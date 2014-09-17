@@ -26,8 +26,6 @@ class Assets_model extends CI_Model
 		$query = $this->db->get('assets_images');	
 		$result = $query->result_array();
 
-		// test de changements
-
 		return $result;
 	}
 
