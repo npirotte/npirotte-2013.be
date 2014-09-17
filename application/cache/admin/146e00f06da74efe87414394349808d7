@@ -1,0 +1,56 @@
+
+<div id="viewTools">
+  <button data-role="submit" class="btn btn-primary btn-ripple" ng-click="save(true)" ng-disabled="editForm.$invalid">Terminer<i class="fa fa-check-circle"></i></button>
+<button data-role="submit" class="btn btn-primary btn-ripple" ng-click="save()" ng-disabled="editForm.$invalid">Sauver<i class="fa fa-save"></i></button>
+<a data-role="cancel" class="btn btn-default btn-ripple" href="#/{{backUrl ? backUrl : section}}">Retour<i class="fa fa-reply"></i></a>
+<button data-role="delete" ng-if="mode != 'new'" class="btn btn-danger btn-ripple" ng-click="delete()">Supprimer<i class="fa fa-trash-o"></i></button>
+<span id="mainAlert">{{alert}}</span>
+</div>
+
+<div>
+  <h1>Menu : #{{item.id}} {{item.name}}</h1>
+  <hr>
+  <div error-sumary></div>
+  <div class="row">
+    <div class="col-md-9">
+  
+      <form name="editForm" class="form form-horizontal">
+      
+        <div class="row">
+          <div class="col-sm-6">
+              <div class="form-group">
+                <label class="control-label col-xs-3" for"inputDbTitle">Nom du menu</label>
+                <div class="col-xs-6">
+                  <input type="text" name="name" value="" id="item_name" ng-model="item.name" ng-maxlength="40" data-required="true"  /><div class="label label-danger" ng-show="editForm.name.$error.required && editForm.name.$dirty">Ce champ est requis</div><div class="label label-danger" ng-show="editForm.name.$error.maxlength">Max. 40 caractères.</div>                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-6">
+              <div class="form-group">
+                <label class="control-label col-xs-3" for"inputDbTitle">Classes Css</label>
+                <div class="col-xs-6">
+                  <input type="text" name="cssclass" value="" id="item_cssclass" ng-model="item.cssclass" ng-maxlength="80"  /><div class="label label-danger" ng-show="editForm.cssclass.$error.maxlength">Max. 80 caractères.</div>                </div>
+              </div>
+            </div>
+        </div>
+          
+      </form>
+
+      <div menus-items-panel menu-id="item.id" ng-if="item.id"></div>
+    </div>
+
+    <div class="col-md-2 col-md-offset-1">
+      <aside id="edit-aside" class="well" ng-if="item.created_on">
+        <strong>Crée le :</strong> {{item.created_on}} <br />
+        <strong>Par : </strong><manager-user-infos userid="item.created_by" ></manager-user-infos>
+
+        <div ng-if="item.modified_by">
+          <strong>Modifié le : </strong> {{item.modified_on}} <br />
+          <strong>Par : </strong><manager-user-infos userid="item.modified_by" ></manager-user-infos>
+        </div>
+      </aside>
+    </div>
+
+  </div>
+
+</div>

@@ -1,0 +1,265 @@
+@keyframes comein
+{
+from {transform: translate(0px,10px);}
+to {transform: translate(0px,0px);}
+}
+
+@-webkit-keyframes comein {
+from {-webkit-transform: translate(0px,10px);}
+to {-webkit-transform: translate(0px,0px);}
+}
+
+#assets-manager
+{
+	position: fixed;
+	right: 20px;
+	top: 50px;
+	left: 180px;
+	bottom: 20px;
+	padding: 30px;
+	display: none;
+
+	background: @gray-lighter;
+
+	z-index: 99;
+	box-shadow: 0 2px 10px fade(black, 10%);
+
+	ul 
+	{
+		margin: 0;
+		padding: 0;
+	}
+
+	li 
+	{
+		position: relative;
+		list-style: none;
+		cursor : pointer;
+
+		animation: comein .2s;
+-webkit-animation: comein .2s; /* Safari and Chrome */
+
+		a,
+		span
+		{
+			display: block;
+			position: relative;
+			padding: 10px;
+			background: white;
+			margin-bottom: 1px;
+		}
+
+		&.selected
+		{
+			> a, 
+			> span 
+			{
+				box-shadow: 4px 0 0 @brand-primary inset; 
+				//background: @grayLight;
+			}
+		}
+
+		.actions
+		{
+			position: absolute;
+			right: 19px;
+			top: 10px;
+		}
+
+		.progress
+		{
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			top: 0;
+			background: fade(@gray-light, 20%);
+			margin-bottom: 0;
+			height: auto;
+			width: 0;
+			.transition(all 1s);
+
+			&.complete
+			{
+				background: fade(@brand-primary, 10%);
+			}
+
+			&.error
+			{
+				background: fade(@brand-danger, 20%);
+			}
+		}
+	}
+
+	#assets-details
+	{
+		position: absolute;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		width: 200px;
+		background: @gray-darker;
+		text-align: center;
+		color: @gray-light;
+		font-size: .8em;
+		padding: 16px;
+
+		img 
+		{
+			max-width: 100%;
+			box-shadow: 0 0 10px black;
+			margin-bottom: 16px;
+		}
+	}
+}
+
+#closeAssets
+{
+	position: absolute;
+	top: 10px;
+	right: 10px;
+}
+
+#assets-list
+{
+	position: absolute;
+	top: 50px;
+	left: 30px;
+	right: 30px;
+	bottom: 30px;
+	padding: 10px;
+	background: lighten(@gray-lighter, 2%);
+	overflow-y: scroll; 
+	overflow-x: hidden; 
+
+	.transition(background 1s);
+
+	&.drop-hover
+	{
+		background: @gray-light;
+	}
+
+	.asset-details
+	{
+		background: @gray-dark;
+		padding: 20px;
+		color: @gray-lighter;
+
+		h3 
+		{
+			font-weight: lighter;
+		}
+
+		button
+		{
+			color: @gray-light;
+			.icon-ok {color: @brand-success}
+			.icon-remove {color: @brand-danger}
+		}
+
+		.editing
+		{
+			input 
+			{
+				min-width: 200px;
+			}
+			button { margin-bottom: 8px }
+		}
+
+		.figure
+		{
+			margin-right: 20px;
+			float: left;
+			font-size: 4em;
+			color: @gray;
+
+			img 
+			{
+				max-width: 100%;
+			}
+		}
+	}
+}
+
+/* Overlays */
+.ui-widget-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.ui-resizable {
+	position: relative;
+}
+.ui-resizable-handle {
+	position: absolute;
+	font-size: 0.1px;
+	display: block;
+}
+.ui-resizable-disabled .ui-resizable-handle,
+.ui-resizable-autohide .ui-resizable-handle {
+	display: none;
+}
+.ui-resizable-n {
+	cursor: n-resize;
+	height: 7px;
+	width: 100%;
+	top: -5px;
+	left: 0;
+}
+.ui-resizable-s {
+	cursor: s-resize;
+	height: 7px;
+	width: 100%;
+	bottom: -5px;
+	left: 0;
+}
+.ui-resizable-e {
+	cursor: e-resize;
+	width: 7px;
+	right: -5px;
+	top: 0;
+	height: 100%;
+}
+.ui-resizable-w {
+	cursor: w-resize;
+	width: 7px;
+	left: -5px;
+	top: 0;
+	height: 100%;
+}
+.ui-resizable-se {
+	cursor: se-resize;
+	width: 12px;
+	height: 12px;
+	right: 1px;
+	bottom: 1px;
+}
+.ui-resizable-sw {
+	cursor: sw-resize;
+	width: 9px;
+	height: 9px;
+	left: -5px;
+	bottom: -5px;
+}
+.ui-resizable-nw {
+	cursor: nw-resize;
+	width: 9px;
+	height: 9px;
+	left: -5px;
+	top: -5px;
+}
+.ui-resizable-ne {
+	cursor: ne-resize;
+	width: 9px;
+	height: 9px;
+	right: -5px;
+	top: -5px;
+}
+
+
+
+.upload-container
+{
+	max-width: 100%;
+}

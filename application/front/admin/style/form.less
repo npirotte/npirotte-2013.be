@@ -1,0 +1,135 @@
+.editArea {
+	min-height: 40px;
+	padding: 10px;
+	background: #f4F4F4;
+
+	font-size: .8em;
+	cursor: pointer;
+}
+
+
+#edit-popup {
+	position: absolute;
+	left: 50%;
+	margin-left: -440px;
+	.edit-bg {
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		background: fade(white, 80%);
+		top: 0;
+		left: 160px;
+		z-index: 1;
+	}
+	.controls {
+		position: relative;
+		z-index: 999;
+		&>div {
+			background: white;
+		}
+	}
+
+	.ckeditor {
+		width: 680px;
+		position: absolute;
+	}
+
+	.footer {
+		text-align: center;
+		margin-top: 4px;
+	}
+}
+
+
+.controls {
+	position: relative;
+	.alertRequired {
+		color: #d14b44;
+		margin-left: 10px;
+		cursor: help;
+	}
+	.alertMessage {
+		display: inline-block;
+		font-size: 0.6em;
+		position: relative;
+		top: -2px;
+		margin-left: 4px;
+		display: none;
+	}
+}
+
+
+/*
+Faux input*/
+
+.form-preview
+{
+	max-width: 960px;
+	.item 
+	{
+		margin-bottom: 10px;
+	}
+
+	.form-field-label 
+	{
+		line-height: 48px;
+	}
+}
+
+.form-field
+{
+	background: @gray-lighter;
+	border-radius: 6px;
+	padding: 10px;
+	line-height: 30px;
+	height: 50px;
+	position: relative;
+
+	&.textarea
+	{
+		height: 100px;
+	}
+
+	&.checkbox
+	{
+		height: 20px;
+		width: 20px;
+		color: transparent;
+		margin-top: 10px;
+	}
+
+	&.checkbox_list,
+	&.radio_list
+	{
+		height: 20px;
+		width: 20px;
+		margin-top: 10px;
+		color: transparent;
+		margin-bottom: 100px;
+
+		box-shadow: 0 50px 0 @gray-lighter,  0 100px 0 @gray-lighter;
+	}
+
+	&.radio_list
+	{
+		border-radius: 50%;
+		box-shadow: 0 0 0 10px @gray-light inset, 0 50px 0 @gray-lighter,  0 100px 0 @gray-lighter;
+	}
+
+	&.select
+	{
+		&:after
+		{
+			content: "\f107";
+			font-family: FontAwesome;
+			font-size: 1.8em;
+			width: 50px;
+			line-height: 50px;
+			text-align: center;
+			position: absolute;
+			right: 0;
+			top: 0;
+		}
+	}
+
+}

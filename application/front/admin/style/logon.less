@@ -1,0 +1,204 @@
+// login form style //
+
+@-webkit-keyframes shake {
+	0% { -webkit-transform: translate(0px, 0)}
+	10% { -webkit-transform: translate(-5px, 0) }
+	20% { -webkit-transform: translate(0px, 0)}
+	30% { -webkit-transform: translate(5px, 0)}
+	40% { -webkit-transform: translate(0, 0)}
+	50% { -webkit-transform: translate(-5px, 0) }
+	60% { -webkit-transform: translate(0px, 0)}
+	70% { -webkit-transform: translate(5px, 0) }
+	80% { -webkit-transform: translate(0, 0)}
+	90% { -webkit-transform: translate(-5px 0)}
+	100% { -webkit-transform: translate(0 ,0) }
+}
+
+#install 
+{
+	background: #1A1A1A;
+}
+
+.installation
+{
+	background: white;
+	padding: 20px;
+}
+
+#logon {
+	background: #1A1A1A;
+	.container {
+		width: 340px;
+		background: white;
+		padding-top: 30px;
+		padding-bottom: 20px;
+		margin: auto;
+		box-shadow: 0 0 6px black;
+
+		&.error
+		{
+			animation: shake .8s;
+			-webkit-animation: shake .8s
+		}
+	}
+
+	header {
+		text-align: center;
+		h1 
+		{
+			margin-top: 0;
+		}
+	}
+
+	#inputName, #inputPwd {
+		padding-left: 30px;
+		&:before {
+			content: '';
+		}
+	}
+
+	.form-group
+	{
+		position: relative;
+	}
+
+	.add-on {
+		position: absolute;
+		top: 0;
+		left: 0;
+		display: block;
+		width: 30px;
+		line-height: 38px;
+		text-align: center;
+		z-index: 2;
+
+		font-weight: 800;
+		color: #bbb;
+	}
+
+	.remember 
+	{
+		.checkbox
+		{
+			margin: 0;
+			font-weight: 400;
+			font-size: .9em;
+			line-height: 1.6em;
+		}
+	}
+
+
+	#browser-users
+	{
+		width: 340px;
+		margin: auto;
+
+		.user
+		{
+			@thumb-width: 60px;
+
+			line-height: 0;
+			padding: 20px;
+			display: block;
+			position: relative;
+			background: @gray-darker;
+			color: @gray-light;
+			border-top: solid 1px darken(@gray-darker, 4%);
+
+
+			cursor: pointer;
+
+			.transition(all .1s);
+
+			&:hover
+			{
+				background: darken(@gray-darker, 4%);
+			}
+
+			&:active
+			{
+				.scale(.95, .95);
+			}
+
+			.user_thumb,
+			.user_name
+			{
+				display: block;
+				float: left;
+			}
+
+			.fa 
+			{
+				position: absolute;
+				top: 50%;
+				right: 20px;
+				line-height: 0px;
+				font-size: 1.4em;
+
+				&.fa-plus
+				{
+					font-size: .8em;
+				}
+			}
+
+			.user_thumb
+			{
+				width: @thumb-width;
+				height: @thumb-width;
+				line-height: @thumb-width;
+				border-radius: 50%;
+				overflow: hidden;
+				margin-right: 20px;
+				background-size: cover;
+				box-shadow: 
+					//0 0 0 4px fade(white, 6%) inset,
+					0 1px 1px fade(black, 10%);
+			}
+
+			.user_name
+			{
+				line-height: @thumb-width;
+			}
+		}
+	}
+
+	&.user-selected
+	{
+		#browser-users
+		{
+			.user.selected
+			{
+				display: block;
+				cursor: default;
+			}
+
+			.user
+			{
+				display: none;
+			}
+		}
+
+		#container
+		{
+			display: block;
+			.flipInX;
+			.animated;
+		}
+	}
+
+	#container
+	{
+		display: none;
+		position: relative;
+
+		footer
+		{
+			position: absolute;
+			bottom: -40px;
+			left: 0;
+			right: 0;
+			color: @gray;
+		}
+	}
+}
+

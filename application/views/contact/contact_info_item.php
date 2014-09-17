@@ -1,0 +1,1 @@
+<p><i class="<?= $contact_info['icon']?>"></i><?= $contact_info['value']?></p>

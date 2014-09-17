@@ -1,0 +1,70 @@
+
+
+
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" ng-click="cancel()"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title">{{item.id ? 'Edition' : 'Ajout'}} d'une image</h4>
+      </div>
+      <div class="modal-body">
+          <form name="asset_modal">
+            <div error-sumary></div>
+            <div image-upload config="uploader" item="item.src" ></div>
+            <br />
+
+            <tabset>
+                              <tab heading="fr">
+                <br />
+                  <div class="row">
+                    <div class="col-md-6">
+
+                      <div class="form-group">
+                        <label class="control-label col-xs-2">Titre fr</label>
+                        <div class="col-xs-6">
+                          <input type="text" name="title_fr" value="" id="item_title_fr" ng-model="item.title_fr" ng-maxlength="80"  /><div class="label label-danger" ng-show="asset_modal.title_fr.$error.maxlength">Max. 80 caractères.</div>                        </div>
+                      </div>
+
+                    </div>
+                    <div class="col-md-6">
+                      
+                      <div class="form-group">
+                        <label class="control-label col-xs-2">Texte alternatif fr</label>
+                        <div class="col-xs-6">
+                          <input type="text" name="alt_fr" value="" id="item_alt_fr" ng-model="item.alt_fr" ng-maxlength="80"  /><div class="label label-danger" ng-show="asset_modal.alt_fr.$error.maxlength">Max. 80 caractères.</div>                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+              </tab>
+                              <tab heading="en">
+                <br />
+                  <div class="row">
+                    <div class="col-md-6">
+
+                      <div class="form-group">
+                        <label class="control-label col-xs-2">Titre en</label>
+                        <div class="col-xs-6">
+                          <input type="text" name="title_en" value="" id="item_title_en" ng-model="item.title_en" ng-maxlength="80"  /><div class="label label-danger" ng-show="asset_modal.title_en.$error.maxlength">Max. 80 caractères.</div>                        </div>
+                      </div>
+
+                    </div>
+                    <div class="col-md-6">
+                      
+                      <div class="form-group">
+                        <label class="control-label col-xs-2">Texte alternatif en</label>
+                        <div class="col-xs-6">
+                          <input type="text" name="alt_en" value="" id="item_alt_en" ng-model="item.alt_en" ng-maxlength="80"  /><div class="label label-danger" ng-show="asset_modal.alt_en.$error.maxlength">Max. 80 caractères.</div>                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+              </tab>
+                          </tabset>
+          </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" ng-click="cancel()">Annuler</button>
+        <button type="button" class="btn btn-primary" ng-click="ok()">Sauvegarder</button>
+      </div>
+    </div><!-- /.modal-content -->
+

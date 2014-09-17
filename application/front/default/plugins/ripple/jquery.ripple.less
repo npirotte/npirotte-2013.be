@@ -1,0 +1,51 @@
+
+.btn-ripple
+{
+	position: relative;
+	overflow: hidden;
+
+	& > .ink
+	{
+		display: block; position: absolute;
+		background: fade(white, 30%);
+		border-radius: 100%;
+		transform: scale(0);
+		&.animate 
+		{
+			-webkit-animation: ripple 0.65s linear;
+			-moz-animation: ripple 0.65s linear;
+			-ms-animation: ripple 0.65s linear;
+			animation: ripple 0.65s linear;
+		}
+	}
+
+	&.btn-default
+	{
+		& > .ink 
+		{
+			background: fade(@brand-primary, 30%);
+		}
+	}
+}
+
+/*animation effect*/
+
+@-webkit-keyframes ripple {
+	/*scale the element to 250% to safely cover the entire link and fade it out*/
+	100% {opacity: 0; transform: scale(2.5);}
+}
+
+@-moz-keyframes ripple {
+	/*scale the element to 250% to safely cover the entire link and fade it out*/
+	100% {opacity: 0; transform: scale(2.5);}
+}
+
+@-ms-keyframes ripple {
+	/*scale the element to 250% to safely cover the entire link and fade it out*/
+	100% {opacity: 0; transform: scale(2.5);}
+}
+
+@keyframes ripple {
+	/*scale the element to 250% to safely cover the entire link and fade it out*/
+	100% {opacity: 0; transform: scale(2.5);}
+}

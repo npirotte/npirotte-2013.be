@@ -1,0 +1,129 @@
+<?php
+
+class admin_carte extends ci_controller
+{
+
+	public function __construct()
+	{
+		parent::__construct();
+
+		$this->load->model('carte_model');
+		$this->load->helper('file');
+		
+		$this->auth = new stdClass;
+		$this->load->library('Flexi_auth');
+
+		$this->data = null;
+
+		//Authentification
+		if ($this->flexi_auth->is_logged_in()) 
+		{
+			if ($this->flexi_auth->is_admin())
+			{
+
+			}
+			else
+			{
+				exit('Access denied');
+			}
+		}
+		else
+		{
+			exit('Access denied');
+		}	
+	}
+
+	public function _output($output)
+	{
+	    $this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate");
+		echo json_encode($output);
+	}	
+
+// controllers
+
+	// categories
+
+	public function categories_list($limit, $offset)
+	{
+		$output = $this->carte_model->categories_list($limit, $offset);		
+		$this->output->set_output($output);
+	}
+
+	public function category_details($id)
+	{
+		$output['items'] = $this->carte_model->category_details($id);
+
+		$this->output->set_output($output);
+	}
+
+	public function category_edit()
+	{
+		$item = json_decode(file_get_contents('php://input'));
+		$item = get_object_vars($item);
+
+		if (!array_key_exists('id', $item)) {
+			
+			$output['id'] = $this->carte_model->categories_create($item);
+		}
+		else
+		{
+			$this->general_model->update_item('carte_categories', $item);
+		}
+
+		delete_files(APPPATH.'cache/');
+
+		$this->output->set_output($output);
+	}
+
+	public function category_delete($id)
+	{
+		$this->carte_model->categories_delete($id);
+
+		delete_files(APPPATH.'cache/');
+	}
+
+	// items
+
+	public function items_list($parent_id)
+	{
+		$output['items'] = $this->carte_model->items_list($parent_id);
+
+		$this->output->set_output($output);
+	}
+
+	public function item_edit()
+	{
+		$item = json_decode(file_get_contents('php://input'));
+		$item = get_object_vars($item);
+
+		$output = array();
+
+		if (!array_key_exists('id', $item)) {
+			$output['item'] = $item;
+			$output['item']['id'] = $this->carte_model->item_create($item);
+		}
+		else
+		{
+			$this->general_model->update_item('carte_items', $item);
+		}
+
+		delete_files(APPPATH.'cache/');
+
+		$this->output->set_output($output);
+	}
+
+	public function item_delete($id)
+	{
+		$this->general_model->delete_item('carte_items', $id);
+
+		$output = array();
+		$output['error'] = 0;
+		$output['message'] = 'Element supprimé';
+
+		delete_files(APPPATH.'cache/');
+
+		$this->output->set_output($output);
+	}
+}
+
+?>

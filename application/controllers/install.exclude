@@ -1,0 +1,141 @@
+<?php
+
+ class Install extends CI_Controller
+ {
+ 	public function __construct()
+	{
+		parent::__construct();
+	}
+
+	public function index()
+	{
+		$this->load->helper('view');
+
+		$this->load->view('admin/install/install');
+	}
+
+	public function view($step = 1)
+	{
+		$this->load->view('admin/install/install_view'.$step);	
+	}
+
+	public function create_config()
+	{
+		$this->load->helper('file');
+
+		$item = json_decode(file_get_contents('php://input'), true);
+		$_POST = $item;
+
+		$response = array(
+			'request' => $_POST,
+			'errors' => array()
+			);
+
+		// on test si la db existe
+
+		$config['hostname'] = $_POST['dbData']['hostname'];
+		$config['username'] = $_POST['dbData']['username'];
+		$config['password'] = $_POST['dbData']['password'];
+		$config['database'] = $_POST['dbData']['databaseName'];
+		$config['dbdriver'] = "mysqli";
+		$config['dbprefix'] = "";
+		$config['pconnect'] = FALSE;
+		$config['db_debug'] = TRUE;
+		$config['cache_on'] = FALSE;
+		$config['cachedir'] = "";
+		$config['char_set'] = "utf8";
+		$config['dbcollat'] = "utf8_general_ci";
+
+		try 
+		{
+			$db_obj = $this->load->database($config, true);
+			$connected = $db_obj->initialize();
+		}
+		catch(Exception $e)
+		{
+			$connected = false;
+		}
+
+		if (!$connected) {
+		  $response['errors'][] = 'Impossible de se connecter à la base de donnée';
+		} 
+
+		else
+		{
+
+			$db_config = read_file(APPPATH . 'config/database_init.php');
+			$site_config = read_file(APPPATH . 'config/config_init.php');
+
+			if (!$_POST['dbData']['prefix'] || $_POST['dbData']['prefix'] === '') {
+				$_POST['dbData']['prefix'] = 'nyp_';
+			}
+
+			foreach ($_POST['dbData'] as $key => $value) {
+				$db_config = str_replace('{{'.$key.'}}', $value, $db_config);
+			}
+
+			foreach ($_POST['configData'] as $key => $value) {
+				$site_config = str_replace('{{'.$key.'}}', $value, $site_config);
+			}
+
+			write_file(APPPATH . 'config/database.php', $db_config);
+			write_file(APPPATH . 'config/config.php', $site_config);
+
+		}
+
+		$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate");
+		$this->output->set_output(json_encode($response));
+	}
+
+	public function create_default_user()
+	{
+		$this->load->model('users_model');
+		$this->load->model('general_model');
+		$this->load->library('session');
+		$this->auth = new stdClass;
+		$this->load->library('Flexi_auth');
+
+		$item = json_decode(file_get_contents('php://input'), true);
+		$_POST = $item;
+
+		// creation du groupe admin
+		$name = 'Admin';
+		$description = 'Administateurs du site';
+		$is_admin = TRUE;
+
+		$group_id = $this->flexi_auth->insert_group($name, $description, $is_admin);
+
+
+		// creation du user
+		$email = $_POST['email'];
+		$username = $_POST['username'];
+		$password = $_POST['pwd1'];
+		$user_data = array();
+		$group_id = 1;
+		$activate = TRUE;
+
+
+		$user_data = array();
+
+		$user_data['user_account_id'] = $this->flexi_auth->insert_user($email, $username, $password, $user_data, $group_id, $activate);
+
+		// creatioin du profil
+
+		$this->general_model->insert_item('user_profiles', $user_data);
+
+		$errors = $this->flexi_auth->error_messages();
+
+		$response = array(
+			'errors' => $errors
+			);
+
+
+		$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate");
+		$this->output->set_output(json_encode($response));
+	}
+
+	public function erase_installer()
+	{
+		rename(APPPATH.'controllers/install.php', APPPATH.'controllers/install.exclude');
+	}
+}

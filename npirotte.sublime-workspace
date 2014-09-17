@@ -1,0 +1,1536 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"con",
+				"console"
+			],
+			[
+				"getPage",
+				"GetPage"
+			],
+			[
+				"pre",
+				"preventDefault"
+			],
+			[
+				"ajac",
+				"ajaxConfig"
+			],
+			[
+				"load",
+				"loading"
+			],
+			[
+				"remove",
+				"removeClass	.removeClass()"
+			],
+			[
+				"conte",
+				"context"
+			],
+			[
+				"wn",
+				"window"
+			],
+			[
+				"before",
+				"beforeSend"
+			],
+			[
+				"img",
+				"imgTag"
+			],
+			[
+				"imgC",
+				"imgCanvas"
+			],
+			[
+				"stro",
+				"strokeStyle"
+			],
+			[
+				"resul",
+				"result_array"
+			],
+			[
+				"orde",
+				"order_by"
+			],
+			[
+				"modif",
+				"modified_by"
+			],
+			[
+				"bann",
+				"banners_banners"
+			],
+			[
+				"tu",
+				"thumbs"
+			],
+			[
+				"for",
+				"foreach	foreach …"
+			],
+			[
+				"ta",
+				"table"
+			],
+			[
+				"table",
+				"table_target"
+			],
+			[
+				"fied",
+				"fields"
+			],
+			[
+				"data",
+				"database"
+			],
+			[
+				"port",
+				"portfolio_categories"
+			],
+			[
+				"loca",
+				"localize"
+			],
+			[
+				"fo",
+				"foreach	foreach …"
+			],
+			[
+				"loc",
+				"localise"
+			],
+			[
+				"array_key",
+				"array_key_exists"
+			],
+			[
+				"arry_ke",
+				"array_key_exists"
+			],
+			[
+				"col",
+				"col_params"
+			],
+			[
+				"mous",
+				"mousePosition"
+			],
+			[
+				"mo",
+				"modifierY"
+			],
+			[
+				"modi",
+				"modifierX"
+			],
+			[
+				"pos",
+				"pos-a	position: absolute;"
+			],
+			[
+				"ge",
+				"getData"
+			],
+			[
+				"tree",
+				"treeCulture"
+			],
+			[
+				"tre",
+				"treeCulture"
+			],
+			[
+				"lo",
+				"log"
+			],
+			[
+				"lan",
+				"languages"
+			],
+			[
+				"item",
+				"item_lang"
+			],
+			[
+				"rule",
+				"ruleName"
+			],
+			[
+				"la",
+				"languages"
+			],
+			[
+				"lang",
+				"languages"
+			],
+			[
+				"ot",
+				"output"
+			],
+			[
+				"db",
+				"db_model"
+			],
+			[
+				"menus_",
+				"menus_items"
+			],
+			[
+				"me",
+				"menus_menus"
+			],
+			[
+				"menu",
+				"menus_menus"
+			],
+			[
+				"esl",
+				"else"
+			],
+			[
+				"mod",
+				"module"
+			],
+			[
+				"print_r",
+				"print_r"
+			],
+			[
+				"on",
+				"onMouseDrad"
+			],
+			[
+				"page",
+				"page_data"
+			],
+			[
+				"messa",
+				"messageId"
+			],
+			[
+				"no",
+				"notifications"
+			],
+			[
+				"noti",
+				"notifications"
+			],
+			[
+				"notif",
+				"notificationsNbr"
+			],
+			[
+				"list",
+				"list-d	list-style-type: disc;"
+			],
+			[
+				"add",
+				"addClass	addClass"
+			],
+			[
+				"manage",
+				"manageActiveLinks"
+			],
+			[
+				"url",
+				"urlParts"
+			],
+			[
+				"ex",
+				"explodedUrl"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"pad",
+				"padding-left"
+			],
+			[
+				"remo",
+				"removeClass	.removeClass"
+			],
+			[
+				"margin",
+				"margin"
+			],
+			[
+				"border",
+				"border-radius"
+			],
+			[
+				"inline",
+				"inline-block"
+			],
+			[
+				"pa",
+				"padding-top"
+			],
+			[
+				"tex",
+				"text-align"
+			],
+			[
+				"menus",
+				"menus_items"
+			],
+			[
+				"por",
+				"portfolio_categories"
+			],
+			[
+				"news",
+				"news_items"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"resu",
+				"result"
+			],
+			[
+				"re",
+				"return"
+			],
+			[
+				"pages",
+				"pages_model"
+			],
+			[
+				"result",
+				"result"
+			],
+			[
+				"q",
+				"query"
+			],
+			[
+				"sele",
+				"select"
+			],
+			[
+				"ca",
+				"callback"
+			],
+			[
+				"new",
+				"newValue"
+			],
+			[
+				"rese",
+				"resetItem"
+			],
+			[
+				"meu",
+				"menu_id"
+			],
+			[
+				"get",
+				"getItemList"
+			],
+			[
+				"run",
+				"runing"
+			],
+			[
+				"paret",
+				"parentId"
+			],
+			[
+				"parent",
+				"parentId"
+			],
+			[
+				"end",
+				"endEdit"
+			],
+			[
+				"prit",
+				"print"
+			],
+			[
+				"set",
+				"set_output"
+			],
+			[
+				"field",
+				"fieldConfig"
+			],
+			[
+				"mail",
+				"mailto"
+			],
+			[
+				"conta",
+				"contacts"
+			],
+			[
+				"page_",
+				"page_content"
+			],
+			[
+				"group",
+				"group_id"
+			],
+			[
+				"Crea",
+				"CreateUser"
+			],
+			[
+				"user",
+				"username"
+			],
+			[
+				"str_re",
+				"str_replace"
+			],
+			[
+				"pass",
+				"password"
+			],
+			[
+				"inst",
+				"installerRepository"
+			],
+			[
+				"tr",
+				"true"
+			],
+			[
+				"loda",
+				"loading"
+			],
+			[
+				"scro",
+				"scrollTop	.scrollTop()"
+			],
+			[
+				"app",
+				"app_session_data"
+			],
+			[
+				"sess",
+				"session"
+			],
+			[
+				"curre",
+				"current_user"
+			],
+			[
+				"login",
+				"login_session_token"
+			],
+			[
+				"json",
+				"json_encode"
+			],
+			[
+				"ha",
+				"hash_session_token"
+			],
+			[
+				"upo",
+				"upload"
+			],
+			[
+				"margi",
+				"margin-right"
+			],
+			[
+				"cate",
+				"category_id"
+			],
+			[
+				"eror",
+				"errors"
+			],
+			[
+				"banner",
+				"banners_model"
+			],
+			[
+				"banners",
+				"banners_zones"
+			],
+			[
+				"flush",
+				"flush_cache"
+			],
+			[
+				"trans",
+				"trans_complete"
+			],
+			[
+				"erro",
+				"errors"
+			],
+			[
+				"errr",
+				"errors"
+			],
+			[
+				"sc",
+				"scope"
+			],
+			[
+				"req",
+				"required"
+			],
+			[
+				"swo",
+				"showFadeAlert"
+			],
+			[
+				"banne",
+				"banner-zones"
+			],
+			[
+				"tag",
+				"tag_model"
+			],
+			[
+				"Port",
+				"portfolio"
+			],
+			[
+				"tags",
+				"tags_model"
+			],
+			[
+				"publi",
+				"public"
+			],
+			[
+				"remve",
+				"removeClass	.removeClass"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "application/front/default/js/core/pikes.core.js",
+			"settings":
+			{
+				"buffer_size": 552,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "application/front/default/js/jquery.customer.js",
+			"settings":
+			{
+				"buffer_size": 5729,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "application/front/default/js/customer/pikes.homePageCtrl.js",
+			"settings":
+			{
+				"buffer_size": 347,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "application/front/default/js/customer/pikes.customer_init.js",
+			"settings":
+			{
+				"buffer_size": 278,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Users/npirotte/Downloads/Adobe Photoshop Lightroom 5.3 Final (64 bit) [ChingLiu]/ChingLiu.Install.Notes.nfo",
+			"settings":
+			{
+				"buffer_size": 2699,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "application/front/compilers/default_foot_js.php",
+			"settings":
+			{
+				"buffer_size": 823,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "application/front/default/js/core/pikes.init.js",
+			"settings":
+			{
+				"buffer_size": 157,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "application/views/contact/forms/form.php",
+			"settings":
+			{
+				"buffer_size": 2641,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "application/front/default/js/core/pikes.ajax.js",
+			"settings":
+			{
+				"buffer_size": 2389,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": " /* code by n.pirotte */\n\n;function contactFotmCtrl($form, url)\n{\n\n    var $alert = $form.find('.error-summary');\n\n    $form.submit(function()\n    {\n        formSubmit();\n        return false;\n    });\n\n    function cleanErrors()\n    {\n        $form.find('.formfield-alert').remove();\n    }\n\n    function formErrors(message, error_list)\n    {\n        cleanErrors();\n\n        $alert\n            .removeClass()\n            .addClass('alert alert-danger')\n            .html(message)\n            .fadeIn();\n\n        // gestion des erreurs\n        error_list.forEach(function(value)\n        {\n            var field = value.field_name,\n                error = '<div class=\"formfield-alert label label-danger\">' + value.message + '</div>';\n\n            $('[name=\"' + field + '\"').after(error);\n        });\n    }\n\n    function formSuccess(message)\n    {\n        cleanErrors();\n\n        $alert\n            .removeClass()\n            .addClass('alert alert-success')\n            .text(message)\n            .fadeIn();\n\n        $form.clearForm();\n    }\n\n    function formSubmit()\n    {\n         $.ajax({\n            url: url, // le nom du fichier indiqué dans le formulaire\n            type: 'POST', // la méthode indiquée dans le formulaire (get ou post)\n            data: $form.serialize(), // je sérialise les données (voir plus loin), ici les $_POST,\n            dataType: 'json',\n            success: function(data) { // je récupère la réponse du fichier PHP\n                console.log(data);\n                if (data.error == 1) {\n                    formErrors(data.message, data.error_list);\n                }\n                else\n                {\n                    formSuccess(data.message);\n                }\n            }\n        });\n    }\n}\n\n// clear form function ///////////////////////////////////////////\n\n$.fn.clearForm = function() {\n    return this.each(function() {\n        var type = this.type,\n            tag = this.tagName.toLowerCase();\n        if (tag == 'form') return $(':input', this).clearForm();\n        if (type == 'text' || type == 'password' || tag == 'textarea') this.value = '';\n        else if (type == 'checkbox' || type == 'radio') this.checked = false;\n        else if (tag == 'select') this.selectedIndex = -1;\n    });\n};\n\n// kill the modals //\nfunction closeModal()\n {\n    $('.modal').fadeOut();\n}\n\n\n// active classes managements\n\n(function()\n{\n    $.fn.manageActiveLinks = function()\n    {\n        var currentUrl = window.location.href;\n        currentUrl = currentUrl.replace(/#*/, '');\n        $(this).each(function()\n        {\n            var $_this = $(this);\n\n            // reset des links\n            $_this.find('.active').removeClass('active');\n\n            // application des liens\n            $_this.find('a[href=\"'+currentUrl+'\"]')\n                .addClass('active')\n                .parent()\n                .addClass('active');\n\n        });\n\n        return $(this);\n    }\n})();\n\n\n// ajaxify\n\n(function($)\n{\n\n    var currentUrl,\n        $body = $('body');\n\n    function ajaxify()\n    {\n        $(document).on(\n            'click',\n            'a',\n            function(e)\n            {\n                var $self = $(this),\n                    url = $self.attr('href');\n\n                if (url \n                    && !$self.hasClass('no-ajax')\n                    && $self.attr('target') != \"_blank\"\n                    && $self.attr('target') != \"blank\"\n                    //&& uri.match(/http/)\n                    && !url.match(/mailto:/)\n                     /* plus exeptions */) {\n                    e.preventDefault();\n                    window.getPage($('#container'), url);\n                };\n            }\n        )\n    }\n\n    window.getPage = function($target, url)\n    {\n       $.ajax({\n        url: url,\n        cache: true,\n        dataType: 'html',\n        beforeSend : function()\n        {\n            var stateObj = { foo: 1000 + Math.random()*1001 };\n            try\n            {\n                history.pushState(stateObj, \"ajax page loaded...\", url);\n            }\n            catch(e)\n            {\n                console.log(e);\n                window.location.href = url;\n            }\n\n            $body.addClass('loading');\n            $target\n                .removeClass('loaded')\n                .addClass('go-out');\n        },\n        success: function(data)\n        {\n            currentUrl = window.location.pathname;\n            \n            $target.html(data);\n\n            $('html, body').animate({ scrollTop: 0}, 0);\n\n            $target\n                .removeClass('go-out')\n                .addClass('loaded');\n\n            $('#main-menu').manageActiveLinks();\n\n            //var stateObj = { foo: 1000 + Math.random()*1001 };\n            //history.pushState(stateObj, \"ajax page loaded...\", url);\n\n            //window.onpopstate = getPage(history.location || document.location)\n        },\n        complete : function(data)\n        {\n            $body.removeClass('loading');\n        },\n        error: function(data)\n        {\n            //alert('Erreur lors du chargement de la page');\n        }\n       });\n    }\n\n    window.onpopstate = function(e) { \n        if (currentUrl && currentUrl != window.location.pathname) {\n            getPage($('#container'), window.location.href);\n        };\n    }\n\n    $(document).ready(function(){\n        ajaxify();\n    })\n\n})(jQuery);\n\n",
+			"file": "application/front/framework/js/jquery.functions.js",
+			"file_size": 5375,
+			"file_write_time": 130527034762575107,
+			"settings":
+			{
+				"buffer_size": 5368,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "Packages/User/typescript.sublime-build",
+	"command_palette":
+	{
+		"height": 101.0,
+		"selected_items":
+		[
+			[
+				"inst	a",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"pack",
+				"Package Control: Remove Package"
+			],
+			[
+				"pac",
+				"Package Control: Remove Package"
+			],
+			[
+				"pa",
+				"Package Control: Remove Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"brw",
+				"Preferences: Browse Packages"
+			],
+			[
+				"Snippet: ci",
+				"Snippet: CI - $_POST"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"Snippet: q",
+				"Snippet: QUnit HTML"
+			],
+			[
+				"i",
+				"Package Control: Install Package"
+			],
+			[
+				"",
+				"Package Control: Remove Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 571.0
+	},
+	"console":
+	{
+		"height": 139.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/D/websites/npirotte-2013.be/application/front/default/js/customer/pikes.customer_init.js",
+		"/D/websites/npirotte-2013.be/application/front/compilers/default_foot_js.php",
+		"/D/websites/npirotte-2013.be/application/front/default/js/jquery.customer.js",
+		"/D/websites/npirotte-2013.be/application/front/default/js/canvaIntro.js",
+		"/D/websites/npirotte-2013.be/application/front/default/js/paper-full.min.js",
+		"/D/websites/npirotte-2013.be/index.php",
+		"/D/websites/npirotte-2013.be/application/models/models/news/categories.php",
+		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/portfolio/categories/edit.php",
+		"/D/websites/npirotte-2013.be/application/config/routes.php",
+		"/D/websites/npirotte-2013.be/application/controllers/news.php",
+		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/news/categories/edit.php",
+		"/D/websites/npirotte-2013.be/application/models/models/banners/banners.php",
+		"/D/websites/npirotte-2013.be/application/models/news_model.php",
+		"/D/websites/npirotte-2013.be/application/models/portfolio_model.php",
+		"/D/websites/npirotte-2013.be/application/models/banners_model.php",
+		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/banners/banner/edit.php",
+		"/D/websites/npirotte-2013.be/application/helpers/banners/banners_helper.php",
+		"/D/websites/npirotte-2013.be/application/libraries/smartcache.php",
+		"/D/websites/npirotte-2013.be/application/controllers/pages.php",
+		"/D/websites/npirotte-2013.be/application/controllers/portfolio.php",
+		"/D/websites/npirotte-2013.be/application/front/compilers/admin_foot_js.php",
+		"/D/websites/npirotte-2013.be/application/controllers/admin_news.php",
+		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.newsRepositories.js",
+		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.news.js",
+		"/D/websites/npirotte-2013.be/application/models/models/news/items.php",
+		"/D/websites/npirotte-2013.be/application/views/admin/templates/layout.php",
+		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/portfolio/portfolio/edit.php",
+		"/D/websites/npirotte-2013.be/application/models/models/portfolio/categories.php",
+		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.portfolio.js",
+		"/D/websites/npirotte-2013.be/application/libraries/Models_service.php",
+		"/D/websites/npirotte-2013.be/application/viewModels/global/HeaderViewModel.php",
+		"/D/websites/npirotte-2013.be/application/viewModels/portfolio/PorfolioItemViewModel.php",
+		"/D/websites/npirotte-2013.be/application/viewModels/portfolio/PortfolioCategoriesListViewModel.php",
+		"/D/websites/npirotte-2013.be/application/viewModels/portfolio/ThumbListWidgetViewModel.php",
+		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/news/news/edit.php",
+		"/D/websites/npirotte-2013.be/application/models/models/pages/pages.php",
+		"/D/websites/npirotte-2013.be/application/models/models/portfolio/items.php",
+		"/D/websites/npirotte-2013.be/application/models/menus_model.php",
+		"/D/websites/npirotte-2013.be/application/controllers/maintenance.php",
+		"/D/websites/npirotte-2013.be/application/models/db_model.php",
+		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/shared/widgets/tree.php",
+		"/D/websites/npirotte-2013.be/system/helpers/view_helper.php",
+		"/D/websites/npirotte-2013.be/application/front/default/style/styles.less",
+		"/D/websites/npirotte-2013.be/application/controllers/admin_pages.php",
+		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.pagesRepositories.js",
+		"/D/websites/npirotte-2013.be/application/libraries/MY_Form_validation.php",
+		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.pagesDirectives.js",
+		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.banners.js",
+		"/D/websites/npirotte-2013.be/application/models/pages_model.php",
+		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.pages.js",
+		"/D/websites/npirotte-2013.be/application/controllers/admin.php",
+		"/D/websites/npirotte-2013.be/application/core/MY_Lang.php",
+		"/D/websites/npirotte-2013.be/application/config/config.php",
+		"/D/websites/npirotte-2013.be/application/language/english/db_lang.php",
+		"/D/websites/npirotte-2013.be/application/controllers/admin_menus.php",
+		"/C/Users/npirotte/Desktop/menus_model.php",
+		"/D/websites/npirotte-2013.be/system/language/en/forms_lang.php",
+		"/D/websites/npirotte-2013.be/application/models/models/user/profiles.php",
+		"/D/websites/npirotte-2013.be/application/models/models/user/accounts.php",
+		"/D/websites/npirotte-2013.be/application/models/models/user/groups.php",
+		"/D/websites/npirotte-2013.be/application/models/models/user/privileges.php",
+		"/D/websites/npirotte-2013.be/application/models/models/user/privilege_groups.php",
+		"/D/websites/npirotte-2013.be/application/models/models/pages/templates.php",
+		"/D/websites/npirotte-2013.be/application/models/models/portfolio/links.php",
+		"/D/websites/npirotte-2013.be/application/models/models/contact/contacts_fields.php",
+		"/D/websites/npirotte-2013.be/application/models/models/contact/contacts.php",
+		"/D/websites/npirotte-2013.be/application/models/models/contact/forms_fields.php",
+		"/D/websites/npirotte-2013.be/application/models/models/contact/forms.php",
+		"/D/websites/npirotte-2013.be/application/models/models/pages/templates_values.php",
+		"/D/websites/npirotte-2013.be/application/models/models/banners/zones.php",
+		"/D/websites/npirotte-2013.be/application/models/models/contact/infos.php",
+		"/D/websites/npirotte-2013.be/application/models/models/pages/templates_fields.php",
+		"/D/websites/npirotte-2013.be/application/models/models/user/ips.php",
+		"/D/websites/npirotte-2013.be/application/models/models/user/privilege_users.php",
+		"/D/websites/npirotte-2013.be/application/models/models/user/login_sessions.php",
+		"/D/websites/npirotte-2013.be/application/models/models/menus/menus.php",
+		"/D/websites/npirotte-2013.be/application/models/models/menuModel.php",
+		"/D/websites/npirotte-2013.be/application/models/models/global/config.php",
+		"/D/websites/npirotte-2013.be/application/models/models/global/log.php",
+		"/D/websites/npirotte-2013.be/application/models/models/global/tags_links.php",
+		"/D/websites/npirotte-2013.be/application/models/models/assets/images.php",
+		"/D/websites/npirotte-2013.be/application/models/models/global/tags.php",
+		"/D/websites/npirotte-2013.be/application/models/models/menus/items.php",
+		"/D/websites/npirotte-2013.be/application/views/pages/canvas.php",
+		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.notifications.js",
+		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.contact.js",
+		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.admin.js",
+		"/D/websites/npirotte-2013.be/application/front/admin/style/styles.less",
+		"/D/websites/npirotte-2013.be/application/front/admin/style/bootstrap/badges.less",
+		"/D/websites/npirotte-2013.be/application/models/contact_model.php",
+		"/D/websites/npirotte-2013.be/application/front/admin/style/animate.less",
+		"/D/websites/npirotte-2013.be/application/front/framework/js/jquery.functions.js",
+		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.manager.js",
+		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/shared/views/list.php",
+		"/D/websites/npirotte-2013.be/application/views/templates/meta_head.php",
+		"/D/websites/npirotte-2013.be/application/views/templates/meta_foot.php",
+		"/D/websites/npirotte-2013.be/application/views/contact/forms/form.php",
+		"/D/websites/npirotte-2013.be/application/controllers/assets.php",
+		"/D/websites/npirotte-2013.be/application/views/banners/banners.php",
+		"/D/websites/npirotte-2013.be/application/viewModels/news/LastNewsWidgetViewModel.php",
+		"/D/websites/npirotte-2013.be/application/viewModels/news/NewsItemViewModel.php",
+		"/D/websites/npirotte-2013.be/application/viewModels/news/NewsListViewModel.php",
+		"/D/websites/npirotte-2013.be/application/views/admin/pages/login.php",
+		"/D/websites/npirotte-2013.be/application/helpers/pages/menus_helper.php",
+		"/D/websites/npirotte-2013.be/application/libraries/MY_Parser.php",
+		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/menus/items/edit.php",
+		"/D/websites/npirotte-2013.be/application/views/templates/layout.php",
+		"/D/websites/npirotte-2013.be/application/views/pages/widgets/menu.php",
+		"/D/websites/npirotte-2013.be/application/views/pages/widgets/menu_item.php",
+		"/D/websites/npirotte-2013.be/application/libraries/url_service.php",
+		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.menusRepositories.js",
+		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.menus.js",
+		"/D/websites/npirotte-2013.be/application/front/admin/js/angular-bootstrap-checkbox.js",
+		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.urlService.js",
+		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/banners/bannerzone/edit.php",
+		"/D/websites/npirotte-2013.be/application/controllers/admin_portfolio.php",
+		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/menus/menus/edit.php",
+		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.menuRepositories.js",
+		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.menu.js",
+		"/D/websites/npirotte-2013.be/application/controllers/admin_banners.php",
+		"/D/websites/npirotte-2013.be/application/models/menusService.php",
+		"/D/websites/npirotte-2013.be/application/models/users_model.php",
+		"/D/websites/npirotte-2013.be/application/front/cache/admin_combined.css",
+		"/D/websites/npirotte-2013.be/.htaccess",
+		"/D/websites/npirotte-2013.be/application/config/database.exlude",
+		"/D/websites/npirotte-2013.be/application/config/database.php",
+		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/contacts/informations/edit.php",
+		"/D/websites/npirotte-2013.be/application/helpers/contact/contact_helper.php"
+	],
+	"find":
+	{
+		"height": 43.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			"/Volumes/Documents/jobs/Ben/12_1014_website_js",
+			"/Users/nicolaspirotte/Desktop/perso_web/code"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"InitPage",
+			"canvaIntro",
+			"news_list",
+			"experience",
+			"item_available",
+			"();\n",
+			"\\||(%7c)",
+			"|",
+			"print",
+			"menusService",
+			"nyp_",
+			"icon-",
+			"contact",
+			"btn-group",
+			"date",
+			"glyphicon glyphicon-",
+			"cal",
+			"call",
+			"ajaxify",
+			"circle-o",
+			"circle",
+			"contact_contacts",
+			"nyp_contact_contacts",
+			"pages_templates_values",
+			"nyp_pages_templates_values",
+			"loading",
+			"aside",
+			".noUi-handle",
+			"noUi-background",
+			"banner",
+			"is",
+			"print_r",
+			"is_logged_in",
+			"auth",
+			"is_logged_in",
+			"userdata",
+			"userdata()",
+			"userdata",
+			"sess_cookie_name",
+			"sess_read",
+			"cookie",
+			"get_cookie",
+			"userdata",
+			"session_data",
+			"is_logged_in",
+			"v",
+			"cookie",
+			"$this->CI->auth->sess",
+			"$this->CI->auth",
+			"$this->auth",
+			"portfolio",
+			".noUi-origin",
+			"validate_database_login_session",
+			"is_lo",
+			"is_l",
+			"is_L",
+			"is_",
+			"is_log",
+			"is_logged_in",
+			"login",
+			"insert_database_login_session",
+			"set_cookie",
+			"get_cookie",
+			"set_cookie",
+			"cookie",
+			"header",
+			"is_logged_in",
+			"coockie",
+			"set_login_sessions",
+			"login",
+			"flexi_auth_model",
+			"#mainHeader",
+			"potfo",
+			"porf",
+			"news",
+			"material.animations",
+			"material-track",
+			"is_admin",
+			"login",
+			"carte",
+			"src",
+			"user",
+			"profile",
+			"banners",
+			"banner",
+			"validation",
+			"cssclass",
+			"backUrl",
+			"itemGroupReordering",
+			"getTheItem",
+			"banner",
+			"delete",
+			"categoryDelete",
+			"delete",
+			"itemGroupReordering",
+			"delete",
+			"image-upload",
+			".media",
+			"setIntroHeight",
+			"contact ",
+			"news-list",
+			"news-view",
+			"presentation",
+			"grid",
+			"caption",
+			"formfield-alert",
+			"label",
+			"alert",
+			"radius",
+			"input",
+			"icon_regexp",
+			"portfolio",
+			"portfoliod",
+			".flex-control-nav",
+			"Cache_manager",
+			"news",
+			"PorfolioDetails",
+			"media",
+			"merdia",
+			"simple_portfolio_list",
+			"portfolio",
+			"		\n",
+			"list",
+			"flushCache",
+			"port",
+			"porf",
+			"child_id",
+			"simple_categories_list"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+			"_this",
+			"~",
+			"Menus_model",
+			"fa fa-",
+			"portfolio_items",
+			"admin",
+			"portfolio_item",
+			"admin",
+			"",
+			"fa fa-",
+			"contactsRepository",
+			"col-xs-6",
+			"control-label col-xs-2",
+			"form-group",
+			"col-sm-6",
+			"control-label col-sm-2",
+			"form-group",
+			"control-group col-sm-2",
+			"col-sm-6",
+			"control-label col-sm-2",
+			"form-group",
+			"col-xs-6",
+			"control-label col-xs-2",
+			"form-group",
+			"control-label col-xs-2",
+			"form-control",
+			"col-xs-6",
+			"control-label col-xs-3",
+			"form-group",
+			"xs",
+			"col-xs-6",
+			"<label class=\"control-label col-sx-3\"",
+			"/label></div>",
+			"<div class=\"col-xs-2\"><label",
+			"col-xs-6",
+			"<div class=\"col)xs-2\"><label(az-AZ)</label>",
+			"form-group",
+			"fa fa-",
+			"\"col-sm-",
+			"col-sm-",
+			"fa fa-",
+			"fa fa",
+			"fa fa-",
+			"brand-info",
+			"gray-dark",
+			"brand-primary",
+			"gray-light",
+			"brand-primary",
+			"gray-lighter",
+			"",
+			"/admin_carte",
+			"newField",
+			"formFields",
+			"",
+			"\"",
+			"\"\"",
+			""
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 4,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "application/front/default/js/core/pikes.core.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 552,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								150,
+								156
+							]
+						],
+						"settings":
+						{
+							"open_with_edit": true,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "application/front/default/js/jquery.customer.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5729,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5693,
+								5693
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 4167.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "application/front/default/js/customer/pikes.homePageCtrl.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 347,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								23,
+								23
+							]
+						],
+						"settings":
+						{
+							"open_with_edit": true,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "application/front/default/js/customer/pikes.customer_init.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 278,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								108,
+								108
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/C/Users/npirotte/Downloads/Adobe Photoshop Lightroom 5.3 Final (64 bit) [ChingLiu]/ChingLiu.Install.Notes.nfo",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2699,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2243,
+								2243
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 69.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "application/front/compilers/default_foot_js.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 823,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								648,
+								648
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "application/front/default/js/core/pikes.init.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 157,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								29,
+								29
+							]
+						],
+						"settings":
+						{
+							"open_with_edit": true,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "application/views/contact/forms/form.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2641,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2456,
+								2456
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 573.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "application/front/default/js/core/pikes.ajax.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2389,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								306,
+								306
+							]
+						],
+						"settings":
+						{
+							"open_with_edit": true,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "application/front/framework/js/jquery.functions.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5368,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3009,
+								3683
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2068.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 25.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 225.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "npirotte.sublime-project",
+	"replace":
+	{
+		"height": 80.0
+	},
+	"save_all_on_build": false,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"jquery.ad",
+				"application/front/admin/js/jquery.admin.js"
+			],
+			[
+				"home",
+				"application/views/pages/home.php"
+			],
+			[
+				"gene",
+				"application/models/general_model.php"
+			],
+			[
+				"0",
+				"application/logs/log-2014-01-01.php"
+			],
+			[
+				"re",
+				"content/resources/resources.json"
+			],
+			[
+				"layou",
+				"application/views/admin/templates/layout.php"
+			],
+			[
+				"styles",
+				"content/admin_mobile/style/styles.less"
+			],
+			[
+				"list",
+				"administration/desktop/pages/list.php"
+			],
+			[
+				"dash",
+				"administration/desktop/dashboard/dashboard.php"
+			],
+			[
+				"manager",
+				"content/admin/js/angular.manager.js"
+			],
+			[
+				"varia",
+				"content/admin/style/bootstrap/variables.less"
+			],
+			[
+				"wel",
+				"content/admin/style/bootstrap/wells.less"
+			],
+			[
+				"typo",
+				"content/admin/style/typography.less"
+			],
+			[
+				"met",
+				"application/views/templates/meta_head.php"
+			],
+			[
+				"customer",
+				"content/default/js/jquery.customer.js"
+			],
+			[
+				"hom",
+				"application/views/pages/home.php"
+			],
+			[
+				"",
+				"/private/var/folders/HZ/HZWFg5izHaqz1M-rUaUnFU+++TI/-Tmp-/21095230-41e6-4569-9968-d24082aa4175/www/reglementation.html"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 625.0,
+		"selected_items":
+		[
+			[
+				"",
+				"D:\\websites\\chiens-en-pension.be\\chiens-en-pension.sublime-project"
+			],
+			[
+				"ny",
+				"D:\\websites\\sextoysreunions.be\\nickye.sublime-project"
+			],
+			[
+				"sec",
+				"/D/websites/sextoysreunions.be/nickye.sublime-project"
+			],
+			[
+				"cu",
+				"/D/websites/cucina-autentica.be/cucina-autentica.sublime-project"
+			],
+			[
+				"cus",
+				"/D/websites/cucina-autentica.be/cucina-autentica.sublime-project"
+			],
+			[
+				"p",
+				"/D/websites/npirotte-2013.be/npirotte.sublime-project"
+			],
+			[
+				"c",
+				"/D/websites/cucina-autentica.be/cucina-autentica.sublime-project"
+			],
+			[
+				"cuc",
+				"/D/websites/cucina-autentica.be/cucina-autentica.sublime-project"
+			],
+			[
+				"des",
+				"/D/websites/deshabitsetmoi.be/deshabitsetmoi.sublime-project"
+			],
+			[
+				"n",
+				"/Volumes/documents/localhost/npirotte-2013.be/npirotte.sublime-project"
+			],
+			[
+				"s",
+				"/Volumes/documents/localhost/sainte-marguerite.be/sainte-marguerite.sublime-project"
+			],
+			[
+				"st",
+				"/Volumes/documents/localhost/sainte-marguerite.be/sainte-marguerite.sublime-project"
+			]
+		],
+		"width": 475.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 440.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

@@ -1,0 +1,56 @@
+<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed'); 
+
+class List_query_filters {
+
+	public function __construct()
+	{
+		$this->CI =& get_instance();
+		$this->config = array();
+
+		print_r('ok');
+	}
+
+	public function configuration($config)
+	{
+		$this->config = $config;
+	}
+
+    public function setFilters()
+    {
+
+		if ($this->input->get('orderprop')) {
+			//gestion des exeptions
+			if($this->input->get('orderprop') != 'childs_count')
+			{
+				$this->news_model->reorder('news_categories.'.$this->input->get('orderprop'), $this->input->get('reverse'));
+			}
+		}
+
+		if ($this->input->get('search')) {
+			$cols = array('name', 'slug', 'id');
+			$this->news_model->filter($this->input->get('search'), $cols);
+		}
+    }
+
+    private function reorder($prop, $sens)
+	{
+		$this->CI->db->order_by($prop, $sens == 'true' ? 'asc' : 'desc');
+	}
+
+	private function filter($query, $cols)
+	{
+		$i = 0;
+
+		foreach ($cols as $key => $value) {
+			if ($i++ === 0) {
+				$this->CI->db->like($value, $query);
+			}
+			else
+			{
+				$this->CI->db->or_like($value, $query);
+			}
+			
+		}
+		
+	}
+}

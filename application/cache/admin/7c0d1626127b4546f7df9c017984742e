@@ -1,0 +1,124 @@
+
+<div id="viewTools">
+     <button data-role="submit" class="btn btn-primary btn-ripple" ng-click="save(true)" ng-disabled="editForm.$invalid">Terminer<i class="fa fa-check-circle"></i></button>
+<button data-role="submit" class="btn btn-primary btn-ripple" ng-click="save()" ng-disabled="editForm.$invalid">Sauver<i class="fa fa-save"></i></button>
+<a data-role="cancel" class="btn btn-default btn-ripple" href="#/{{backUrl ? backUrl : section}}">Retour<i class="fa fa-reply"></i></a>
+<button data-role="delete" ng-if="mode != 'new'" class="btn btn-danger btn-ripple" ng-click="delete()">Supprimer<i class="fa fa-trash-o"></i></button>
+<span id="mainAlert">{{alert}}</span>
+</div>
+
+
+<section>
+	<h1>Catégorie: #{{item.id}} {{item.name}}</h1>
+	<hr>
+	<div error-sumary></div>
+
+	<div class="row">
+		
+		<div class="col-md-9">
+			<form name="editForm" class="form form-horizontal">
+				
+				<div class="row">
+
+					<div class="col-md-6">
+						<h3>Identité</h3>
+						<hr/>
+
+													<div class="form-group">
+								<label class="control-label col-sm-2" for"inputName">Titre fr</label>
+								<div class="col-sm-6">
+									<input type="text" name="name_fr" value="" id="item_name_fr" ng-model="item.name_fr" ng-maxlength="80" data-required="true"  /><div class="label label-danger" ng-show="editForm.name_fr.$error.required && editForm.name_fr.$dirty">Ce champ est requis</div><div class="label label-danger" ng-show="editForm.name_fr.$error.maxlength">Max. 80 caractères.</div>								</div>
+							</div>
+													<div class="form-group">
+								<label class="control-label col-sm-2" for"inputName">Titre en</label>
+								<div class="col-sm-6">
+									<input type="text" name="name_en" value="" id="item_name_en" ng-model="item.name_en" ng-maxlength="80" data-required="true"  /><div class="label label-danger" ng-show="editForm.name_en.$error.required && editForm.name_en.$dirty">Ce champ est requis</div><div class="label label-danger" ng-show="editForm.name_en.$error.maxlength">Max. 80 caractères.</div>								</div>
+							</div>
+						
+						<div class="form-group">
+							<label class="control-label col-sm-2" for"inputWeight">Ordre</label>
+							<div class="col-sm-6">
+								<input type="text" name="weight" value="" id="item_weight" ng-model="item.weight" ng-maxlength="9"  /><div class="label label-danger" ng-show="editForm.weight.$error.maxlength">Max. 9 caractères.</div>							</div>
+						</div>
+					</div>
+
+					<div class="col-md-6">
+						<h3>Métas</h3>
+						<hr />
+						<tabset>
+															<tab heading="fr">
+									<br />
+									<div class="form-group">
+										<label class="control-label col-sm-2">Titre fr</label>
+										<div class="col-sm-6">
+											<input type="text" name="meta_title_fr" value="" id="item_meta_title_fr" ng-model="item.meta_title_fr" ng-maxlength="100"  /><div class="label label-danger" ng-show="editForm.meta_title_fr.$error.maxlength">Max. 100 caractères.</div>										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="control-label col-sm-2">Description fr</label>
+										<div class="col-sm-6">
+											<textarea name="meta_description_fr" cols="40" rows="3" id="item_meta_description_fr" ng-model="item.meta_description_fr" ng-maxlength="300" ></textarea><div class="label label-danger" ng-show="editForm.meta_description_fr.$error.maxlength">Max. 300 caractères.</div>										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="control-label col-sm-2">Keywords</label>
+										<div class="col-sm-6">
+											<input
+											id="page_keywords"
+										    type="hidden"
+										    ui-select2="select2Tags"
+										    ng-model="item.meta_keywords_fr"
+										    ng-if="select2Tags.tags && item"
+										    >
+										</div>
+									</div>
+
+								</tab>
+															<tab heading="en">
+									<br />
+									<div class="form-group">
+										<label class="control-label col-sm-2">Titre en</label>
+										<div class="col-sm-6">
+											<input type="text" name="meta_title_en" value="" id="item_meta_title_en" ng-model="item.meta_title_en" ng-maxlength="100"  /><div class="label label-danger" ng-show="editForm.meta_title_en.$error.maxlength">Max. 100 caractères.</div>										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="control-label col-sm-2">Description en</label>
+										<div class="col-sm-6">
+											<textarea name="meta_description_en" cols="40" rows="3" id="item_meta_description_en" ng-model="item.meta_description_en" ng-maxlength="300" ></textarea><div class="label label-danger" ng-show="editForm.meta_description_en.$error.maxlength">Max. 300 caractères.</div>										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="control-label col-sm-2">Keywords</label>
+										<div class="col-sm-6">
+											<input
+											id="page_keywords"
+										    type="hidden"
+										    ui-select2="select2Tags"
+										    ng-model="item.meta_keywords_en"
+										    ng-if="select2Tags.tags && item"
+										    >
+										</div>
+									</div>
+
+								</tab>
+													</tabset>
+						
+					</div>
+					
+				</div>		
+
+			</form>
+		</div>
+		<div class="col-md-2 col-md-offset-1">
+			<aside id="edit-aside" class="well" ng-if="item.created_on">
+	<strong>Crée le :</strong> {{item.created_on}} <br />
+	<strong>Par : </strong><manager-user-infos userid="item.created_by" ></manager-user-infos>
+
+	<div ng-if="item.modified_on">
+		<strong>Modifié le : </strong> {{item.modified_on}} <br />
+		<strong>Par : </strong><manager-user-infos userid="item.modified_by" ></manager-user-infos>
+	</div>
+</aside>		</div>
+	</div>
+</section>

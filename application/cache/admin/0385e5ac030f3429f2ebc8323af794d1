@@ -1,0 +1,122 @@
+
+
+<div id="viewTools">
+	<button data-role="submit" class="btn btn-primary btn-ripple" ng-click="save(true)" ng-disabled="editForm.$invalid">Terminer<i class="fa fa-check-circle"></i></button>
+<button data-role="submit" class="btn btn-primary btn-ripple" ng-click="save()" ng-disabled="editForm.$invalid">Sauver<i class="fa fa-save"></i></button>
+<a data-role="cancel" class="btn btn-default btn-ripple" href="#/{{backUrl ? backUrl : section}}">Retour<i class="fa fa-reply"></i></a>
+<button data-role="delete" ng-if="mode != 'new'" class="btn btn-danger btn-ripple" ng-click="delete()">Supprimer<i class="fa fa-trash-o"></i></button>
+<span id="mainAlert">{{alert}}</span>
+</div>
+
+<div>
+	<h1>Bannière: #{{item.id}} {{item.img_title}}</h1>
+	Zone de bannière : <a href="#/banner-zones/edit/{{item.parent_id}}">#{{item.parent_id}}</a>
+	<hr>
+	<div error-sumary></div>
+	<div class="row">
+		
+		<div class="col-md-9">
+
+			<h3>Image</h3>
+			<hr>
+			<small>Min. {{parent.width}} x {{parent.height}}</small>
+			<div ng-if="uploader" image-upload config="uploader" item="item.src" ></div>
+
+			<br />
+			<h3>Contenu</h3>
+			<hr />
+
+			<form name="editForm" class="form form-horizontal">
+					
+					<tabset>
+													<tab heading="fr">
+								<br />
+								<div class="form-group">
+									<label class="control-label col-xs-2" for"inputTitle">Titre (image) fr</label>
+									<div class="col-xs-6">
+										<input type="text" name="img_title_fr" value="" id="item_img_title_fr" ng-model="item.img_title_fr" ng-maxlength="80"  /><div class="label label-danger" ng-show="editForm.img_title_fr.$error.maxlength">Max. 80 caractères.</div>									</div>
+								</div>
+
+								<div class="form-group">
+									<label class="control-label col-xs-2" for"inputAlt">texte alternatif fr</label>
+									<div class="col-xs-6">
+										<input type="text" name="alt_fr" value="" id="item_alt_fr" ng-model="item.alt_fr" ng-maxlength="80"  /><div class="label label-danger" ng-show="editForm.alt_fr.$error.maxlength">Max. 80 caractères.</div>									</div>
+								</div>
+
+								<div class="form-group">
+									<label class="control-label col-xs-2" for"inputLink">Lien (URL) fr</label>
+									<div class="col-xs-6">
+										<input type="text" name="link_fr" value="" id="item_link_fr" ng-model="item.link_fr" ng-maxlength="80"  /><div class="label label-danger" ng-show="editForm.link_fr.$error.maxlength">Max. 80 caractères.</div>									</div>
+								</div>
+
+								<div class="form-group">
+									<label class="control-label col-xs-2" for"inputContent">Contenu fr</label>
+									<div class="col-xs-6">
+										<div ng-if="item || mode == 'new'">
+											<textarea name="content_fr" cols="40" rows="10" id="item_content_fr" ng-model="item.content_fr" ng-maxlength="300" ui-tinymce="tinymceOptions" ></textarea><div class="label label-danger" ng-show="editForm.content_fr.$error.maxlength">Max. 300 caractères.</div>										</div>
+									</div>
+								</div>
+								
+							</tab>
+													<tab heading="en">
+								<br />
+								<div class="form-group">
+									<label class="control-label col-xs-2" for"inputTitle">Titre (image) en</label>
+									<div class="col-xs-6">
+										<input type="text" name="img_title_en" value="" id="item_img_title_en" ng-model="item.img_title_en" ng-maxlength="80"  /><div class="label label-danger" ng-show="editForm.img_title_en.$error.maxlength">Max. 80 caractères.</div>									</div>
+								</div>
+
+								<div class="form-group">
+									<label class="control-label col-xs-2" for"inputAlt">texte alternatif en</label>
+									<div class="col-xs-6">
+										<input type="text" name="alt_en" value="" id="item_alt_en" ng-model="item.alt_en" ng-maxlength="80"  /><div class="label label-danger" ng-show="editForm.alt_en.$error.maxlength">Max. 80 caractères.</div>									</div>
+								</div>
+
+								<div class="form-group">
+									<label class="control-label col-xs-2" for"inputLink">Lien (URL) en</label>
+									<div class="col-xs-6">
+										<input type="text" name="link_en" value="" id="item_link_en" ng-model="item.link_en" ng-maxlength="80"  /><div class="label label-danger" ng-show="editForm.link_en.$error.maxlength">Max. 80 caractères.</div>									</div>
+								</div>
+
+								<div class="form-group">
+									<label class="control-label col-xs-2" for"inputContent">Contenu en</label>
+									<div class="col-xs-6">
+										<div ng-if="item || mode == 'new'">
+											<textarea name="content_en" cols="40" rows="10" id="item_content_en" ng-model="item.content_en" ng-maxlength="300" ui-tinymce="tinymceOptions" ></textarea><div class="label label-danger" ng-show="editForm.content_en.$error.maxlength">Max. 300 caractères.</div>										</div>
+									</div>
+								</div>
+								
+							</tab>
+											</tabset>
+
+					<div class="form-group">
+						<label class="control-label col-xs-2" for"inputWeight">Ordre</label>
+						<div class="col-xs-6">
+							<input type="text" name="weight" value="" id="item_weight" ng-model="item.weight" ng-maxlength="9"  /><div class="label label-danger" ng-show="editForm.weight.$error.maxlength">Max. 9 caractères.</div>						</div>
+					</div>
+
+					<div class="form-group">
+						<label class="control-label col-xs-2" for"inputCssclass">Classe Css</label>
+						<div class="col-xs-6">
+							<input type="text" name="cssclass" value="" id="item_cssclass" ng-model="item.cssclass" ng-maxlength="80"  /><div class="label label-danger" ng-show="editForm.cssclass.$error.maxlength">Max. 80 caractères.</div>						</div>
+					</div>
+
+			</form>
+			
+		</div>
+
+		<div class="col-md-2 col-md-offset-1">
+			<aside id="edit-aside" class="well" ng-if="item.created_on">
+				<strong>Crée le :</strong> {{item.created_on}} <br />
+				<strong>Par : </strong><manager-user-infos userid="item.created_by" ></manager-user-infos>
+
+				<div ng-if="item.modified_by">
+					<strong>Modifié le : </strong> {{item.modified_on}} <br />
+					<strong>Par : </strong><manager-user-infos userid="item.modified_by" ></manager-user-infos>
+				</div>
+			</aside>
+		</div>
+    
+	</div>
+
+</div>
