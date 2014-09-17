@@ -14,10 +14,14 @@ class Assets_model extends CI_Model
 			);
 	}
 
-	public function AssetsByParent($parent_id, $parent_identity)
+	public function AssetsByParent($parent_id, $parent_identity, $full = false)
 	{
 		$lang = $this->lang->lang();
-		$this->db->select('id, src, title_'.$lang.' as title, alt_'.$lang.' as alt, weight');
+
+		if (!$full) 
+		{
+			$this->db->select('id, src, title_'.$lang.' as title, alt_'.$lang.' as alt, weight');
+		}
 
 		$this->db->where(array('parent_id' => $parent_id, 'parent_identity' => $parent_identity));
 

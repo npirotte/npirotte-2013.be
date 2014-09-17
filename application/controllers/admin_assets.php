@@ -156,7 +156,7 @@
 	{
 		$this->load->model('assets_model');
 
-		$response = $this->assets_model->AssetsByParent($parent_id, $parent_identity);
+		$response = $this->assets_model->AssetsByParent($parent_id, $parent_identity, true);
 
 		$this->output->set_output($response);
 	}

@@ -6,7 +6,7 @@
 			<tr ng-repeat="asset in assets | filter:query | orderBy:orderProp:reverse" ng-dblclick="openModal(asset.id)">
 				<td><a href="#/{{assetsList.editPath}}{{asset.id}}">#{{asset.id}}</a></td>
 				<td><img id="preview_img" src="/assets/image/{{assetsList.assetPath}}/80x80/{{asset.src}}" alt=""></td>
-				<td>{{asset.title ? asset.title : asset.src}}</td>
+				<td>{{asset.title_<?= $this->lang->lang()?> ? asset.title_<?= $this->lang->lang()?> : asset.src}}</td>
 			</tr>
 
 		</tbody>
