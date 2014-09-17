@@ -37,10 +37,10 @@ Icon
 .Trashes
 
 # Cache
-cache/**/*
+cache/
 
 # Logs
-logs/**/*
+logs/
 
 # Assets
-assets/**/*
+assets/
