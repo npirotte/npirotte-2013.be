@@ -16,7 +16,7 @@
 					</div>
 					<div class="col-md-10">
 						<h2><?=$news->title?></h2>
-						<p><i class="<?=$news->icon?>"></i>  <?= $news->Date() ?></p>
+						<p><i class="fa <?=$news->icon?>"></i>  <?= $news->Date() ?></p>
 						<p><?=$news->resume?></p>
 						<?=anchor($news->Slug(), 'Voir plus');?>
 					</div>

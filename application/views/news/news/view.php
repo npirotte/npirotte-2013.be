@@ -31,6 +31,16 @@
 				<div>
 					<?=$news->content?>
 				</div>
+
+				<?php if (count($imagesViewModel) > 0): ?>
+					<div id="gallery">
+						<?php foreach($imagesViewModel as $image): ?>
+							<a data-gallery class="no-ajax" href="<?=$image->Src()?>">
+								<img src="<?=$image->Src('520x520')?>" alt="<?=$image->alt?>" title="<?=$image->title?>">
+							</a>
+						<?php endforeach; ?>
+					</div>
+				<?php endif; ?>
 			</div>
 			<footer id="news-footer">
 				

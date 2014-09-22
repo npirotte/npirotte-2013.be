@@ -110,7 +110,7 @@
 {
 	$this->load->helper('html');
 	$this->load->helper('view');
-	$this->load->model('tags_model');
+	$this->load->model(array('tags_model', 'assets_model'));
 
 	$filename = $this->smartcache->CacheName('news_'.$slug, array('lang' => $lang, 'ajax' => $this->data->ajax));
 
@@ -152,9 +152,20 @@
 
 		// data supplémentaire
 
+		$images = $this->assets_model->AssetsByParent($id, 'news_item');
+
 		$navigation = $this->news_model->NewsNavigation($news, $news['parent_id']);
 
 		// view model
+
+		//images
+		$imagesDirectory = 'news~'.$id;
+		$data['imagesViewModel'] = array();
+		require_once(APPPATH.'viewModels/assets/AssetImageViewModel.php');
+		
+		foreach ($images as $image) {
+			$data['imagesViewModel'][] = new AssetImageViewModel($image, $imagesDirectory);
+		}
 
 		//news
 		require_once(APPPATH.'viewModels/news/NewsItemViewModel.php');

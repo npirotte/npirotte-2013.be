@@ -10,6 +10,7 @@ var Peaks = function(context, options)
 	this.context = context;
 	this.$context = $(context);
 	this.$page = this.$context.find(this.config.PageSelector); 
+	this.currentUrl = window.location.href;
 }
 
 ;(function()

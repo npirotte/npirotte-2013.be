@@ -12,6 +12,11 @@ MyPeaks.prototype = new Peaks();
 {
 	MyPeaks.prototype.CustomerInitPage = function()
 	{
-		
+		var _this = this;
+
+		this.$context.find('#menu-toggle').click(function()
+		{
+			menuToggle();
+		});
 	}
 })();

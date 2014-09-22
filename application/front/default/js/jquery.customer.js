@@ -152,19 +152,6 @@ function setIntroHeight (h, w)
 var scrollPosition;
 
 
-function killView ()
-{	
-	$('a[data-action="killView"], .media img').click(function(e){
-		e.preventDefault();
-		$('#container').fadeIn();
-		$('#ajax-frame').fadeOut();
-		$('body, html').animate({scrollTop: scrollPosition}, 0);
-	var stateObj = { foo: 1000 + Math.random()*1001 };
-		history.pushState(stateObj, "ajax page loaded...", '/#/portfolio');
-	});
-
-}
-
 $.fn.formFocus = function()
 {
 	'use strict';
@@ -179,51 +166,6 @@ $.fn.formFocus = function()
 		$(this).blur(function()
 		{
 			icon.removeClass('active');
-		});
-	});
-}
-
-$.fn.getNews = function ()
-{
-	'use strict';
-	var $items = $(this),
-		$container = $('#news-view').parent();
-
-	$(this).each(function ()
-	{
-		var $self = $(this),
-			id = $self.find('a').attr('data-id');
-
-		$self.find('a').click(function(e)
-		{
-			e.preventDefault();
-		});
-		
-		$self.click(function(e)
-		{
-			e.preventDefault();
-			console.log(id);
-			$container.css('opacity', 0);
-			
-			$.ajax({
-				url: '/news/get_news_ajax/'+id,
-				cache: true,
-				success: function (data) {
-					// remplissage du contenu
-					$container.html(data);
-					// gestion de l'active
-					$items.removeClass('active');
-					$self.addClass('active');
-				},
-				error: function (data) {
-
-				},
-				complete: function (data) {
-					//$container.unblock(); 
-					$container.css('opacity', 1);
-				}
-			});
-
 		});
 	});
 }
@@ -253,29 +195,3 @@ function initGlobal (parent)
 	$.pageLoader();
 	$('[data-toggle="tooltip"]').tooltip();
 }
-
-function initPortfolioPage (frameId)
-{
-	killView(frameId);
-	if ( initialPage == 'home') {
-		ajaxify($('#ajax-frame'));
-		$('[data-toggle="tooltip"]').tooltip();
-	};
-
-	var h = $(window).height(),
-		w = $('body').width();
-	portfolioViewHeight(w, h);
-	$(window).resize(function () {
-		h = $(window).height();
-		w = $('body').width();
-		portfolioViewHeight(w, h);
-	});	
-
-	$('.toggleAside').toggleAside();
-}
-
-
-$(document).ready(function() {
-	//initGlobal ();
-	//1menuToggle();
-});

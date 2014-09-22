@@ -45,14 +45,6 @@ class Flexi_auth_lite
 		###++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++###
 		// CHECK LOGIN CREDENTIALS ON LOAD
 		###++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++###
-
-		if (isset($this->headers['login_session_token'])) 
-		{
-			$this->auth->app_session_data = array(
-				'user_id' => $this->headers['user_id'],
-				'login_session_token' => $this->headers['login_session_token']
-				);
-		}
 		
 		// Validate login credentials on every page load if set via config file.
 		if ($this->is_logged_in() && $this->CI->auth->auth_security['validate_login_onload'] && !isset($this->CI->flexi_auth_lite_model->auth_verified))
@@ -184,14 +176,7 @@ class Flexi_auth_lite
 	 */
 	public function is_logged_in()
 	{
-		if (isset($this->auth->app_session_data)) 
-		{
-			return (bool) $this->auth->app_session_data['user_id'];
-		}
-		else
-		{
-			return (bool) $this->CI->auth->session_data[$this->CI->auth->session_name['user_id']];	
-		}
+		return (bool) $this->CI->auth->session_data[$this->CI->auth->session_name['user_identifier']];
 	}
 
 	/**

@@ -47,6 +47,12 @@
 				ScrollTop : true
 			},
 			ajaxConfig = $.extend(defaultConfig, options);
+
+
+		if (_this.currentUrl.replace(/#\S*/, '') === url.replace(/#\S*/, '')) 
+		{
+			return false;
+		};
 				
 
 		$.ajax({

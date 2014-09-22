@@ -66,6 +66,7 @@
 
                 jQuery(document).ready(function($) {
                     //var contactFotmCtrl_<?= $form_id ?> = new contactFotmCtrl($('#form_<?= $form_id ?>'), '<?= site_url(array('contact', 'send', $form_id)) ?>');
+                    var contactFotmCtrl_<?= $form_id ?> = new FormCtrl($('#form_<?= $form_id ?>'), '<?= site_url(array('contact', 'send', $form_id)) ?>');
                 });
 
             </script>

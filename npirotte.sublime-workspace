@@ -4,6 +4,50 @@
 		"selected_items":
 		[
 			[
+				"no",
+				"no-ajax"
+			],
+			[
+				"err",
+				"error_list"
+			],
+			[
+				"proto",
+				"prototype"
+			],
+			[
+				"ayy",
+				"array_key_exists"
+			],
+			[
+				"meta",
+				"meta_title"
+			],
+			[
+				"ca",
+				"category_data"
+			],
+			[
+				"prnt",
+				"print_r"
+			],
+			[
+				"me",
+				"meta_keywords"
+			],
+			[
+				"icon",
+				"iconPrefix"
+			],
+			[
+				"ico",
+				"iconsSheet"
+			],
+			[
+				"fa",
+				"faIcons"
+			],
+			[
 				"con",
 				"console"
 			],
@@ -184,10 +228,6 @@
 				"menus_items"
 			],
 			[
-				"me",
-				"menus_menus"
-			],
-			[
 				"menu",
 				"menus_menus"
 			],
@@ -214,10 +254,6 @@
 			[
 				"messa",
 				"messageId"
-			],
-			[
-				"no",
-				"notifications"
 			],
 			[
 				"noti",
@@ -318,10 +354,6 @@
 			[
 				"sele",
 				"select"
-			],
-			[
-				"ca",
-				"callback"
 			],
 			[
 				"new",
@@ -482,123 +514,88 @@
 			[
 				"sc",
 				"scope"
-			],
-			[
-				"req",
-				"required"
-			],
-			[
-				"swo",
-				"showFadeAlert"
-			],
-			[
-				"banne",
-				"banner-zones"
-			],
-			[
-				"tag",
-				"tag_model"
-			],
-			[
-				"Port",
-				"portfolio"
-			],
-			[
-				"tags",
-				"tags_model"
-			],
-			[
-				"publi",
-				"public"
-			],
-			[
-				"remve",
-				"removeClass	.removeClass"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "application/front/default/js/core/pikes.core.js",
+			"file": "application/controllers/news.php",
 			"settings":
 			{
-				"buffer_size": 552,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "application/front/default/js/jquery.customer.js",
-			"settings":
-			{
-				"buffer_size": 5729,
+				"buffer_size": 5834,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "application/front/default/js/customer/pikes.homePageCtrl.js",
+			"file": "application/views/news/news/view.php",
 			"settings":
 			{
-				"buffer_size": 347,
-				"line_ending": "Windows"
+				"buffer_size": 1987,
+				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "application/front/default/js/customer/pikes.customer_init.js",
+			"file": "application/views/templates/layout.php",
 			"settings":
 			{
-				"buffer_size": 278,
-				"line_ending": "Windows"
+				"buffer_size": 940,
+				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/C/Users/npirotte/Downloads/Adobe Photoshop Lightroom 5.3 Final (64 bit) [ChingLiu]/ChingLiu.Install.Notes.nfo",
+			"file": "application/views/news/news/list.php",
 			"settings":
 			{
-				"buffer_size": 2699,
-				"line_ending": "Windows"
+				"buffer_size": 798,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "application/views/news/widgets/news_list.php",
+			"settings":
+			{
+				"buffer_size": 529,
+				"line_ending": "Unix"
 			}
 		},
 		{
 			"file": "application/front/compilers/default_foot_js.php",
 			"settings":
 			{
-				"buffer_size": 823,
+				"buffer_size": 1124,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "application/front/default/js/core/pikes.init.js",
+			"file": "application/front/default/style_compilator.less",
 			"settings":
 			{
-				"buffer_size": 157,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "application/views/contact/forms/form.php",
-			"settings":
-			{
-				"buffer_size": 2641,
+				"buffer_size": 430,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "application/front/default/js/core/pikes.ajax.js",
+			"file": "application/front/default/plugins/gallery/css/blueimp-gallery.less",
 			"settings":
 			{
-				"buffer_size": 2389,
-				"line_ending": "Windows"
+				"buffer_size": 5720,
+				"line_ending": "Unix"
 			}
 		},
 		{
-			"contents": " /* code by n.pirotte */\n\n;function contactFotmCtrl($form, url)\n{\n\n    var $alert = $form.find('.error-summary');\n\n    $form.submit(function()\n    {\n        formSubmit();\n        return false;\n    });\n\n    function cleanErrors()\n    {\n        $form.find('.formfield-alert').remove();\n    }\n\n    function formErrors(message, error_list)\n    {\n        cleanErrors();\n\n        $alert\n            .removeClass()\n            .addClass('alert alert-danger')\n            .html(message)\n            .fadeIn();\n\n        // gestion des erreurs\n        error_list.forEach(function(value)\n        {\n            var field = value.field_name,\n                error = '<div class=\"formfield-alert label label-danger\">' + value.message + '</div>';\n\n            $('[name=\"' + field + '\"').after(error);\n        });\n    }\n\n    function formSuccess(message)\n    {\n        cleanErrors();\n\n        $alert\n            .removeClass()\n            .addClass('alert alert-success')\n            .text(message)\n            .fadeIn();\n\n        $form.clearForm();\n    }\n\n    function formSubmit()\n    {\n         $.ajax({\n            url: url, // le nom du fichier indiqué dans le formulaire\n            type: 'POST', // la méthode indiquée dans le formulaire (get ou post)\n            data: $form.serialize(), // je sérialise les données (voir plus loin), ici les $_POST,\n            dataType: 'json',\n            success: function(data) { // je récupère la réponse du fichier PHP\n                console.log(data);\n                if (data.error == 1) {\n                    formErrors(data.message, data.error_list);\n                }\n                else\n                {\n                    formSuccess(data.message);\n                }\n            }\n        });\n    }\n}\n\n// clear form function ///////////////////////////////////////////\n\n$.fn.clearForm = function() {\n    return this.each(function() {\n        var type = this.type,\n            tag = this.tagName.toLowerCase();\n        if (tag == 'form') return $(':input', this).clearForm();\n        if (type == 'text' || type == 'password' || tag == 'textarea') this.value = '';\n        else if (type == 'checkbox' || type == 'radio') this.checked = false;\n        else if (tag == 'select') this.selectedIndex = -1;\n    });\n};\n\n// kill the modals //\nfunction closeModal()\n {\n    $('.modal').fadeOut();\n}\n\n\n// active classes managements\n\n(function()\n{\n    $.fn.manageActiveLinks = function()\n    {\n        var currentUrl = window.location.href;\n        currentUrl = currentUrl.replace(/#*/, '');\n        $(this).each(function()\n        {\n            var $_this = $(this);\n\n            // reset des links\n            $_this.find('.active').removeClass('active');\n\n            // application des liens\n            $_this.find('a[href=\"'+currentUrl+'\"]')\n                .addClass('active')\n                .parent()\n                .addClass('active');\n\n        });\n\n        return $(this);\n    }\n})();\n\n\n// ajaxify\n\n(function($)\n{\n\n    var currentUrl,\n        $body = $('body');\n\n    function ajaxify()\n    {\n        $(document).on(\n            'click',\n            'a',\n            function(e)\n            {\n                var $self = $(this),\n                    url = $self.attr('href');\n\n                if (url \n                    && !$self.hasClass('no-ajax')\n                    && $self.attr('target') != \"_blank\"\n                    && $self.attr('target') != \"blank\"\n                    //&& uri.match(/http/)\n                    && !url.match(/mailto:/)\n                     /* plus exeptions */) {\n                    e.preventDefault();\n                    window.getPage($('#container'), url);\n                };\n            }\n        )\n    }\n\n    window.getPage = function($target, url)\n    {\n       $.ajax({\n        url: url,\n        cache: true,\n        dataType: 'html',\n        beforeSend : function()\n        {\n            var stateObj = { foo: 1000 + Math.random()*1001 };\n            try\n            {\n                history.pushState(stateObj, \"ajax page loaded...\", url);\n            }\n            catch(e)\n            {\n                console.log(e);\n                window.location.href = url;\n            }\n\n            $body.addClass('loading');\n            $target\n                .removeClass('loaded')\n                .addClass('go-out');\n        },\n        success: function(data)\n        {\n            currentUrl = window.location.pathname;\n            \n            $target.html(data);\n\n            $('html, body').animate({ scrollTop: 0}, 0);\n\n            $target\n                .removeClass('go-out')\n                .addClass('loaded');\n\n            $('#main-menu').manageActiveLinks();\n\n            //var stateObj = { foo: 1000 + Math.random()*1001 };\n            //history.pushState(stateObj, \"ajax page loaded...\", url);\n\n            //window.onpopstate = getPage(history.location || document.location)\n        },\n        complete : function(data)\n        {\n            $body.removeClass('loading');\n        },\n        error: function(data)\n        {\n            //alert('Erreur lors du chargement de la page');\n        }\n       });\n    }\n\n    window.onpopstate = function(e) { \n        if (currentUrl && currentUrl != window.location.pathname) {\n            getPage($('#container'), window.location.href);\n        };\n    }\n\n    $(document).ready(function(){\n        ajaxify();\n    })\n\n})(jQuery);\n\n",
-			"file": "application/front/framework/js/jquery.functions.js",
-			"file_size": 5375,
-			"file_write_time": 130527034762575107,
+			"file": "application/front/default/plugins/gallery/js/jquery.blueimp-gallery.js",
 			"settings":
 			{
-				"buffer_size": 5368,
+				"buffer_size": 2633,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "application/controllers/portfolio.php",
+			"settings":
+			{
+				"buffer_size": 8118,
 				"line_ending": "Unix"
 			}
 		}
@@ -691,41 +688,78 @@
 	},
 	"file_history":
 	[
-		"/D/websites/npirotte-2013.be/application/front/default/js/customer/pikes.customer_init.js",
+		"/D/websites/npirotte-2013.be/application/front/default/plugins/gallery/css/demo.css",
+		"/D/websites/npirotte-2013.be/application/controllers/admin_news.php",
+		"/D/websites/npirotte-2013.be/application/front/default/js/core/peaks.core.js",
 		"/D/websites/npirotte-2013.be/application/front/compilers/default_foot_js.php",
+		"/D/websites/npirotte-2013.be/application/front/default/js/core/peaks.init.js",
+		"/D/websites/npirotte-2013.be/application/views/contact/forms/form.php",
+		"/D/websites/npirotte-2013.be/application/front/default/js/core/peaks.ajax.js",
+		"/D/websites/npirotte-2013.be/application/front/default/js/widgets/contactForm.js",
+		"/D/websites/npirotte-2013.be/application/front/default/js/customer/peaks.homePageCtrl.js",
+		"/D/websites/npirotte-2013.be/application/front/default/js/customer/peaks.news.js",
 		"/D/websites/npirotte-2013.be/application/front/default/js/jquery.customer.js",
+		"/D/websites/npirotte-2013.be/application/front/default/js/customer/peaks.customer_init.js",
+		"/D/websites/npirotte-2013.be/application/front/default/js/customer/peaks.portfolio.js",
+		"/D/websites/npirotte-2013.be/application/front/framework/js/jquery.functions.js",
+		"/D/websites/npirotte-2013.be/application/front/default/js/widgtet/contactForm.js",
+		"/D/websites/npirotte-2013.be/application/front/default/js/core/peaks.contactForm.js",
+		"/D/websites/npirotte-2013.be/application/controllers/admin_manager.php",
+		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.admin.js",
+		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.news.js",
+		"/D/websites/npirotte-2013.be/application/models/flexi_auth_lite_model.php",
+		"/D/websites/npirotte-2013.be/application/libraries/Flexi_auth_lite.php",
+		"/D/websites/npirotte-2013.be/application/front/default/style/styles.less",
+		"/C/Users/npirotte/Downloads/WRC.4.FIA.World.Rally.Championship-RELOADED/reloaded.nfo",
+		"/D/websites/npirotte-2013.be/application/models/assets_model.php",
+		"/D/websites/npirotte-2013.be/application/controllers/admin_assets.php",
+		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/assets/widgets/assets_list_modal.php",
+		"/D/websites/npirotte-2013.be/.gitignore",
+		"/D/websites/npirotte-2013.be/application/models/banners_model.php",
+		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/assets/widgets/asset_modal.php",
+		"/D/websites/npirotte-2013.be/application/models/tags_model.php",
+		"/D/websites/npirotte-2013.be/application/models/models/assets/images.php",
+		"/D/websites/npirotte-2013.be/application/viewModels/global/HeaderViewModel.php",
+		"/D/websites/npirotte-2013.be/application/models/portfolio_model.php",
+		"/D/websites/npirotte-2013.be/application/controllers/portfolio.php",
+		"/D/websites/npirotte-2013.be/application/controllers/admin_portfolio.php",
+		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.portfolio.js",
+		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/portfolio/categories/edit.php",
+		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/news/news/edit.php",
+		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.portfolioRepositories.js",
+		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/portfolio/portfolio/edit.php",
+		"/D/websites/npirotte-2013.be/application/models/news_model.php",
+		"/D/websites/npirotte-2013.be/application/front/compilers/admin_foot_js.php",
+		"/D/websites/npirotte-2013.be/application/front/framework/font-awesome/less/icons.less",
+		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.iconsService.js",
+		"/D/websites/npirotte-2013.be/application/controllers/admin_helpers.php",
+		"/D/websites/npirotte-2013.be/application/views/news/news/view.php",
+		"/D/websites/npirotte-2013.be/application/front/default/js/core/pikes.ajax.js",
+		"/D/websites/npirotte-2013.be/application/front/default/js/core/pikes.init.js",
+		"/D/websites/npirotte-2013.be/application/front/default/js/core/pikes.core.js",
+		"/D/websites/npirotte-2013.be/application/front/default/js/customer/pikes.homePageCtrl.js",
+		"/D/websites/npirotte-2013.be/application/front/default/js/customer/pikes.customer_init.js",
+		"/C/Users/npirotte/Downloads/Adobe Photoshop Lightroom 5.3 Final (64 bit) [ChingLiu]/ChingLiu.Install.Notes.nfo",
 		"/D/websites/npirotte-2013.be/application/front/default/js/canvaIntro.js",
 		"/D/websites/npirotte-2013.be/application/front/default/js/paper-full.min.js",
 		"/D/websites/npirotte-2013.be/index.php",
 		"/D/websites/npirotte-2013.be/application/models/models/news/categories.php",
-		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/portfolio/categories/edit.php",
 		"/D/websites/npirotte-2013.be/application/config/routes.php",
 		"/D/websites/npirotte-2013.be/application/controllers/news.php",
 		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/news/categories/edit.php",
 		"/D/websites/npirotte-2013.be/application/models/models/banners/banners.php",
-		"/D/websites/npirotte-2013.be/application/models/news_model.php",
-		"/D/websites/npirotte-2013.be/application/models/portfolio_model.php",
-		"/D/websites/npirotte-2013.be/application/models/banners_model.php",
 		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/banners/banner/edit.php",
 		"/D/websites/npirotte-2013.be/application/helpers/banners/banners_helper.php",
 		"/D/websites/npirotte-2013.be/application/libraries/smartcache.php",
 		"/D/websites/npirotte-2013.be/application/controllers/pages.php",
-		"/D/websites/npirotte-2013.be/application/controllers/portfolio.php",
-		"/D/websites/npirotte-2013.be/application/front/compilers/admin_foot_js.php",
-		"/D/websites/npirotte-2013.be/application/controllers/admin_news.php",
 		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.newsRepositories.js",
-		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.news.js",
 		"/D/websites/npirotte-2013.be/application/models/models/news/items.php",
 		"/D/websites/npirotte-2013.be/application/views/admin/templates/layout.php",
-		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/portfolio/portfolio/edit.php",
 		"/D/websites/npirotte-2013.be/application/models/models/portfolio/categories.php",
-		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.portfolio.js",
 		"/D/websites/npirotte-2013.be/application/libraries/Models_service.php",
-		"/D/websites/npirotte-2013.be/application/viewModels/global/HeaderViewModel.php",
 		"/D/websites/npirotte-2013.be/application/viewModels/portfolio/PorfolioItemViewModel.php",
 		"/D/websites/npirotte-2013.be/application/viewModels/portfolio/PortfolioCategoriesListViewModel.php",
 		"/D/websites/npirotte-2013.be/application/viewModels/portfolio/ThumbListWidgetViewModel.php",
-		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/news/news/edit.php",
 		"/D/websites/npirotte-2013.be/application/models/models/pages/pages.php",
 		"/D/websites/npirotte-2013.be/application/models/models/portfolio/items.php",
 		"/D/websites/npirotte-2013.be/application/models/menus_model.php",
@@ -733,7 +767,6 @@
 		"/D/websites/npirotte-2013.be/application/models/db_model.php",
 		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/shared/widgets/tree.php",
 		"/D/websites/npirotte-2013.be/system/helpers/view_helper.php",
-		"/D/websites/npirotte-2013.be/application/front/default/style/styles.less",
 		"/D/websites/npirotte-2013.be/application/controllers/admin_pages.php",
 		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.pagesRepositories.js",
 		"/D/websites/npirotte-2013.be/application/libraries/MY_Form_validation.php",
@@ -771,54 +804,18 @@
 		"/D/websites/npirotte-2013.be/application/models/models/global/config.php",
 		"/D/websites/npirotte-2013.be/application/models/models/global/log.php",
 		"/D/websites/npirotte-2013.be/application/models/models/global/tags_links.php",
-		"/D/websites/npirotte-2013.be/application/models/models/assets/images.php",
 		"/D/websites/npirotte-2013.be/application/models/models/global/tags.php",
 		"/D/websites/npirotte-2013.be/application/models/models/menus/items.php",
 		"/D/websites/npirotte-2013.be/application/views/pages/canvas.php",
 		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.notifications.js",
 		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.contact.js",
-		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.admin.js",
 		"/D/websites/npirotte-2013.be/application/front/admin/style/styles.less",
 		"/D/websites/npirotte-2013.be/application/front/admin/style/bootstrap/badges.less",
 		"/D/websites/npirotte-2013.be/application/models/contact_model.php",
 		"/D/websites/npirotte-2013.be/application/front/admin/style/animate.less",
-		"/D/websites/npirotte-2013.be/application/front/framework/js/jquery.functions.js",
 		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.manager.js",
 		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/shared/views/list.php",
-		"/D/websites/npirotte-2013.be/application/views/templates/meta_head.php",
-		"/D/websites/npirotte-2013.be/application/views/templates/meta_foot.php",
-		"/D/websites/npirotte-2013.be/application/views/contact/forms/form.php",
-		"/D/websites/npirotte-2013.be/application/controllers/assets.php",
-		"/D/websites/npirotte-2013.be/application/views/banners/banners.php",
-		"/D/websites/npirotte-2013.be/application/viewModels/news/LastNewsWidgetViewModel.php",
-		"/D/websites/npirotte-2013.be/application/viewModels/news/NewsItemViewModel.php",
-		"/D/websites/npirotte-2013.be/application/viewModels/news/NewsListViewModel.php",
-		"/D/websites/npirotte-2013.be/application/views/admin/pages/login.php",
-		"/D/websites/npirotte-2013.be/application/helpers/pages/menus_helper.php",
-		"/D/websites/npirotte-2013.be/application/libraries/MY_Parser.php",
-		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/menus/items/edit.php",
-		"/D/websites/npirotte-2013.be/application/views/templates/layout.php",
-		"/D/websites/npirotte-2013.be/application/views/pages/widgets/menu.php",
-		"/D/websites/npirotte-2013.be/application/views/pages/widgets/menu_item.php",
-		"/D/websites/npirotte-2013.be/application/libraries/url_service.php",
-		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.menusRepositories.js",
-		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.menus.js",
-		"/D/websites/npirotte-2013.be/application/front/admin/js/angular-bootstrap-checkbox.js",
-		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.urlService.js",
-		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/banners/bannerzone/edit.php",
-		"/D/websites/npirotte-2013.be/application/controllers/admin_portfolio.php",
-		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/menus/menus/edit.php",
-		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.menuRepositories.js",
-		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.menu.js",
-		"/D/websites/npirotte-2013.be/application/controllers/admin_banners.php",
-		"/D/websites/npirotte-2013.be/application/models/menusService.php",
-		"/D/websites/npirotte-2013.be/application/models/users_model.php",
-		"/D/websites/npirotte-2013.be/application/front/cache/admin_combined.css",
-		"/D/websites/npirotte-2013.be/.htaccess",
-		"/D/websites/npirotte-2013.be/application/config/database.exlude",
-		"/D/websites/npirotte-2013.be/application/config/database.php",
-		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/contacts/informations/edit.php",
-		"/D/websites/npirotte-2013.be/application/helpers/contact/contact_helper.php"
+		"/D/websites/npirotte-2013.be/application/views/templates/meta_head.php"
 	],
 	"find":
 	{
@@ -838,6 +835,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"get",
+			"is_logged_in",
+			"Pikes",
 			"InitPage",
 			"canvaIntro",
 			"news_list",
@@ -962,10 +962,7 @@
 			"		\n",
 			"list",
 			"flushCache",
-			"port",
-			"porf",
-			"child_id",
-			"simple_categories_list"
+			"port"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -973,6 +970,7 @@
 		"regex": true,
 		"replace_history":
 		[
+			"Peaks",
 			"_this",
 			"~",
 			"Menus_model",
@@ -1040,167 +1038,24 @@
 	"groups":
 	[
 		{
-			"selected": 4,
+			"selected": 3,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "application/front/default/js/core/pikes.core.js",
+					"file": "application/controllers/news.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 552,
+						"buffer_size": 5834,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								150,
-								156
-							]
-						],
-						"settings":
-						{
-							"open_with_edit": true,
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "application/front/default/js/jquery.customer.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 5729,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								5693,
-								5693
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 4167.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "application/front/default/js/customer/pikes.homePageCtrl.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 347,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								23,
-								23
-							]
-						],
-						"settings":
-						{
-							"open_with_edit": true,
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "application/front/default/js/customer/pikes.customer_init.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 278,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								108,
-								108
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "/C/Users/npirotte/Downloads/Adobe Photoshop Lightroom 5.3 Final (64 bit) [ChingLiu]/ChingLiu.Install.Notes.nfo",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2699,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2243,
-								2243
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 69.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "application/front/compilers/default_foot_js.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 823,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								648,
-								648
+								4025,
+								4040
 							]
 						],
 						"settings":
@@ -1209,92 +1064,62 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "application/front/default/js/core/pikes.init.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 157,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								29,
-								29
-							]
-						],
-						"settings":
-						{
-							"open_with_edit": true,
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "application/views/contact/forms/form.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2641,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2456,
-								2456
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 573.0,
+						"translation.y": 1275.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 8,
 					"type": "text"
 				},
 				{
-					"buffer": 8,
-					"file": "application/front/default/js/core/pikes.ajax.js",
+					"buffer": 1,
+					"file": "application/views/news/news/view.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2389,
+						"buffer_size": 1987,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								306,
-								306
+								1128,
+								1128
 							]
 						],
 						"settings":
 						{
-							"open_with_edit": true,
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": -0.0,
+						"translation.y": 22.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "application/views/templates/layout.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 940,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								939,
+								939
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -1304,20 +1129,166 @@
 					"type": "text"
 				},
 				{
-					"buffer": 9,
-					"file": "application/front/framework/js/jquery.functions.js",
+					"buffer": 3,
+					"file": "application/views/news/news/list.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5368,
+						"buffer_size": 798,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3009,
-								3683
+								544,
+								544
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "application/views/news/widgets/news_list.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 529,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								191,
+								191
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "application/front/compilers/default_foot_js.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1124,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								431,
+								431
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "application/front/default/style_compilator.less",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 430,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								327,
+								327
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LESS/LESS.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "application/front/default/plugins/gallery/css/blueimp-gallery.less",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5720,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								17,
+								17
+							]
+						],
+						"settings":
+						{
+							"open_with_edit": true,
+							"syntax": "Packages/LESS/LESS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "application/front/default/plugins/gallery/js/jquery.blueimp-gallery.js",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 2633,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
 							]
 						],
 						"settings":
@@ -1326,8 +1297,37 @@
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
+						"translation.x": -0.0,
+						"translation.y": 390.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "application/controllers/portfolio.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 8118,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5949,
+								6225
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
 						"translation.x": 0.0,
-						"translation.y": 2068.0,
+						"translation.y": 3176.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 9,
@@ -1463,8 +1463,12 @@
 		"selected_items":
 		[
 			[
+				"adm",
+				"D:\\webapps\\adminMobile\\adminMobile.sublime-project"
+			],
+			[
 				"",
-				"D:\\websites\\chiens-en-pension.be\\chiens-en-pension.sublime-project"
+				"D:\\webapps\\adminMobile\\adminMobile.sublime-project"
 			],
 			[
 				"ny",

@@ -309,7 +309,9 @@ function EditNews($scope, $http, $routeParams, tagsRespository, newsCategoriesRe
     getThePage();
   }
   else {
-    setTimeout("$('form').formValidation();",10);
     $scope.hideForNew = true;
+    $scope.item = {
+      meta_tags : []
+    }
   }
 }

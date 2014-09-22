@@ -4,7 +4,7 @@
 		<?php foreach($items as $item): ?>
 			<li class="<?= $item->cssClass?>">
 				<div class="pull-left">
-					<i class="<?=$item->icon?>"></i>
+					<i class="fa <?=$item->icon?>"></i>
 					<span class="date"><?=$item->published_on?></span>
 				</div>
 				<?= anchor($item->slug(), $item->title, array('class' => 'no-ajax', 'data-id' => $item->id))?>

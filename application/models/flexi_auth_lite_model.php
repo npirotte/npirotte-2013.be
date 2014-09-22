@@ -44,10 +44,6 @@ class Flexi_auth_lite_model extends CI_Model
 		$this->db->cache_off();
 
 		###++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++###
-
-		// hack pour une identification par header
-
-		$this->headers = apache_request_headers();
 		
 		// Sessions and cookies
 		$this->auth->session_name = $this->config->item('sessions','flexi_auth');
@@ -57,13 +53,6 @@ class Flexi_auth_lite_model extends CI_Model
 		if ($this->session->userdata($this->auth->session_name['name']) !== FALSE)
 		{
 			$this->auth->session_data = $this->session->userdata($this->auth->session_name['name']);
-		}
-		else if (isset($this->headers['login_session_token'])) 
-		{
-			$this->auth->session_data = array(
-				'user_id' => $this->headers['user_id'],
-				'login_session_token' => $this->headers['login_session_token']
-				);
 		}
 		else
 		{
@@ -174,7 +163,6 @@ class Flexi_auth_lite_model extends CI_Model
 		
 		// Global template data.
 		$this->auth->template_data = array();
-
 	}
 	
 	public function &__get($key)
@@ -377,7 +365,6 @@ class Flexi_auth_lite_model extends CI_Model
 	 */
 	public function validate_database_login_session()
 	{
-		
 		$user_id = $this->auth->session_data[$this->auth->session_name['user_id']];
 		$session_token = $this->auth->session_data[$this->auth->session_name['login_session_token']];
 		

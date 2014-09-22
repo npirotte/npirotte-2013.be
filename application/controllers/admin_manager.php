@@ -19,10 +19,12 @@
 
 		// headers pour app mobile //
 
-		/*$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate");
-		$this->output->set_header('Access-Control-Allow-Origin: *');
+		$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate");
 		$this->output->set_header('Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept, user_id, login_session_token');
-*/
+		$this->output->set_header('Access-Control-Allow-Origin: *');
+
+		$headers = apache_request_headers();
+
 		// Authentification
 		if ($this->flexi_auth->is_logged_in()) 
 		{
@@ -45,6 +47,9 @@
 
 	public function _output($output)
 	{
+		$headers = apache_request_headers();
+
+		$output['headers'] = array_key_exists('login_session_token', $headers);
 	    $this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate");
 		echo json_encode($output);
 	}

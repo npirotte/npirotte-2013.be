@@ -8,12 +8,17 @@ $files = array(
 	//APPPATH .'front/framework/js/jquery.functions.js',
 	//APPPATH .'front/default/js/canvaIntro.js',
 	APPPATH .'front/default/plugins/flexslider/jquery.flexslider.js',
+	APPPATH .'front/default/plugins/gallery/je/blueimp-gallery.js',
+	APPPATH .'front/default/plugins/gallery/je/jquery.blueimp-gallery.js',
 	//APPPATH . "front/default/plugins/ripple/jquery.ripple.js",
 	//APPPATH .'front/default/js/jquery.portfolio.js',
 	APPPATH .'front/default/js/core/peaks.core.js',
 	APPPATH .'front/default/js/core/peaks.ajax.js',
+	APPPATH .'front/default/js/widgets/contactForm.js',
 	APPPATH .'front/default/js/jquery.customer.js',	
 	APPPATH .'front/default/js/customer/peaks.customer_init.js',
 	APPPATH .'front/default/js/customer/peaks.homePageCtrl.js',
+	APPPATH .'front/default/js/customer/peaks.portfolio.js',
+	APPPATH .'front/default/js/customer/peaks.news.js',
 	APPPATH .'front/default/js/core/peaks.init.js'
 	);

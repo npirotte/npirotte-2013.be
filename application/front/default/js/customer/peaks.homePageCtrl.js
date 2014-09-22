@@ -14,7 +14,10 @@
 		setIntroHeight(h, w);
 		menuActivity();
 
-		//$('input, textarea').formFocus();
+		$('input, textarea').formFocus();
+
+		this.PorfolioWidget();
+		this.NewsWidget();
 
 		//canvaIntro();
 	}
