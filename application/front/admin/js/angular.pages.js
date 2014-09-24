@@ -26,7 +26,7 @@ function PagesListCtrl($scope, $http, $injector)
 }
 
 
-function PagesEditCtrl($rootScope, $scope, $routeParams, pagesRepository, templatesRespository, tagsRespository, _) {
+function PagesEditCtrl($rootScope, $scope, $routeParams, pagesRepository, templatesRespository, tagsRespository, groupsRespository, _) {
 
   init_page();
   menuControl('pages');
@@ -78,6 +78,18 @@ function PagesEditCtrl($rootScope, $scope, $routeParams, pagesRepository, templa
     pagesRepository.getPage(id, function(data)
     {
       $scope.item = data.page_data;
+
+      var userGroups = data.page_data.user_groups.split(',');
+
+      $scope.userGroups = [];
+      groupsRespository.GetGroups(function(data)
+      {
+        $scope.userGroups = data; 
+        angular.forEach(data, function(item)
+        {
+          item.checked = _.indexOf(userGroups, item.id) >= 0;
+        });   
+      });
 
       if (data.page_data.type === 'template' && getTemplateValues) {
         templatesRespository.getTemplateFields(data.page_data.template, function(data_sub)
@@ -140,6 +152,18 @@ function PagesEditCtrl($rootScope, $scope, $routeParams, pagesRepository, templa
       if ($scope.item.type === 'file') {
         $scope.templateFields = false;
       };
+
+      $scope.item.user_groups = '';
+
+      angular.forEach($scope.userGroups, function(group){
+        if (group.checked) {
+          $scope.item.user_groups += group.id + ',';
+        };
+      });
+
+      $scope.item.user_groups = $scope.item.user_groups.substring(0, $scope.item.user_groups.length-1);
+
+      console.log($scope.userGroups);
 
       if (id != 'new' && ($scope.item.parent_id != $scope.item.cache.parent_id || $scope.item.weight != $scope.item.cache.weight)) {
         broadcast = true;

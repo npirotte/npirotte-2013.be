@@ -70,6 +70,10 @@ $database['pages'] = array(
 			'type' => 'INT',
 			'constraint' => 10
 			),
+		'user_groups' => array(
+			'type' => 'VARCHAR',
+			'constraint' => 80
+			),
 		'created_on' => array(
 			'type' => 'DATETIME'
 			),

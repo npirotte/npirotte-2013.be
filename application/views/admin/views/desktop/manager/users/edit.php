@@ -70,6 +70,17 @@
 									<?php print_input($self, 'text', 'user_accounts', 'email', 'item', 'editForm') ?>
 								</div>
 							</div>
+
+							<h4>Droits</h4>
+							<hr />
+							<div class="form-group">
+								<label class="control-label col-xs-3" for"inputEmail">Groupe d'utilisateurs</label>
+								<div class="col-xs-6">
+									<select  ng-model="item.group_fk">
+										<option value="{{group.id}}" ng-repeat="group in userGroups">{{group.ugrp_name}}</option>
+									</select>
+								</div>
+							</div>
 						</div>
 						<div class="col-sm-6" ng-if="item.user_id">
 							<h4>Informations complémentaires</h4>

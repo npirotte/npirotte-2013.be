@@ -353,7 +353,7 @@
 	 * TRUE = Login credentials are validated against the database everytime a page is loaded, invalid users are logged out automatically.
 	 * FALSE = Login credentials are validated only once at time of login and will not expire until CI sessions expire (Defined via CI config file).
 	*/
-	$config['security']['validate_login_onload'] = TRUE;
+	$config['security']['validate_login_onload'] = FALSE;
 	
 	/**
 	 * Set the lifetime of a user login session in seconds.

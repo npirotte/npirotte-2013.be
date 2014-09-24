@@ -19,11 +19,9 @@
 
 		// headers pour app mobile //
 
-		$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate");
+		/*$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate");
 		$this->output->set_header('Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept, user_id, login_session_token');
-		$this->output->set_header('Access-Control-Allow-Origin: *');
-
-		$headers = apache_request_headers();
+		$this->output->set_header('Access-Control-Allow-Origin: *');*/
 
 		// Authentification
 		if ($this->flexi_auth->is_logged_in()) 
@@ -47,9 +45,6 @@
 
 	public function _output($output)
 	{
-		$headers = apache_request_headers();
-
-		$output['headers'] = array_key_exists('login_session_token', $headers);
 	    $this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate");
 		echo json_encode($output);
 	}
@@ -148,6 +143,53 @@
 	delete_files(APPPATH.'cache/');
 	$this->output->set_output($this->data);
 	
+}
+
+	public function user_group_details($id)
+{
+	$this->data = $this->users_model->user_group_details($id);
+	$this->output->set_output($this->data);
+}
+
+	public function user_group_edit()
+{
+	$data = json_decode(file_get_contents('php://input'));
+	$data = get_object_vars($data);
+
+	if (!array_key_exists('id', $data)) 
+	{
+		$data['id'] = $this->users_model->insert_user_group($data);
+	}
+	else
+	{
+		$this->users_model->update_user_group($data);
+	}
+
+	$this->data['message'] = $this->flexi_auth->error_messages();
+
+	count($this->data['message']) === 0 ? $this->data['error'] = 0 : $this->data['error'] = 1;
+
+	if ($this->data['error'] === 0) {
+		$this->data['message'] = $this->flexi_auth->status_messages();
+		$this->data['id'];
+	}
+
+	$this->cache_manager->DeletePagesCache();
+	$this->cache_manager->DeleteDbCache();
+
+	$this->output->set_output($this->data);
+}
+
+	public function user_groups_list($limit, $offset)
+{
+	$data = $this->users_model->user_groups_list($limit, $offset);
+
+ 	$this->output->set_output($data);
+}
+	
+	public function user_group_delete($id)
+{
+	$this->flexi_auth->delete_group($id);
 }
 
 	public function day_visits()

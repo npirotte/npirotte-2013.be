@@ -520,43 +520,19 @@
 	"buffers":
 	[
 		{
-			"file": "application/controllers/news.php",
-			"settings":
-			{
-				"buffer_size": 5834,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "application/views/news/news/view.php",
-			"settings":
-			{
-				"buffer_size": 1987,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "application/views/templates/layout.php",
-			"settings":
-			{
-				"buffer_size": 940,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "application/views/news/news/list.php",
-			"settings":
-			{
-				"buffer_size": 798,
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "application/views/news/widgets/news_list.php",
 			"settings":
 			{
 				"buffer_size": 529,
 				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "application/front/default/js/canvaIntro.js",
+			"settings":
+			{
+				"buffer_size": 4755,
+				"line_ending": "Windows"
 			}
 		},
 		{
@@ -580,14 +556,6 @@
 			"settings":
 			{
 				"buffer_size": 5720,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "application/front/default/plugins/gallery/js/jquery.blueimp-gallery.js",
-			"settings":
-			{
-				"buffer_size": 2633,
 				"line_ending": "Unix"
 			}
 		},
@@ -688,6 +656,10 @@
 	},
 	"file_history":
 	[
+		"/D/websites/npirotte-2013.be/application/controllers/news.php",
+		"/D/websites/npirotte-2013.be/application/views/news/news/view.php",
+		"/D/websites/npirotte-2013.be/application/views/templates/layout.php",
+		"/D/websites/npirotte-2013.be/application/views/news/news/list.php",
 		"/D/websites/npirotte-2013.be/application/front/default/plugins/gallery/css/demo.css",
 		"/D/websites/npirotte-2013.be/application/controllers/admin_news.php",
 		"/D/websites/npirotte-2013.be/application/front/default/js/core/peaks.core.js",
@@ -733,7 +705,6 @@
 		"/D/websites/npirotte-2013.be/application/front/framework/font-awesome/less/icons.less",
 		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.iconsService.js",
 		"/D/websites/npirotte-2013.be/application/controllers/admin_helpers.php",
-		"/D/websites/npirotte-2013.be/application/views/news/news/view.php",
 		"/D/websites/npirotte-2013.be/application/front/default/js/core/pikes.ajax.js",
 		"/D/websites/npirotte-2013.be/application/front/default/js/core/pikes.init.js",
 		"/D/websites/npirotte-2013.be/application/front/default/js/core/pikes.core.js",
@@ -745,7 +716,6 @@
 		"/D/websites/npirotte-2013.be/index.php",
 		"/D/websites/npirotte-2013.be/application/models/models/news/categories.php",
 		"/D/websites/npirotte-2013.be/application/config/routes.php",
-		"/D/websites/npirotte-2013.be/application/controllers/news.php",
 		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/news/categories/edit.php",
 		"/D/websites/npirotte-2013.be/application/models/models/banners/banners.php",
 		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/banners/banner/edit.php",
@@ -813,9 +783,7 @@
 		"/D/websites/npirotte-2013.be/application/front/admin/style/bootstrap/badges.less",
 		"/D/websites/npirotte-2013.be/application/models/contact_model.php",
 		"/D/websites/npirotte-2013.be/application/front/admin/style/animate.less",
-		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.manager.js",
-		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/shared/views/list.php",
-		"/D/websites/npirotte-2013.be/application/views/templates/meta_head.php"
+		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.manager.js"
 	],
 	"find":
 	{
@@ -1038,127 +1006,11 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "application/controllers/news.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 5834,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								4025,
-								4040
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1275.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 8,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "application/views/news/news/view.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1987,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1128,
-								1128
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": -0.0,
-						"translation.y": 22.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "application/views/templates/layout.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 940,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								939,
-								939
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "application/views/news/news/list.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 798,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								544,
-								544
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
 					"file": "application/views/news/widgets/news_list.php",
 					"semi_transient": false,
 					"settings":
@@ -1187,7 +1039,37 @@
 					"type": "text"
 				},
 				{
-					"buffer": 5,
+					"buffer": 1,
+					"file": "application/front/default/js/canvaIntro.js",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 4755,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								749,
+								625
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
 					"file": "application/front/compilers/default_foot_js.php",
 					"semi_transient": false,
 					"settings":
@@ -1216,7 +1098,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 6,
+					"buffer": 3,
 					"file": "application/front/default/style_compilator.less",
 					"semi_transient": false,
 					"settings":
@@ -1244,7 +1126,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 7,
+					"buffer": 4,
 					"file": "application/front/default/plugins/gallery/css/blueimp-gallery.less",
 					"semi_transient": false,
 					"settings":
@@ -1271,41 +1153,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "application/front/default/plugins/gallery/js/jquery.blueimp-gallery.js",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 2633,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": -0.0,
-						"translation.y": 390.0,
-						"zoom_level": 1.0
-					},
 					"stack_index": 4,
 					"type": "text"
 				},
 				{
-					"buffer": 9,
+					"buffer": 5,
 					"file": "application/controllers/portfolio.php",
 					"semi_transient": false,
 					"settings":
@@ -1330,7 +1182,7 @@
 						"translation.y": 3176.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 9,
+					"stack_index": 5,
 					"type": "text"
 				}
 			]
@@ -1463,11 +1315,19 @@
 		"selected_items":
 		[
 			[
-				"adm",
-				"D:\\webapps\\adminMobile\\adminMobile.sublime-project"
+				"",
+				"D:\\websites\\kicker\\kicker.sublime-project"
 			],
 			[
-				"",
+				"ki",
+				"D:\\websites\\kicker\\kicker.sublime-project"
+			],
+			[
+				"k",
+				"D:\\websites\\kicker\\kicker.sublime-project"
+			],
+			[
+				"adm",
 				"D:\\webapps\\adminMobile\\adminMobile.sublime-project"
 			],
 			[

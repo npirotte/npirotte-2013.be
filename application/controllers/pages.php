@@ -8,11 +8,13 @@
  	public function __construct()
 	{
 		parent::__construct();
-		$this->load->library('smartcache');
+		$this->load->library(array('smartcache'));
 
 		$this->data = new stdClass;
 
 		$this->data->ajax = $this->input->is_ajax_request();
+
+		$this->load->library('flexi_auth');
 
 	}
  	
@@ -32,7 +34,7 @@
 		redirect('/'.$lang);
 	}
 
-	$filename = $this->smartcache->CacheName($page, array('lang' => $lang, 'ajax' => $this->data->ajax));
+	$filename = $this->smartcache->CacheName($page, array('lang' => $lang, 'ajax' => $this->data->ajax, 'user_groups' => $this->flexi_auth->get_user_group()));
 
 	$cache = $this->smartcache->get_data($filename);
 
@@ -53,6 +55,14 @@
 			// todo -> redirection si changement de slug
 			// Whoops, we don't have a page for that!
 			show_404();
+		}
+
+		// auth
+		if ($page_data['user_groups'] && $page_data['user_groups'] != '') {
+			$user_groups = explode(',', $page_data['user_groups']);
+			if (!$this->flexi_auth->in_group($user_groups)) {
+				exit();
+			}
 		}
 
 		// template

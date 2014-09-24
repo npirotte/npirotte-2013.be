@@ -50,6 +50,8 @@ angular.module("ui.checkbox", []).directive("checkbox", function() {
 			}
 
 			// Update element when model changes
+			console.log(modelCtrl);
+
 			scope.$watch(function() {
 				if(modelCtrl.$modelValue === trueValue || modelCtrl.$modelValue === true) {
 					modelCtrl.$setViewValue(trueValue);

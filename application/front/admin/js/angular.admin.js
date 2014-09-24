@@ -67,8 +67,10 @@ var admin = admin || angular.module('admin', ['ngRoute', 'ngSanitize', 'nouislid
     //manager
       when('/manager/comptes', {templateUrl: '/admin/view_loader/'+templateDir+'/shared/views/list',   controller: UserListCtrl}).
       when('/manager/comptes/edit/:userId', {templateUrl: '/admin/view_loader/'+templateDir+'/manager/users/edit',   controller: EditUser}).
-      when('/manager/logs', {templateUrl: '/admin/view_loader/'+templateDir+'/manager/logs/list',   controller: LogsList}).
-      when('/manager/logs/:logId', {templateUrl: '/admin/view_loader/'+templateDir+'/manager/logs/details',   controller: LogsDetails}).
+      when('/manager/groupes', {templateUrl: '/admin/view_loader/'+templateDir+'/shared/views/list',   controller: GroupsListCtrl}).
+      when('/manager/groupes/edit/:groupId', {templateUrl: '/admin/view_loader/'+templateDir+'/manager/groups/edit',   controller: GroupsEditCtrl}).
+      /*when('/manager/logs', {templateUrl: '/admin/view_loader/'+templateDir+'/manager/logs/list',   controller: LogsList}).
+      when('/manager/logs/:logId', {templateUrl: '/admin/view_loader/'+templateDir+'/manager/logs/details',   controller: LogsDetails}).*/
     //portfolio
       when('/portfolio/portfolios', {templateUrl: '/admin/view_loader/'+templateDir+'/shared/views/list',   controller: PortfolioListCtrl}).
       when('/portfolio/portfolios/edit/:id', {templateUrl: '/admin/view_loader/'+templateDir+'/portfolio/portfolio/edit',   controller: PortfolioEditCtrl}).

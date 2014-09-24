@@ -88,7 +88,7 @@ class Users_model extends CI_Model {
 			}
 		}
 
-		$this->db->select('user_accounts.user_id, user_accounts.email, user_accounts.username, user_accounts.active ,'.$profile_fields);
+		$this->db->select('user_accounts.user_id, user_accounts.email, user_accounts.username, user_accounts.active, user_accounts.group_fk,'.$profile_fields);
 		$this->db->join('user_profiles', 'user_profiles.user_account_id = user_accounts.user_id', 'left');
 		$this->db->where('user_id', $id);
 		$query = $this->db->get('user_accounts');
@@ -141,11 +141,11 @@ class Users_model extends CI_Model {
 
 		$database_config = $this->db_model->database_model('user_profiles');
 		$custom_data = $database_config['fields'];
-
 		$user_data = array(
 			'account_data' => array(
 				'username' => $user['username'],
-				'email' => $user['email']
+				'email' => $user['email'],
+				'group_fk' => $user['group_fk']
 				),
 			'profile_data' => array()
 			);
@@ -211,6 +211,61 @@ class Users_model extends CI_Model {
 	 	$data = $query->result_array();
 
 	 	return $data[0];
+	}
+
+	// user groups
+
+	public function user_groups_list($limit, $offset)
+	{
+		$this->load->library(
+			'List_query_filters', 
+			array(
+				'table' => 'user_groups', 
+				'filtered_cols' => array('user_groups.ugrp_name', 'user_groups.ugrp_admin'),
+				'transform' => array('user_groups.id' => 'user_groups.ugrp_id')
+				));
+
+		$this->db->start_cache();
+		
+			$this->list_query_filters->setFilters();
+
+		$this->db->stop_cache();
+
+		$count = $this->db->count_all_results('user_groups');
+
+		$this->db->select('ugrp_id as id, ugrp_name, ugrp_admin');
+		$query = $this->db->get('user_groups', $limit, $offset);
+
+		$result = array(
+			'items' => $query->result_array(),
+			'total_items' => $count
+			);
+
+		return $result;
+	}
+
+	public function user_group_details($id)
+	{
+		$this->db->where('ugrp_id', $id);
+		$query = $this->db->get('user_groups');
+		$result = $query->result_array();
+		$result = $result[0];
+		$result['id'] = $result['ugrp_id'];
+
+		$result['ugrp_admin'] = $result['ugrp_admin'] == 1;
+
+		return $result;
+	}
+
+	public function insert_user_group($data)
+	{
+		$id = $this->flexi_auth->insert_group($data['ugrp_name'], $data['ugrp_description'], $data['ugrp_admin']);
+		return $id;
+	}
+
+	public function update_user_group($data)
+	{
+		$this->flexi_auth->update_group($data['id'], array('ugrp_name' => $data['ugrp_name'], 'ugrp_desc' => $data['ugrp_desc'], 'ugrp_admin' => $data['ugrp_admin']));
 	}
 
 	public function visits($time)

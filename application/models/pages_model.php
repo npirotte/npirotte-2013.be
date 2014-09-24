@@ -140,7 +140,7 @@ class Pages_model extends CI_Model {
 	{
 		$this->db->cache_on();
 
-		$this->db->select('id, name, meta_description, meta_title, type, template, version');
+		$this->db->select('id, name, meta_description, meta_title, type, template, version, user_groups');
 		$this->db->where(array('slug' => $slug, 'lang' => $lang));
 		$query = $this->db->get('pages');
 		$result = $query->result_array();
@@ -208,6 +208,7 @@ class Pages_model extends CI_Model {
 			'parent_id' => $data['parent_id'],
 			'weight' => $data['weight'],
 			'version' => $_POST['version'],
+			'user_groups' => $_POST['user_groups'],
  			'created_by' => $this->flexi_auth->get_user_id()
 			);
 
@@ -250,6 +251,7 @@ class Pages_model extends CI_Model {
 			'parent_id' => $data['parent_id'],
 			'weight' => $data['weight'],
 			'version' => $_POST['version'],
+			'user_groups' => $_POST['user_groups'],
  			'modified_by' => $this->flexi_auth->get_user_id()
 			);
 

@@ -73,6 +73,17 @@
 								<div class="col-xs-6">
 									<input type="text" name="email" value="" id="item_email" ng-model="item.email" ng-maxlength="100" data-required="true" validation="mail"  /><div class="label label-danger" ng-show="editForm.email.$error.required && editForm.email.$dirty">Ce champ est requis</div><div class="label label-danger" ng-show="editForm.email.$error.validation">{{item_email}}</div><div class="label label-danger" ng-show="editForm.email.$error.maxlength">Max. 100 caractères.</div>								</div>
 							</div>
+
+							<h4>Droits</h4>
+							<hr />
+							<div class="form-group">
+								<label class="control-label col-xs-3" for"inputEmail">Groupe d'utilisateurs</label>
+								<div class="col-xs-6">
+									<select  ng-model="item.group_fk">
+										<option value="{{group.id}}" ng-repeat="group in userGroups">{{group.ugrp_name}}</option>
+									</select>
+								</div>
+							</div>
 						</div>
 						<div class="col-sm-6" ng-if="item.user_id">
 							<h4>Informations complémentaires</h4>

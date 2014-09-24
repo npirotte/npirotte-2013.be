@@ -39,8 +39,13 @@ class smartcache {
             $name .= $divider.'category~'.$varyBy['category'];
         }
 
-        if (array_key_exists('user_id', $varBy)) {
+        if (array_key_exists('user_id', $varyBy)) {
             $name .= $divider.'user_id~'.$varyBy['user_id'];
+        }
+
+        if (array_key_exists('user_groups', $varyBy)) 
+        {
+            $name .= $divider.'user_groups~'.$varyBy['user_groups'];
         }
 
         return $name;

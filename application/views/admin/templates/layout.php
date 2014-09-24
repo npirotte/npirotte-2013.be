@@ -45,6 +45,7 @@
                     </a>
                     <ul class="dropdown-menu">
                         <li><a href="#/manager/comptes">Comptes</a></li>  
+                        <li><a href="#/manager/groupes">Groupes</a></li>  
                         <!-- <li><a href="#/manager/logs">Logs serveur</a></li> -->
                         <!-- <li><a href="#/manager/maintenance">Maintenance</a></li>  -->      
                     </ul>

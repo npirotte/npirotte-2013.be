@@ -35,7 +35,7 @@ function UserListCtrl($scope, $http, $injector)
 }
 
 
-function EditUser($scope, $http, $routeParams) {
+function EditUser($scope, $http, $routeParams, groupsRespository) {
 
   menuControl('manager');
   var id = $routeParams.userId;
@@ -44,11 +44,17 @@ function EditUser($scope, $http, $routeParams) {
 
   $scope.backUrl = 'manager/comptes';
 
+  $scope.userGroups = [];
+  groupsRespository.GetGroups(function(data)
+  {
+    $scope.userGroups = data;
+  });
+
    var getTheUser = function(){
       if (id != 'new') {
         $http.get('/admin_manager/user_details/'+id).success(function(data) {
-          console.log(data);
           $scope.item = data[0];
+          console.log($scope.item);
           init_page();
         });
       } 
@@ -163,6 +169,98 @@ function EditUser($scope, $http, $routeParams) {
   }  
 }
 
+
+function GroupsListCtrl($scope, $http, $injector)
+{
+  var config = {
+    section : "manager/groupes",
+    menu : 'manager',
+    getUrl : '/admin_manager/user_groups_list/',
+    deleteUrl : 'admin_manager/user_group_delete/',
+    getCallBack : function(data)
+    {
+      // traitement du statut utilisateur 
+      var i = 0;
+      angular.forEach($scope.items, function(item){
+        $scope.items[i].statut = item.active == 1 ? 'success' : 'warning';    
+        if (item.suspend == 1) $scope.items[i].statut = 'error';
+        i++;
+      });
+    }
+  }
+
+  $scope.table = [
+      {title : 'Nom', param : 'ugrp_name', strong : true},
+    ];
+
+  $scope.pageTitle = 'Groupes d\'utilisateurs';
+
+  $injector.invoke(ItemList, this, {$scope: $scope, $http: $http, config: config});
+}
+
+function GroupsEditCtrl($scope, $routeParams, groupsRespository)
+{
+  menuControl('manager');
+  var id = $routeParams.groupId;
+
+  $scope.mode = id;
+
+  $scope.backUrl = 'manager/groupes';
+
+  function getData()
+  {
+    console.log('ok');
+    groupsRespository.GetGroup(id, function(data)
+    {
+      console.log(data);
+      $scope.item = data;
+      init_page();
+    })
+  }
+
+  $scope.save = function(returnToList)
+  {
+    groupsRespository.SaveGroup($scope.item, function(data)
+    {
+      if (returnToList && data.error == 0) {
+          window.location.hash = $scope.backUrl;
+        }
+        else if (id == 'new' && data.error == 0)
+        {
+          window.location.hash = '/manager/groupes/edit/' + data.id;
+        }
+        else
+        {
+          $scope.alert = data.message[data.message.length - 1];
+          if (data.message.length > 1) {
+            $scope.errors = data.message;
+          }
+          else
+          {
+            $scope.errors = 0;
+          }
+          
+          showFadeAlert();
+        }
+    })
+  }
+
+  $scope.delete = function()
+  {
+    groupsRespository.DeleteGroup(id, function(){
+      window.location.hash = $scope.backUrl;
+    });
+  }
+
+  if (id != 'new') {
+    getData();
+  }
+  else
+  {
+    $scope.item = {}
+    init_page();
+  }
+}
 
 admin.directive('activationMessage', function(){
   // Runs during compile
