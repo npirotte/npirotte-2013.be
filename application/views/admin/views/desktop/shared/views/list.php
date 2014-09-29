@@ -21,7 +21,7 @@
 				      		<div class="pull-right" ng-if="totalItems >= itemPerPage">
 				      			<pagination total-items="totalItems" page="currentPage" items-per-page="itemPerPage" on-select-page="setGetPage(page)" previous-text="&lsaquo;" next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;" boundary-links="true" rotate="false" max-size="3"></pagination>
 				      		</div>
-				      		<div class="pull-right">
+				      		<div class="pull-right pagination-count">
 				      			{{offset + 1}} à {{offset + itemPerPage > totalItems ? totalItems : offset + itemPerPage}} / {{totalItems}} &nbsp;
 				      		</div> 		
 				      	</div>

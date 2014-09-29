@@ -15,12 +15,13 @@
 #mainHeader {
 	position: fixed;
 	width: 100%;
-	height: 40px;
+	height: 64px;
 	//background: fade(white, 70%);
-	#gradient > .vertical(fade(white, 70%), fade(white, 80%));
+	#gradient > .vertical(fade(#f9f9f9, 50%), fade(#f9f9f9, 60%));
 	z-index: 99;
 	.pull-right {
 		margin-right: 16px;
+		padding-top: 12px;
 	}
 
 	button 
@@ -138,6 +139,7 @@
 		font-size: .8em;
 		background: fade(@gray-darker, 94%);
 		border: 0;
+		border-radius: 0;
 
 		li a 
 		{
@@ -148,7 +150,7 @@
 
 #container {
 	margin-left: @menuWidth;
-	padding: 50px 20px 20px 20px;
+	padding: 64px 20px 20px 20px;
 }
 
 
@@ -166,14 +168,14 @@
 
 .loading #viewTools
 {
-	.translate(0, -40px);	
+	.translate(0, -64px);	
 	.transition(all .1s);
 }
 
 #viewTools {
 	position: fixed;
 	left: @menuWidth+20;
-	top: 0px;
+	top: 16px;
 	height: 40px;
 	z-index: 100;
 	// animation: viewTools .5s;

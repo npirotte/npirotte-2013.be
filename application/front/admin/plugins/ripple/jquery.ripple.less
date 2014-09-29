@@ -1,5 +1,5 @@
 
-.btn-ripple
+.ripple
 {
 	position: relative;
 	overflow: hidden;
@@ -7,25 +7,25 @@
 	& > .ink
 	{
 		display: block; position: absolute;
-		background: fade(white, 30%);
+		background: fade(black, 4%);
 		border-radius: 100%;
 		transform: scale(0);
 		&.animate 
 		{
-			-webkit-animation: ripple 0.65s linear;
-			-moz-animation: ripple 0.65s linear;
-			-ms-animation: ripple 0.65s linear;
-			animation: ripple 0.65s linear;
+			-webkit-animation: ripple 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+			-moz-animation: ripple 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+			-ms-animation: ripple 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+			animation: ripple 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 		}
 	}
 
-	&.btn-default
+	/* &.btn-default
 	{
 		& > .ink 
 		{
 			background: fade(@brand-primary, 30%);
 		}
-	}
+	} */
 }
 
 /*animation effect*/

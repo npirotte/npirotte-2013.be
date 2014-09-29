@@ -121,8 +121,8 @@ if ( ! function_exists('print_css'))
 {
 	function print_css($data, $varsOverride = false) {
 
-		//if ( ENVIRONMENT  == 'development' || !file_exists( APPPATH .'front/cache/'.$data.'_combined.css' ))
-		if (false || !file_exists( APPPATH .'front/cache/'.$data.'_combined.css' ))
+		if ( ENVIRONMENT  == 'development' || !file_exists( APPPATH .'front/cache/'.$data.'_combined.css' ))
+		//if (false || !file_exists( APPPATH .'front/cache/'.$data.'_combined.css' ))
 		{
 			require SYSDIR ."/third_party/less.php/Less.php";
 

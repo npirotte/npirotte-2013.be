@@ -4,8 +4,9 @@
 (function()
 {
 	var parent, ink, d, x, y;
-	$(document).delegate('.btn-ripple', 'click', function(e){
+	$(document).delegate('.btn-ripple, .btn, .pagination a', 'click', function(e){
 		$self = $(this);
+		$self.addClass('ripple');
 		//create .ink element if it doesn't exist
 		if($self.find(".ink").length == 0)
 			$self.prepend("<span class='ink'></span>");
