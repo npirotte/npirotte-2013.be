@@ -27,6 +27,7 @@ $files = array(
 	APPPATH . "front/admin/js/angular.ctrlModels.js",
 	APPPATH . "front/admin/js/angular.urlService.js",
 	APPPATH . "front/admin/js/angular.iconsService.js",
+	APPPATH . "front/admin/js/angular.global.js",
 	APPPATH . "front/admin/js/angular.globalRepositories.js",
 	APPPATH . "front/admin/js/angular.globalDirectives.js",
 	APPPATH . "front/admin/js/angular.managerRepositories.js",

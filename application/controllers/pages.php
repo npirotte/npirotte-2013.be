@@ -64,7 +64,7 @@
 				exit();
 			}
 		}
-
+		
 		// template
 
 		if ($page_data['type'] === 'template') 

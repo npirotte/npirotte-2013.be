@@ -45,6 +45,10 @@ var admin = admin || angular.module('admin', ['ngRoute', 'ngSanitize', 'nouislid
   $httpProvider.interceptors.push('httpRequestInterceptor');
   $routeProvider.
   	  when('/', {templateUrl: '/admin/view_loader/'+templateDir+'/dashboard/dashboard/view',   controller: DashboardMasterListCtrl}).
+
+      // global
+      when('/configuration/stylesheets', {templateUrl: '/admin/view_loader/'+templateDir+'/shared/views/list',   controller: StylecheetsListCtrl}).
+      when('/configuration/stylesheets/edit/:id', {templateUrl: '/admin/view_loader/'+templateDir+'/global/stylesheets/edit',   controller: StylecheetEdit}).
   	//contact
       when('/contacts/config', {templateUrl: '/admin/view_loader/'+templateDir+'/contacts/informations/edit', controller: ContactConfigCtrl}).
       when('/contacts/:filter', {templateUrl: '/admin/view_loader/'+templateDir+'/contacts/messages/list',   controller: MessagesListCtrl}).

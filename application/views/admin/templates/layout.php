@@ -41,11 +41,21 @@
                 <li><a href="#/" class="btn-ripple"><i class="fa fa-home circle-icon"></i>Accueil</a></li>
                 <li class="dropdown">
                     <a href="" id="manager" class="dropdown-toggle btn-ripple" data-toggle="dropdown">
-                        <i class="fa fa-cog circle-icon"></i>Manager
+                        <i class="fa fa-users circle-icon"></i>Manager
                     </a>
                     <ul class="dropdown-menu">
                         <li><a href="#/manager/comptes">Comptes</a></li>  
                         <li><a href="#/manager/groupes">Groupes</a></li>  
+                        <!-- <li><a href="#/manager/logs">Logs serveur</a></li> -->
+                        <!-- <li><a href="#/manager/maintenance">Maintenance</a></li>  -->      
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="" id="configuration" class="dropdown-toggle btn-ripple" data-toggle="dropdown">
+                        <i class="fa fa-cog circle-icon"></i>Configuration
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#/configuration/stylesheets">Styles Css</a></li>  
                         <!-- <li><a href="#/manager/logs">Logs serveur</a></li> -->
                         <!-- <li><a href="#/manager/maintenance">Maintenance</a></li>  -->      
                     </ul>

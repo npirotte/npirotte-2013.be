@@ -134,6 +134,9 @@ class Db_model extends CI_Model {
 			require(APPPATH.'models/models/global/config.php');
 			require(APPPATH.'models/models/global/log.php');
 			require(APPPATH.'models/models/global/tags.php');
+			require(APPPATH.'models/models/global/tags_links.php');
+			require(APPPATH.'models/models/global/stylesheets.php');
+			require(APPPATH.'models/models/global/stylesheets_content.php');
 
 			// assets
 
@@ -147,6 +150,7 @@ class Db_model extends CI_Model {
 			require(APPPATH.'models/models/user/login_sessions.php');
 			require(APPPATH.'models/models/user/privileges.php');
 			require(APPPATH.'models/models/user/privilege_groups.php');
+			require(APPPATH.'models/models/user/privilege_users.php');
 			require(APPPATH.'models/models/user/groups.php');
 			require(APPPATH.'models/models/user/ips.php');
 

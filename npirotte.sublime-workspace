@@ -4,12 +4,144 @@
 		"selected_items":
 		[
 			[
-				"no",
-				"no-ajax"
+				"glo",
+				"global_stylesheets"
+			],
+			[
+				"sta",
+				"statut"
+			],
+			[
+				"le",
+				"length"
 			],
 			[
 				"err",
-				"error_list"
+				"errors"
+			],
+			[
+				"new",
+				"newStyleSheet"
+			],
+			[
+				"Sty",
+				"StylesheetsRespository"
+			],
+			[
+				"Styl",
+				"StyleSheetSave"
+			],
+			[
+				"style",
+				"stylesheets_model"
+			],
+			[
+				"child",
+				"childs"
+			],
+			[
+				"Style",
+				"stylesheets"
+			],
+			[
+				"sty",
+				"stylesheets"
+			],
+			[
+				"re",
+				"result"
+			],
+			[
+				"globa",
+				"global_stylesheets_content"
+			],
+			[
+				"st",
+				"stylesheets"
+			],
+			[
+				"for",
+				"foreach	foreach …"
+			],
+			[
+				"result",
+				"result_array"
+			],
+			[
+				"resu",
+				"result_array"
+			],
+			[
+				"pos",
+				"pos-r	position: relative;"
+			],
+			[
+				"box",
+				"box-shadow"
+			],
+			[
+				"arr",
+				"array"
+			],
+			[
+				"grou",
+				"group_auth"
+			],
+			[
+				"con",
+				"constraint"
+			],
+			[
+				"fl",
+				"flexi_auth"
+			],
+			[
+				"lo",
+				"location"
+			],
+			[
+				"mo",
+				"modelValue"
+			],
+			[
+				"mode",
+				"modelCtrl"
+			],
+			[
+				"admi",
+				"admin_manager"
+			],
+			[
+				"group",
+				"groupsRespository"
+			],
+			[
+				"grop",
+				"groupsRespository"
+			],
+			[
+				"resul",
+				"result"
+			],
+			[
+				"res",
+				"result_array"
+			],
+			[
+				"user",
+				"user_groups"
+			],
+			[
+				"use",
+				"users_model"
+			],
+			[
+				"users",
+				"users_model"
+			],
+			[
+				"no",
+				"no-ajax"
 			],
 			[
 				"proto",
@@ -46,10 +178,6 @@
 			[
 				"fa",
 				"faIcons"
-			],
-			[
-				"con",
-				"console"
 			],
 			[
 				"getPage",
@@ -96,10 +224,6 @@
 				"strokeStyle"
 			],
 			[
-				"resul",
-				"result_array"
-			],
-			[
 				"orde",
 				"order_by"
 			],
@@ -114,10 +238,6 @@
 			[
 				"tu",
 				"thumbs"
-			],
-			[
-				"for",
-				"foreach	foreach …"
 			],
 			[
 				"ta",
@@ -168,16 +288,8 @@
 				"mousePosition"
 			],
 			[
-				"mo",
-				"modifierY"
-			],
-			[
 				"modi",
 				"modifierX"
-			],
-			[
-				"pos",
-				"pos-a	position: absolute;"
 			],
 			[
 				"ge",
@@ -190,10 +302,6 @@
 			[
 				"tre",
 				"treeCulture"
-			],
-			[
-				"lo",
-				"log"
 			],
 			[
 				"lan",
@@ -332,20 +440,8 @@
 				"function"
 			],
 			[
-				"resu",
-				"result"
-			],
-			[
-				"re",
-				"return"
-			],
-			[
 				"pages",
 				"pages_model"
-			],
-			[
-				"result",
-				"result"
 			],
 			[
 				"q",
@@ -354,10 +450,6 @@
 			[
 				"sele",
 				"select"
-			],
-			[
-				"new",
-				"newValue"
 			],
 			[
 				"rese",
@@ -412,16 +504,8 @@
 				"page_content"
 			],
 			[
-				"group",
-				"group_id"
-			],
-			[
 				"Crea",
 				"CreateUser"
-			],
-			[
-				"user",
-				"username"
 			],
 			[
 				"str_re",
@@ -430,140 +514,88 @@
 			[
 				"pass",
 				"password"
-			],
-			[
-				"inst",
-				"installerRepository"
-			],
-			[
-				"tr",
-				"true"
-			],
-			[
-				"loda",
-				"loading"
-			],
-			[
-				"scro",
-				"scrollTop	.scrollTop()"
-			],
-			[
-				"app",
-				"app_session_data"
-			],
-			[
-				"sess",
-				"session"
-			],
-			[
-				"curre",
-				"current_user"
-			],
-			[
-				"login",
-				"login_session_token"
-			],
-			[
-				"json",
-				"json_encode"
-			],
-			[
-				"ha",
-				"hash_session_token"
-			],
-			[
-				"upo",
-				"upload"
-			],
-			[
-				"margi",
-				"margin-right"
-			],
-			[
-				"cate",
-				"category_id"
-			],
-			[
-				"eror",
-				"errors"
-			],
-			[
-				"banner",
-				"banners_model"
-			],
-			[
-				"banners",
-				"banners_zones"
-			],
-			[
-				"flush",
-				"flush_cache"
-			],
-			[
-				"trans",
-				"trans_complete"
-			],
-			[
-				"erro",
-				"errors"
-			],
-			[
-				"errr",
-				"errors"
-			],
-			[
-				"sc",
-				"scope"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "application/views/news/widgets/news_list.php",
+			"file": "application/models/models/global/stylesheets_content.php",
 			"settings":
 			{
-				"buffer_size": 529,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "application/front/default/js/canvaIntro.js",
-			"settings":
-			{
-				"buffer_size": 4755,
+				"buffer_size": 963,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "application/front/compilers/default_foot_js.php",
+			"file": "application/front/admin/js/angular.admin.js",
 			"settings":
 			{
-				"buffer_size": 1124,
+				"buffer_size": 9695,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "application/front/default/style_compilator.less",
+			"file": "application/models/stylesheets_model.php",
 			"settings":
 			{
-				"buffer_size": 430,
+				"buffer_size": 4978,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "system/helpers/view_helper.php",
+			"settings":
+			{
+				"buffer_size": 4196,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "application/front/default/plugins/gallery/css/blueimp-gallery.less",
+			"file": "application/controllers/admin_global.php",
 			"settings":
 			{
-				"buffer_size": 5720,
+				"buffer_size": 4795,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "application/front/admin/style_compilator.less",
+			"settings":
+			{
+				"buffer_size": 721,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "application/controllers/portfolio.php",
+			"file": "application/front/admin/style/styles.less",
 			"settings":
 			{
-				"buffer_size": 8118,
+				"buffer_size": 12475,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "application/front/admin/js/angular.banners.js",
+			"settings":
+			{
+				"buffer_size": 6286,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "application/front/compilers/admin_foot_js.php",
+			"settings":
+			{
+				"buffer_size": 2818,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "application/views/admin/templates/layout.php",
+			"settings":
+			{
+				"buffer_size": 15944,
 				"line_ending": "Unix"
 			}
 		}
@@ -654,8 +686,77 @@
 		"side_bar_visible": false,
 		"status_bar_visible": false
 	},
+	"expanded_folders":
+	[
+		"/D/websites/npirotte-2013.be",
+		"/D/websites/npirotte-2013.be/application",
+		"/D/websites/npirotte-2013.be/application/front",
+		"/D/websites/npirotte-2013.be/application/front/admin",
+		"/D/websites/npirotte-2013.be/application/front/admin/style",
+		"/D/websites/npirotte-2013.be/application/front/compilers",
+		"/D/websites/npirotte-2013.be/system",
+		"/D/websites/npirotte-2013.be/system/third_party",
+		"/D/websites/npirotte-2013.be/system/third_party/less.php"
+	],
 	"file_history":
 	[
+		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.globalRepositories.js",
+		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/global/stylesheets/edit.php",
+		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.global.js",
+		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.content_edition.js",
+		"/D/websites/npirotte-2013.be/application/models/stylesheets_model.php",
+		"/D/websites/npirotte-2013.be/application/models/models/global/stylesheets.php",
+		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.globalDirectives.js",
+		"/D/websites/npirotte-2013.be/application/models/portfolio_model.php",
+		"/D/websites/npirotte-2013.be/application/models/models/news/categories.php",
+		"/D/websites/npirotte-2013.be/application/models/models/global/stylesheets_content.php",
+		"/D/websites/npirotte-2013.be/application/controllers/admin_global.php",
+		"/D/websites/npirotte-2013.be/application/models/forms_model.php",
+		"/D/websites/npirotte-2013.be/application/models/db_model.php",
+		"/D/websites/npirotte-2013.be/index.php",
+		"/D/websites/npirotte-2013.be/system/core/CodeIgniter.php",
+		"/D/websites/npirotte-2013.be/application/controllers/pages.php",
+		"/D/websites/npirotte-2013.be/application/controllers/session.php",
+		"/C/xampp/apache/conf/extra/httpd-vhosts.conf",
+		"/D/websites/npirotte-2013.be/application/front/admin/style/bootstrap/variables.less",
+		"/D/websites/npirotte-2013.be/application/front/admin/style/form.less",
+		"/D/websites/npirotte-2013.be/application/front/admin/js/angular-bootstrap-checkbox.js",
+		"/D/websites/dev stuffs/hosts",
+		"/C/xampp/apache/conf/httpd.conf",
+		"/D/websites/dev stuffs/htaccess",
+		"/D/websites/npirotte-2013.be/application/front/admin/style/bootstrap/panels.less",
+		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/shared/views/list.php",
+		"/D/websites/npirotte-2013.be/application/front/admin/style/styles.less",
+		"/D/websites/npirotte-2013.be/application/front/admin/style/bootstrap/pagination.less",
+		"/D/websites/npirotte-2013.be/application/front/admin/style/bootstrap/alerts.less",
+		"/C/Users/npirotte/Desktop/ripples.less",
+		"/D/websites/npirotte-2013.be/application/front/admin/plugins/ripple/jquery.ripple.less",
+		"/D/websites/npirotte-2013.be/application/front/admin/plugins/ripple/jquery.ripple.js",
+		"/D/websites/npirotte-2013.be/system/helpers/view_helper.php",
+		"/D/websites/npirotte-2013.be/application/models/pages_model.php",
+		"/D/websites/npirotte-2013.be/application/libraries/smartcache.php",
+		"/D/websites/npirotte-2013.be/application/config/flexi_auth.php",
+		"/D/websites/npirotte-2013.be/application/libraries/Cache_manager.php",
+		"/D/websites/npirotte-2013.be/application/views/admin/templates/layout.php",
+		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/manager/groups/edit.php",
+		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.managerRepositories.js",
+		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.admin.js",
+		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/portfolio/portfolio/edit.php",
+		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/pages/pages/edit.php",
+		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.pagesRepositories.js",
+		"/D/websites/npirotte-2013.be/application/models/users_model.php",
+		"/D/websites/npirotte-2013.be/application/controllers/admin_manager.php",
+		"/D/websites/npirotte-2013.be/application/controllers/admin_pages.php",
+		"/D/websites/npirotte-2013.be/application/models/models/pages/pages.php",
+		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.pages.js",
+		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.manager.js",
+		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/manager/users/edit.php",
+		"/D/websites/npirotte-2013.be/application/models/maintenance_model.php",
+		"/D/websites/npirotte-2013.be/application/controllers/portfolio.php",
+		"/D/websites/npirotte-2013.be/application/front/default/plugins/gallery/css/blueimp-gallery.less",
+		"/D/websites/npirotte-2013.be/application/front/default/style_compilator.less",
+		"/D/websites/npirotte-2013.be/application/front/compilers/default_foot_js.php",
+		"/D/websites/npirotte-2013.be/application/views/news/widgets/news_list.php",
 		"/D/websites/npirotte-2013.be/application/controllers/news.php",
 		"/D/websites/npirotte-2013.be/application/views/news/news/view.php",
 		"/D/websites/npirotte-2013.be/application/views/templates/layout.php",
@@ -663,7 +764,6 @@
 		"/D/websites/npirotte-2013.be/application/front/default/plugins/gallery/css/demo.css",
 		"/D/websites/npirotte-2013.be/application/controllers/admin_news.php",
 		"/D/websites/npirotte-2013.be/application/front/default/js/core/peaks.core.js",
-		"/D/websites/npirotte-2013.be/application/front/compilers/default_foot_js.php",
 		"/D/websites/npirotte-2013.be/application/front/default/js/core/peaks.init.js",
 		"/D/websites/npirotte-2013.be/application/views/contact/forms/form.php",
 		"/D/websites/npirotte-2013.be/application/front/default/js/core/peaks.ajax.js",
@@ -676,8 +776,6 @@
 		"/D/websites/npirotte-2013.be/application/front/framework/js/jquery.functions.js",
 		"/D/websites/npirotte-2013.be/application/front/default/js/widgtet/contactForm.js",
 		"/D/websites/npirotte-2013.be/application/front/default/js/core/peaks.contactForm.js",
-		"/D/websites/npirotte-2013.be/application/controllers/admin_manager.php",
-		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.admin.js",
 		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.news.js",
 		"/D/websites/npirotte-2013.be/application/models/flexi_auth_lite_model.php",
 		"/D/websites/npirotte-2013.be/application/libraries/Flexi_auth_lite.php",
@@ -692,14 +790,11 @@
 		"/D/websites/npirotte-2013.be/application/models/tags_model.php",
 		"/D/websites/npirotte-2013.be/application/models/models/assets/images.php",
 		"/D/websites/npirotte-2013.be/application/viewModels/global/HeaderViewModel.php",
-		"/D/websites/npirotte-2013.be/application/models/portfolio_model.php",
-		"/D/websites/npirotte-2013.be/application/controllers/portfolio.php",
 		"/D/websites/npirotte-2013.be/application/controllers/admin_portfolio.php",
 		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.portfolio.js",
 		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/portfolio/categories/edit.php",
 		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/news/news/edit.php",
 		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.portfolioRepositories.js",
-		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/portfolio/portfolio/edit.php",
 		"/D/websites/npirotte-2013.be/application/models/news_model.php",
 		"/D/websites/npirotte-2013.be/application/front/compilers/admin_foot_js.php",
 		"/D/websites/npirotte-2013.be/application/front/framework/font-awesome/less/icons.less",
@@ -713,77 +808,26 @@
 		"/C/Users/npirotte/Downloads/Adobe Photoshop Lightroom 5.3 Final (64 bit) [ChingLiu]/ChingLiu.Install.Notes.nfo",
 		"/D/websites/npirotte-2013.be/application/front/default/js/canvaIntro.js",
 		"/D/websites/npirotte-2013.be/application/front/default/js/paper-full.min.js",
-		"/D/websites/npirotte-2013.be/index.php",
-		"/D/websites/npirotte-2013.be/application/models/models/news/categories.php",
 		"/D/websites/npirotte-2013.be/application/config/routes.php",
 		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/news/categories/edit.php",
 		"/D/websites/npirotte-2013.be/application/models/models/banners/banners.php",
 		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/banners/banner/edit.php",
 		"/D/websites/npirotte-2013.be/application/helpers/banners/banners_helper.php",
-		"/D/websites/npirotte-2013.be/application/libraries/smartcache.php",
-		"/D/websites/npirotte-2013.be/application/controllers/pages.php",
 		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.newsRepositories.js",
 		"/D/websites/npirotte-2013.be/application/models/models/news/items.php",
-		"/D/websites/npirotte-2013.be/application/views/admin/templates/layout.php",
 		"/D/websites/npirotte-2013.be/application/models/models/portfolio/categories.php",
 		"/D/websites/npirotte-2013.be/application/libraries/Models_service.php",
 		"/D/websites/npirotte-2013.be/application/viewModels/portfolio/PorfolioItemViewModel.php",
 		"/D/websites/npirotte-2013.be/application/viewModels/portfolio/PortfolioCategoriesListViewModel.php",
 		"/D/websites/npirotte-2013.be/application/viewModels/portfolio/ThumbListWidgetViewModel.php",
-		"/D/websites/npirotte-2013.be/application/models/models/pages/pages.php",
 		"/D/websites/npirotte-2013.be/application/models/models/portfolio/items.php",
 		"/D/websites/npirotte-2013.be/application/models/menus_model.php",
 		"/D/websites/npirotte-2013.be/application/controllers/maintenance.php",
-		"/D/websites/npirotte-2013.be/application/models/db_model.php",
 		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/shared/widgets/tree.php",
-		"/D/websites/npirotte-2013.be/system/helpers/view_helper.php",
-		"/D/websites/npirotte-2013.be/application/controllers/admin_pages.php",
-		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.pagesRepositories.js",
 		"/D/websites/npirotte-2013.be/application/libraries/MY_Form_validation.php",
 		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.pagesDirectives.js",
 		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.banners.js",
-		"/D/websites/npirotte-2013.be/application/models/pages_model.php",
-		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.pages.js",
-		"/D/websites/npirotte-2013.be/application/controllers/admin.php",
-		"/D/websites/npirotte-2013.be/application/core/MY_Lang.php",
-		"/D/websites/npirotte-2013.be/application/config/config.php",
-		"/D/websites/npirotte-2013.be/application/language/english/db_lang.php",
-		"/D/websites/npirotte-2013.be/application/controllers/admin_menus.php",
-		"/C/Users/npirotte/Desktop/menus_model.php",
-		"/D/websites/npirotte-2013.be/system/language/en/forms_lang.php",
-		"/D/websites/npirotte-2013.be/application/models/models/user/profiles.php",
-		"/D/websites/npirotte-2013.be/application/models/models/user/accounts.php",
-		"/D/websites/npirotte-2013.be/application/models/models/user/groups.php",
-		"/D/websites/npirotte-2013.be/application/models/models/user/privileges.php",
-		"/D/websites/npirotte-2013.be/application/models/models/user/privilege_groups.php",
-		"/D/websites/npirotte-2013.be/application/models/models/pages/templates.php",
-		"/D/websites/npirotte-2013.be/application/models/models/portfolio/links.php",
-		"/D/websites/npirotte-2013.be/application/models/models/contact/contacts_fields.php",
-		"/D/websites/npirotte-2013.be/application/models/models/contact/contacts.php",
-		"/D/websites/npirotte-2013.be/application/models/models/contact/forms_fields.php",
-		"/D/websites/npirotte-2013.be/application/models/models/contact/forms.php",
-		"/D/websites/npirotte-2013.be/application/models/models/pages/templates_values.php",
-		"/D/websites/npirotte-2013.be/application/models/models/banners/zones.php",
-		"/D/websites/npirotte-2013.be/application/models/models/contact/infos.php",
-		"/D/websites/npirotte-2013.be/application/models/models/pages/templates_fields.php",
-		"/D/websites/npirotte-2013.be/application/models/models/user/ips.php",
-		"/D/websites/npirotte-2013.be/application/models/models/user/privilege_users.php",
-		"/D/websites/npirotte-2013.be/application/models/models/user/login_sessions.php",
-		"/D/websites/npirotte-2013.be/application/models/models/menus/menus.php",
-		"/D/websites/npirotte-2013.be/application/models/models/menuModel.php",
-		"/D/websites/npirotte-2013.be/application/models/models/global/config.php",
-		"/D/websites/npirotte-2013.be/application/models/models/global/log.php",
-		"/D/websites/npirotte-2013.be/application/models/models/global/tags_links.php",
-		"/D/websites/npirotte-2013.be/application/models/models/global/tags.php",
-		"/D/websites/npirotte-2013.be/application/models/models/menus/items.php",
-		"/D/websites/npirotte-2013.be/application/views/pages/canvas.php",
-		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.notifications.js",
-		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.contact.js",
-		"/D/websites/npirotte-2013.be/application/front/admin/style/styles.less",
-		"/D/websites/npirotte-2013.be/application/front/admin/style/bootstrap/badges.less",
-		"/D/websites/npirotte-2013.be/application/models/contact_model.php",
-		"/D/websites/npirotte-2013.be/application/front/admin/style/animate.less",
-		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.manager.js"
+		"/D/websites/npirotte-2013.be/application/controllers/admin.php"
 	],
 	"find":
 	{
@@ -803,6 +847,13 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"cersions",
+			"btn-ripple",
+			"v",
+			"riple",
+			"ripple",
+			"#mainHeader",
+			"modelCtrl",
 			"get",
 			"is_logged_in",
 			"Pikes",
@@ -923,14 +974,7 @@
 			"Cache_manager",
 			"news",
 			"PorfolioDetails",
-			"media",
-			"merdia",
-			"simple_portfolio_list",
-			"portfolio",
-			"		\n",
-			"list",
-			"flushCache",
-			"port"
+			"media"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1006,24 +1050,24 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 5,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "application/views/news/widgets/news_list.php",
+					"file": "application/models/models/global/stylesheets_content.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 529,
+						"buffer_size": 963,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								191,
-								191
+								298,
+								298
 							]
 						],
 						"settings":
@@ -1035,54 +1079,54 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "application/front/default/js/canvaIntro.js",
-					"semi_transient": true,
+					"file": "application/front/admin/js/angular.admin.js",
+					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4755,
+						"buffer_size": 9695,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								749,
-								625
+								1025,
+								1040
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
+							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
 					"buffer": 2,
-					"file": "application/front/compilers/default_foot_js.php",
+					"file": "application/models/stylesheets_model.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1124,
+						"buffer_size": 4978,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								431,
-								431
+								4908,
+								4908
 							]
 						],
 						"settings":
@@ -1091,27 +1135,85 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 2962.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
 					"buffer": 3,
-					"file": "application/front/default/style_compilator.less",
+					"file": "system/helpers/view_helper.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 430,
+						"buffer_size": 4196,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								327,
-								327
+								3460,
+								3460
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": -0.0,
+						"translation.y": 1777.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "application/controllers/admin_global.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4795,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2603,
+								2603
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1559.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "application/front/admin/style_compilator.less",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 721,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								691,
+								691
 							]
 						],
 						"settings":
@@ -1122,55 +1224,83 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "application/front/default/plugins/gallery/css/blueimp-gallery.less",
-					"semi_transient": false,
+					"buffer": 6,
+					"file": "application/front/admin/style/styles.less",
+					"semi_transient": true,
 					"settings":
 					{
-						"buffer_size": 5720,
+						"buffer_size": 12475,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								17,
-								17
+								2574,
+								2583
 							]
 						],
 						"settings":
 						{
-							"open_with_edit": true,
 							"syntax": "Packages/LESS/LESS.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 2128.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
-					"buffer": 5,
-					"file": "application/controllers/portfolio.php",
+					"buffer": 7,
+					"file": "application/front/admin/js/angular.banners.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 8118,
+						"buffer_size": 6286,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								5949,
-								6225
+								3036,
+								500
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 93.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "application/front/compilers/admin_foot_js.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2818,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1461,
+								1461
 							]
 						],
 						"settings":
@@ -1179,10 +1309,40 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 3176.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "application/views/admin/templates/layout.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 15944,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2986,
+								2986
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 515.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
 					"type": "text"
 				}
 			]
@@ -1385,6 +1545,7 @@
 		],
 		"width": 0.0
 	},
+	"selected_group": 0,
 	"settings":
 	{
 	},

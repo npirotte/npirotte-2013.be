@@ -132,6 +132,15 @@ if ( ! function_exists('print_css'))
 
 			$parser->parseFile( APPPATH .'front/'.$data.'/style_compilator.less',  '/'.APPPATH .'front/'.$data );
 
+			// récupération du css db pour le front
+			if ($data === 'default') 
+			{
+				$CI =& get_instance();
+				$CI->load->model('stylesheets_model');
+				$customCss = $CI->stylesheets_model->StyleSheetsContent();
+				$parser->parse($customCss);
+			}
+
 			if ($varsOverride) {
 				$parser->ModifyVars( $varsOverride );
 			}

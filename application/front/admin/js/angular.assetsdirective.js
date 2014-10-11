@@ -226,7 +226,7 @@ function AssetModalCrl($scope, $modalInstance, item, uploadConfig, assetsReposit
   };
 }
 
-admin.directive('imageUpload', function(){
+admin.directive('imageUpload', function($timeout){
   // Runs during compile
   var widgetUniqueId = 0;
   return {
@@ -246,7 +246,10 @@ admin.directive('imageUpload', function(){
 
           $scope.triggerUpload = function()
           {
+            $timeout(function()
+            {
               $('#fileUploader-' + $scope.uploaderId).click();
+            });
           }
 
           $scope.uploaderClass = function (content)

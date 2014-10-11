@@ -60,6 +60,22 @@ $database['news_categories'] = array(
 			'type' => 'INT',
 			'constraint' => 9,
 			'NULL' => TRUE
+			),
+		'created_on' => array(
+			'type' => 'DATETIME'
+			),
+		'created_by' => array(
+			'type' => 'INT',
+			'constraint' => 9
+			),
+		'modified_on' => array(
+			'type' => 'DATETIME',
+			'NULL' => TRUE
+			),
+		'modified_by' => array(
+			'type' => 'INT',
+			'constraint' => 9,
+			'NULL' => TRUE
 			)
 		)
 	);
