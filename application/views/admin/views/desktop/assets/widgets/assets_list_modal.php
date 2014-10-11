@@ -1,6 +1,6 @@
 <div ng-if="assets.length == 0" class="alert alert-warning">Aucun élément. <a href="" ng-click="openModal()">Ajouter</a></div>
 <div ng-if="assets.length > 0">
-	<table class="table table-bordered table-striped table-hover">
+	<table class="table table-striped table-hover">
 		<tbody ui:sortable="sortableOptions" ng:model="assets">
 
 			<tr ng-repeat="asset in assets | filter:query | orderBy:orderProp:reverse" ng-dblclick="openModal(asset.id)">

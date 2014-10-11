@@ -77,7 +77,7 @@
 
 				      	<div ng-show="childs.length == 0" class="alert alert-warning">Cette catégorie ne contient aucun élément. <a href="#/{{section}}/edit/new">Ajouter</a></div> 
 
-					          <table ng-show="childs.length > 0" class="table table-bordered table-striped table-hover">
+					          <table ng-show="childs.length > 0" class="table table-striped table-hover">
 					          	<thead>
 					          		<th ng-click="orderProp = 'id'; reverse=!reverse">Id</th>
 					          		<th>Titre</th>

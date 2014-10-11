@@ -1,5 +1,5 @@
 <div ng-show="assets.length == 0" class="alert alert-warning">Aucun élément. <a href="#/{{assetsList.editPath}}{{item.id}}/new">Ajouter</a></div>
-<table ng-show="assets.length > 0" class="table table-bordered table-striped table-hover">
+<table ng-show="assets.length > 0" class="table table-striped table-hover">
 	<tbody ui:sortable="sortableOptions" ng:model="assets">
 
 		<tr ng-repeat="asset in assets | filter:query | orderBy:orderProp:reverse" ng-dblclick="getView(asset.id)">
