@@ -233,7 +233,7 @@ admin.directive('menusItemsPanel', ['menusItemsRepository', 'UrlService', functi
 
             parentChildsList = event.dest.nodesScope.$modelValue;
             data.id = parentChildsList[data.new_index].id;
-            data.manu_id = $scope.menuId;
+            data.menu_id = $scope.menuId;
 
             if (event.source.index != data.new_index || data.parent_id != data.old_parent_id) {
 

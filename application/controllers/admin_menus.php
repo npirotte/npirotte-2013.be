@@ -171,6 +171,8 @@ public function item_reorder()
 {
 	$_POST =$item = json_decode(file_get_contents('php://input'), true);
 	
+	$_POST['weight'] = $_POST['new_index'] + 1;
+
 	$this->Menus_model->itemUpdate($_POST);
 	
 	$this->cache_manager->DeletePagesCache();

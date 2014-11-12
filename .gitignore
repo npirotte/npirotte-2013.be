@@ -36,11 +36,15 @@ Icon
 .Spotlight-V100
 .Trashes
 
+
+# node_modules
+node_modules/
+
 # Cache
-cache/
+application/cache/
 
 # Logs
-logs/
+application/logs/
 
 # Assets
-assets/
+application/assets/

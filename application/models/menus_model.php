@@ -158,6 +158,7 @@ class Menus_model extends CI_Model {
 
 	public function itemUpdate($data)
 	{
+		//$data['weight'] = $data['new_index'] + 1;
 		$data['weight'] = $this->itemGroupReordering($data, 'menus_items');
 
 		$updata = array();
