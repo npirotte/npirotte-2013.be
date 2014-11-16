@@ -17,7 +17,8 @@
 	width: 100%;
 	height: 64px;
 	//background: fade(white, 70%);
-	#gradient > .vertical(fade(#f9f9f9, 50%), fade(#f9f9f9, 60%));
+	#gradient > .vertical(fade(white, 60%), fade(white, 70%));
+	border-bottom: solid 1px fade(@gray-light, 20%);
 	z-index: 99;
 	.pull-right {
 		margin-right: 16px;
@@ -58,12 +59,12 @@
 	left: 0;
 	width: @menuWidth;
 	height: 100%;
-	background: #1A1A1A;
-	background-image: linear-gradient(left, rgb(26,26,26) 90%, rgb(16,16,16) 100%);
-	background-image: -o-linear-gradient(left, rgb(26,26,26) 90%, rgb(16,16,16) 100%);
-	background-image: -moz-linear-gradient(left, rgb(26,26,26) 90%, rgb(16,16,16) 100%);
-	background-image: -webkit-linear-gradient(left, rgb(26,26,26) 90%, rgb(16,16,16) 100%);
-	background-image: -ms-linear-gradient(left, rgb(26,26,26) 90%, rgb(16,16,16) 100%);
+	background: white;
+	background-image: linear-gradient(left, rgb(36,36,36) 90%, rgb(16,16,16) 100%);
+	background-image: -o-linear-gradient(left, rgb(36,36,36) 90%, rgb(16,16,16) 100%);
+	background-image: -moz-linear-gradient(left, rgb(36,36,36) 90%, rgb(16,16,16) 100%);
+	background-image: -webkit-linear-gradient(left, rgb(36,36,36) 90%, rgb(16,16,16) 100%);
+	background-image: -ms-linear-gradient(left, rgb(36,36,36) 90%, rgb(16,16,16) 100%);
 
 	z-index: 101;
 
@@ -88,10 +89,10 @@
 	li a {
 		position: relative;
 		display: block;
-		height: 50px;
-		line-height: 50px;
+		height: 44px;
+		line-height: 44px;
 		padding-left: 16px;
-		color: white;
+		color: @gray-light;
 		text-shadow: 0 1px 1px black;
 
 		.circle-icon {
@@ -100,9 +101,13 @@
 			top: 9px;
 			.transition(right .2s);
 			&:before {
-				color: white;
+				height: 26px;
+				width: 26px;
+				line-height: 25px;
+				color: @gray-light;
 				background: transparent !important;
-				border-color: white;
+				border-color: @gray-light;
+				font-size: .8em;
 				box-shadow: 
 					0 1px 1px black,
 					0 1px 1px black inset;
@@ -110,24 +115,36 @@
 		}
 
 		&:hover, &:focus, &:active, &.active {
-			background-color: @brand-primary;
-			color: #1A1A1A;
+			background-color: @gray-darker;
+			color: @brand-primary;
 			text-shadow: 0 0 0 transparent;
-			font-weight: bold;
+			
 			text-decoration: none;
 			outline: none;
-			.circle-icon {
+			/* .circle-icon {
 				&:before {
-					color: #1A1A1A;
+					color: white;
 					border-color: #1A1A1A;
 					box-shadow: 0 0 0 transparent;
 				}
-			}
+			} */
 		}
 		&:hover, &:focus, &:active {
 			.circle-icon {
-				top: 9px;
 				right: 12px;
+			}
+		}
+		&.active
+		{
+			border-left: solid 2px @brand-primary;
+			padding-left: 16px - 2; 
+			font-weight: bold;
+			.circle-icon {
+				&:before {
+					color: white;
+					border-color: white;
+					box-shadow: 0 0 0 transparent;
+				}
 			}
 		}
 	} 
@@ -143,7 +160,8 @@
 
 		li a 
 		{
-			line-height: 44px;
+			line-height: 36px;
+			color: white;
 		}
 	}
 }
@@ -151,6 +169,7 @@
 #container {
 	margin-left: @menuWidth;
 	padding: 64px 20px 20px 20px;
+	background: #F9F9F9;
 }
 
 
@@ -175,7 +194,7 @@
 #viewTools {
 	position: fixed;
 	left: @menuWidth+20;
-	top: 16px;
+	top: 15px;
 	height: 40px;
 	z-index: 100;
 	// animation: viewTools .5s;

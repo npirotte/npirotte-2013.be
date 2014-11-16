@@ -14,7 +14,7 @@
 			<div class="row">
 				<div class="col-md-6">
 					<h3>Informations</h3>
-
+					<h3></h3>
 					<div class="form-group">
 						<label class="control-label col-sm-2" for"inputHeight">Nom</label>
 						<div class="col-sm-6">
@@ -35,7 +35,7 @@
 					<h3>Configuration</h3>
 					<hr>
 					<div class="form-group">
-						<label class="control-label col-sm-2" for"inputHeight">Est administrateur</label>
+						<label class="control-label col-sm-3" for"inputHeight">Est administrateur</label>
 						<div class="col-sm-6">
 							<checkbox ng-model="item.ugrp_admin" value="1"></checkbox>
 						</div>
