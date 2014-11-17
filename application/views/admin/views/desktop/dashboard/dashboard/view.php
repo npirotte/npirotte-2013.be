@@ -39,7 +39,7 @@
 <div id="last-message" class="row dashboard-list">
 	<div class="col-lg-4" last-messages></div>
 	<div class="col-lg-4">
-		<h3>News en attente :</h3>
+		<!-- <h3>News en attente :</h3> -->
 	</div>
 </div>
 
