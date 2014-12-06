@@ -36,7 +36,7 @@
             </div>
         </header>
         <nav id="mainNav">
-            <a class="brand" href="/" target="_blank"><?=$site_name?></a>
+            <a class="brand" href="/" target="_blank"><img src="<?= APPPATH ?>/front/admin/img/peaks-white.svg" alt="Peaks" width="76px"><!-- <?=$site_name?> --></a>
             <ul>
                 <li><a href="#/" class="btn-ripple"><i class="fa fa-home circle-icon"></i>Accueil</a></li>
                 <li class="dropdown">
@@ -129,7 +129,7 @@
         </div>
 
         <div id="quick-action-modal" class="modal fade">
-            <div class="modal-content">
+            <div class="modal-content modal-lg">
                  <div class="modal-header">
                 <div class="container">
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
@@ -266,6 +266,7 @@
         <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js" charset="utf-8"></script>
         <script>window.jQuery || document.write('<script src="/<?= APPPATH?>front/framework/js/jquery-2.1.1.min.js"><\/script>')</script>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.20/angular.min.js" charset="utf-8"></script>
+        <script>window.angular || document.write('<script src="/<?= APPPATH?>front/framework/js/angular.min.js"><\/script>')</script>
 
         <script type="text/javascript" src="/<?= APPPATH?>front/framework/js/jquery-ui-1.10.4.custom.min.js" charset="utf-8"></script>
 

@@ -16,7 +16,6 @@ function MessagesListCtrl($scope, $http, contactsRepository, $routeParams, _ ) {
     {
       $scope.items = data;
       $scope.total_items = total_items;
-      $('.item-list').minSize();
       init_page();
 
       if (loadMessage)
@@ -303,7 +302,6 @@ function ContactConfigCtrl($scope, $http) {
 
 // ************** edition des formulaires ******************************//
 
-// module de menu restaurant
 
 function ContactFormsListCtrl($scope, $http, $injector)
 {
@@ -324,26 +322,28 @@ function ContactFormsListCtrl($scope, $http, $injector)
 
 }
 
-function ContactFormsEditCtrl($scope, $http, $routeParams)
+function ContactFormsEditCtrl($scope, $http, $routeParams, FormsRespository)
 {
-  $scope.section = "contact/forms/edit";
+  $scope.section = "contacts/forms/list";
   $scope.backurl = 'contacts/forms/list';
-    menuControl('messages');
+  menuControl('messages');
 
-    var id = $routeParams.id;
+  var id = $routeParams.id;
   $scope.mode =  id;
 
   var getThePage = function(){
 
-      $http.get('/admin_forms/form_details/'+id).success(function(data) {
-        console.log(data);
-        $scope.item = data.items[0];        
+    FormsRespository.Get(id)
+      .success(function(data)
+      {
+        $scope.item = data.items[0];
         init_page();
       });
    };
 
   if (id == 'new') 
   {
+    $scope.item = {};
     init_page();
   } 
   else 
@@ -354,42 +354,44 @@ function ContactFormsEditCtrl($scope, $http, $routeParams)
   $scope.delete = function()
   {
     if (confirm('Supprimer cette catégories et tout ses éléments ?')) {
-      $http.get('/admin_forms/form_delete/'+id).success(function(data) {
-          window.location.hash = '/contacts/forms/list';
-      });
+      FormsRespository.Delete(id)
+        .success(function(data)
+        {
+          window.location.hash = $scope.backurl;
+        });
     };
   }
 
     $scope.save = function(returnToList)
     {
-      $http({
-            url: '/admin_forms/form_edit',
-            method: "POST",
-            data: $scope.item,
-            headers: {'Content-Type': 'application/json'}
-        })
-      .success(function (data, status, headers, config) {
+      $scope.alert = "Sauvegarde...";
+      showAlert();
 
-          if (returnToList && data.errors.length === 0) {
-            window.location.hash = '/contacts/forms/list';
-          }
-          else if (id === 'new' && data.errors.length === 0)
-          {
-            window.location.hash = '/contacts/forms/edit/' + data.id;
-          }
-          else
-          {
-            $scope.alert = data.message;
-            $scope.errors = data.errors;
-            showFadeAlert();
-            getThePage();
-          }
-                
-        })
-      .error(function (data, status, headers, config) {
-                $scope.alert = 'Une erreure est survenue.';
-                showFadeAlert();
-            });
+      FormsRespository.Save($scope.item)
+        .success(function (data, status, headers, config) {
+
+          console.log(data);
+
+            if (returnToList && data.errors.length === 0) {
+              window.location.hash = '/contacts/forms/list';
+            }
+            else if (id === 'new' && data.errors.length === 0)
+            {
+              window.location.hash = '/contacts/forms/edit/' + data.id;
+            }
+            else
+            {
+              $scope.alert = data.message;
+              $scope.errors = data.errors;
+              showFadeAlert();
+              getThePage();
+            }
+                  
+          })
+        .error(function (data, status, headers, config) {
+                  $scope.alert = 'Une erreure est survenue.';
+                  showFadeAlert();
+              });
     }
     
 }
@@ -409,7 +411,7 @@ admin.directive('formsFields', function(){
     //     w : '=w',
     //     h : '=h',
     // }, // {} = isolate, true = child, false/undefined = no change
-    controller: function($scope, $element, $attrs, $transclude, $http, $routeParams) {
+    controller: function($scope, $element, $attrs, $transclude, $http, $routeParams, $modal, FormsFieldsRespository) {
         
         // gestion des infos contact
 
@@ -418,12 +420,9 @@ admin.directive('formsFields', function(){
         function getFormFields ()
         {
          
-
-          $http.get('/admin_forms/fields_list/'+id).success(function(data)
+          FormsFieldsRespository.GetAll(id)
+            .success(function(data)
             {
-               console.log('ok');
-              console.log(data);
-
               var i = 0;
               data = data.items;
               angular.forEach(data, function(element){
@@ -432,7 +431,6 @@ admin.directive('formsFields', function(){
                 i++;
               });
               $scope.formFields = data;
-
             });
         }
 
@@ -453,10 +451,13 @@ admin.directive('formsFields', function(){
             //$scope.formFieldsSamples = formFieldsSamples.slice();
             angular.forEach($scope.formFields, function( item )
             {
+              console.log(item);
+              console.log(i);
                 if (i != item.weight )
                 {
-                  $scope.formFields[i].weight = i;
-                  updateItem($scope.formFields[i]);
+                  item.weight = i;
+                  updateItem(item);
+                  FormsFieldsRespository.Save(item);
                 }
                 i++;
             })
@@ -468,166 +469,27 @@ admin.directive('formsFields', function(){
         };
 
       
-        $scope.addField = function()
+
+        $scope.openModal = function(object)
         {
-          console.log('ok');
-          $scope.newField.parent_id = id;
-          $scope.newField.weight = $scope.formFields.length;
-          $http({
-                  url: '/admin_forms/field_edit',
-                  method: "POST",
-                  data: $scope.newField,
-                  headers: {'Content-Type': 'application/json'}
-              }).success(function (data, status, headers, config) {
-                  console.log(data);
-                  $scope.formFields.push(data.item);
+          if (!object.parent_id) { object.parent_id = id };
+           if (!object.weight) { object.weight = $scope.formFields.length };
 
-                  $scope.alert = "Modifications enregistrées";
-                  showFadeAlert();
-                  }).error(function (data, status, headers, config) {
-                      $scope.alert = 'Une erreure est survenue.';
-                      console.log(data);
-                      showFadeAlert();
-                  }); 
-
-          $scope.newField = null;
-         $('#item-creation-popup').modal('hide');
-        }
-
-        $scope.switchEditMode = function(object)
-        {
-          $scope.editMode = true;
-          $scope.editedItem = clone(object);
-          $('#item-creation-popup').modal();
-
-          //$('#edit-form-anchor').scrollTo();
-        }
-
-        $scope.closeEditModal = function()
-        {
-          $scope.editMode = false; 
-          $('#item-creation-popup').modal('hide');
-        }
-
-        $scope.updateField = function(object)
-        {
-
-          $scope.alert = 'Sauvegarde';
-          showAlert();
-          $http(
-          {
-            url: '/admin_forms/field_edit',
-            method: 'POST',
-            data: $scope.editedItem,
-            headers: {'Content-Type': 'application/json'}
-          }).success(function(data) {
-            var i = 0;
-            angular.forEach($scope.formFields, function(item){
-              if (item.id === $scope.editedItem.id) {$scope.formFields[i] = $scope.editedItem};
-              i++;
-            });
-            $scope.editMode = false;
-            $('#item-creation-popup').modal('hide');
-
-            $scope.alert = "Modifications enregistrées";
-            showFadeAlert();
-          })
-        }
-
-        $scope.deleteField = function()
-        {
-          $http({
-            url: '/admin_forms/field_delete/' + $scope.editedItem.id,
-            method: 'POST',
-            data: $scope.editedItem,
-            headers: {'Content-Type': 'application/json'}
-          }).success(function(data) {
-            console.log(data);
-            if (data.error == 0) {
-                $scope.editMode = false;
-                $scope.editModeOpen = false;
-                $scope.alert = data.message;
-                showFadeAlert();
-
-
-                var temp = [],
-                i = 0;
-
-                angular.forEach($scope.formFields, function(item) {
-
-                  if ( item.weight > $scope.editedItem.weight )
-                  {
-                    item.weight = item.weight - 1;
-                    updateItem(item);
-                  }
-                
-                  if ( item.id != $scope.editedItem.id ) temp.push(item);
-
-                });
-
-                $scope.formFields = temp;
-
-            };
-          })
-        }
-
-         function updateItem(object)
-        {
-            $http(
-            {
-              url: '/admin_forms/field_edit',
-              method: 'POST',
-              data: object,
-              headers: {'Content-Type': 'application/json'}
-            });
-        }
-
-        $scope.reorder = function(object, sens)
-        {
-          var currentWeight = object.weight,
-              newWeight,
-              i=0,
-              modified = 0;
-
-          function setMinus()
-          {
-            angular.forEach($scope.formFields, function(item){
-              if (item.weight === currentWeight+1) { $scope.formFields[i].weight = currentWeight; modified = 1};
-              if (item.id === object.id) { $scope.formFields[i].weight = currentWeight+1; modified = 1};
-              i++;
-              if (modified === 1) {updateItem(item)};
-            });
-          }
-
-          function setPlus()
-          {
-            angular.forEach($scope.formFields, function(item){
-              if (item.weight === currentWeight-1) { $scope.formFields[i].weight = currentWeight; modified = 1};
-              if (item.id === object.id) { $scope.formFields[i].weight = currentWeight-1; modified = 1};
-              i++;
-              if (modified === 1) {updateItem(item)};
-            });
-          }
-
-          sens == 'plus' ? setMinus() : setPlus();
-
-        }
-
-        $scope.fieldvalues = {
-          add : function(object)
-          {
-            if (typeof $scope[object].field_values === 'object') {
-              $scope[object].field_values.push({ field_value : 'valeur', field_display_value : 'texte affiché'});
+          var modalInstance = $modal.open({
+            templateUrl: '/admin/view_loader/'+templateDir+'/contacts/widgets/edit_modal',
+            controller: EditFormModalCtrl,
+            size: 'lg',
+            resolve: {
+              item: function () {
+                return angular.copy(object);
+              }
             }
-            else
-            {
-              $scope[object].field_values = [{ field_value : 'valeur', field_display_value : 'texte affiché'}];
-            }         
-          },
-          remove: function(object, index)
+          });
+
+          modalInstance.result.then(function(resultObj)
           {
-            $scope[object].field_values.splice(index, 1);
-          }
+            getFormFields();
+          });
         }
 
     },
@@ -643,3 +505,60 @@ admin.directive('formsFields', function(){
     // }
   };
 });
+
+function EditFormModalCtrl($scope, $modalInstance, FormsFieldsRespository, item)
+{
+  $scope.item = item;
+
+  $scope.save = function () {
+    FormsFieldsRespository.Save(item)
+      .success(function(data){
+        if (data.error > 0) {
+          $scope.errors = data.errors
+        }
+        else
+        {
+           $modalInstance.close({ action : 'edit', item : $scope.item });
+        }
+      }); 
+  };
+
+  $scope.deleteField = function()
+  {
+    bootbox.confirm('Etes vous sur de vouloir supprimer ce champ ?', function(result)
+    {
+      if (result) {
+        FormsFieldsRespository.Delete(item.id)
+          .success(function()
+          {
+             $modalInstance.close({ action : 'delete', item : $scope.item});
+          });
+      };
+    });
+  }
+
+  $scope.cancel = function () {
+    $modalInstance.dismiss('cancel');
+  };
+
+  $scope.fieldvalues = {
+    add : function()
+    {
+
+      try 
+      {
+        $scope.item.field_values.push({ field_value : 'valeur', field_display_value : 'texte affiché'});
+      }
+      catch(e)
+      {
+        $scope.item.field_values = [{ field_value : 'valeur', field_display_value : 'texte affiché'}];
+      }
+         
+    },
+    remove: function(index)
+    {
+      $scope.item.field_values.splice(index, 1);
+    }
+  }
+
+}

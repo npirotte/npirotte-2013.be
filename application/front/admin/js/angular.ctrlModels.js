@@ -6,6 +6,8 @@ function ItemList($scope, $http, config)
       reorderQuery = '',
       searchQuery = '';
 
+  $scope.reverse = false;
+
   $scope.section = config.section;
   menuControl(config.menu);
 
@@ -75,11 +77,13 @@ function ItemList($scope, $http, config)
     if (orderprop != col) 
     {
       orderprop = col;
+      $scope.orderprop = orderprop;
       reverse = false;
     }
     else 
     {
       reverse = !reverse;
+      $scope.reverse = reverse;
     }
 
     reorderQuery = '?orderprop=' + orderprop + '&reverse=' + reverse;

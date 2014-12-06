@@ -246,10 +246,10 @@ admin.directive('imageUpload', function($timeout){
 
           $scope.triggerUpload = function()
           {
-            $timeout(function()
-            {
+            //$timeout(function()
+            //{
               $('#fileUploader-' + $scope.uploaderId).click();
-            });
+            //});
           }
 
           $scope.uploaderClass = function (content)

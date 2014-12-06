@@ -17,6 +17,7 @@ th {
 .table {
   width: 100%;
   margin-bottom: @line-height-computed;
+  box-shadow: 0 1px 1px fade(black, 10%);
   // Cells
   > thead,
   > tbody,
@@ -43,6 +44,36 @@ th {
   > thead > tr > th {
     vertical-align: bottom;
     border-bottom: 2px solid @table-border-color;
+    &[ng-click] 
+    {
+      &:after
+      {
+        content: "\f0dc";
+        font-family: fontAwesome;
+        float: right;
+        color: @gray-light;
+      }
+
+      &.ordered
+      {
+        &:after 
+        {
+          content: "\f0de";
+          color: @gray;
+          position: relative;
+          top: 5px;
+        }
+        &.reverse 
+        {
+          &:after 
+          {
+            content: "\f0dd";
+            position: relative;
+            top: 0px;
+          }
+        }
+      }
+    }
   }
   // Remove top border from thead by default
   > caption + thead,

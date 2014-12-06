@@ -3,30 +3,29 @@
 </div>
 
 
-<div>
-	<h1>Compte : {{item.username}}</h1>
-	<hr>
+<div class="animated fadeIn" ng-if="item" >
+	<h1 class="page-title">Compte : {{item.username}}</h1>
 
 	<div error-sumary></div>
 	<div ng-if="item.active == 0" activation-message ></div>
 
-	<div class="tabbable" id="edit-tabset" vertical="true">
-		<ul class="nav nav-tabs nav-stacked">
+	<div class="edit-tabs">
+		<ul class="nav nav-tabs">
 			<li ng-class="panes.profile">
 	  			<a ng-click="selectPane('panes', 'profile')">
-				 <i class="fa fa-user"></i>
+				 <i class="fa fa-user"></i>&nbsp;&nbsp;Utilisateur
 				</a>
 			</li>
 			<li ng-if="item.user_id" ng-class="panes.contact_info">
 	  			<a ng-click="selectPane('panes', 'contact_info')">
-				 <i class="fa fa-envelope"></i>
+				 <i class="fa fa-envelope"></i>&nbsp;&nbsp;Contact
 				</a>
 			</li>
-			<li ng-class="panes.config">
-	  			<a ng-click="selectPane('panes', 'config')">
+			<!-- <li ng-class="panes.config">
+				  			<a ng-click="selectPane('panes', 'config')">
 				 <i class="fa fa-cog"></i>
 				</a>
-			</li>
+			</li> -->
 		</ul>
 
 		<div class="tab-content">

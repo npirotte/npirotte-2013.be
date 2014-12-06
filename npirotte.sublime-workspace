@@ -4,634 +4,630 @@
 		"selected_items":
 		[
 			[
-				"glo",
-				"global_stylesheets"
+				"item",
+				"item_available"
 			],
 			[
-				"sta",
-				"statut"
-			],
-			[
-				"le",
-				"length"
-			],
-			[
-				"err",
+				"error",
 				"errors"
 			],
 			[
-				"new",
-				"newStyleSheet"
+				"ope",
+				"openModal"
 			],
 			[
-				"Sty",
-				"StylesheetsRespository"
+				"ero",
+				"errors"
 			],
 			[
-				"Styl",
-				"StyleSheetSave"
+				"For",
+				"FormsFieldsRespository"
 			],
 			[
-				"style",
-				"stylesheets_model"
-			],
-			[
-				"child",
-				"childs"
-			],
-			[
-				"Style",
-				"stylesheets"
-			],
-			[
-				"sty",
-				"stylesheets"
-			],
-			[
-				"re",
-				"result"
-			],
-			[
-				"globa",
-				"global_stylesheets_content"
-			],
-			[
-				"st",
-				"stylesheets"
-			],
-			[
-				"for",
-				"foreach	foreach …"
+				"Form",
+				"FormsFieldsRespository"
 			],
 			[
 				"result",
-				"result_array"
+				"resultObj"
 			],
 			[
-				"resu",
-				"result_array"
-			],
-			[
-				"pos",
-				"pos-r	position: relative;"
-			],
-			[
-				"box",
-				"box-shadow"
-			],
-			[
-				"arr",
-				"array"
-			],
-			[
-				"grou",
-				"group_auth"
-			],
-			[
-				"con",
-				"constraint"
-			],
-			[
-				"fl",
-				"flexi_auth"
-			],
-			[
-				"lo",
-				"location"
-			],
-			[
-				"mo",
-				"modelValue"
-			],
-			[
-				"mode",
-				"modelCtrl"
-			],
-			[
-				"admi",
-				"admin_manager"
-			],
-			[
-				"group",
-				"groupsRespository"
-			],
-			[
-				"grop",
-				"groupsRespository"
-			],
-			[
-				"resul",
-				"result"
-			],
-			[
-				"res",
-				"result_array"
-			],
-			[
-				"user",
-				"user_groups"
-			],
-			[
-				"use",
-				"users_model"
-			],
-			[
-				"users",
-				"users_model"
-			],
-			[
-				"no",
-				"no-ajax"
-			],
-			[
-				"proto",
-				"prototype"
-			],
-			[
-				"ayy",
-				"array_key_exists"
-			],
-			[
-				"meta",
-				"meta_title"
-			],
-			[
-				"ca",
-				"category_data"
-			],
-			[
-				"prnt",
-				"print_r"
-			],
-			[
-				"me",
-				"meta_keywords"
-			],
-			[
-				"icon",
-				"iconPrefix"
-			],
-			[
-				"ico",
-				"iconsSheet"
-			],
-			[
-				"fa",
-				"faIcons"
-			],
-			[
-				"getPage",
-				"GetPage"
-			],
-			[
-				"pre",
-				"preventDefault"
-			],
-			[
-				"ajac",
-				"ajaxConfig"
-			],
-			[
-				"load",
-				"loading"
-			],
-			[
-				"remove",
-				"removeClass	.removeClass()"
-			],
-			[
-				"conte",
-				"context"
-			],
-			[
-				"wn",
-				"window"
-			],
-			[
-				"before",
-				"beforeSend"
-			],
-			[
-				"img",
-				"imgTag"
-			],
-			[
-				"imgC",
-				"imgCanvas"
-			],
-			[
-				"stro",
-				"strokeStyle"
-			],
-			[
-				"orde",
-				"order_by"
-			],
-			[
-				"modif",
-				"modified_by"
-			],
-			[
-				"bann",
-				"banners_banners"
-			],
-			[
-				"tu",
-				"thumbs"
-			],
-			[
-				"ta",
-				"table"
-			],
-			[
-				"table",
-				"table_target"
-			],
-			[
-				"fied",
-				"fields"
-			],
-			[
-				"data",
-				"database"
-			],
-			[
-				"port",
-				"portfolio_categories"
-			],
-			[
-				"loca",
-				"localize"
-			],
-			[
-				"fo",
-				"foreach	foreach …"
-			],
-			[
-				"loc",
-				"localise"
-			],
-			[
-				"array_key",
-				"array_key_exists"
-			],
-			[
-				"arry_ke",
-				"array_key_exists"
-			],
-			[
-				"col",
-				"col_params"
-			],
-			[
-				"mous",
-				"mousePosition"
-			],
-			[
-				"modi",
-				"modifierX"
-			],
-			[
-				"ge",
-				"getData"
-			],
-			[
-				"tree",
-				"treeCulture"
-			],
-			[
-				"tre",
-				"treeCulture"
-			],
-			[
-				"lan",
-				"languages"
-			],
-			[
-				"item",
-				"item_lang"
-			],
-			[
-				"rule",
-				"ruleName"
-			],
-			[
-				"la",
-				"languages"
-			],
-			[
-				"lang",
-				"languages"
-			],
-			[
-				"ot",
-				"output"
-			],
-			[
-				"db",
-				"db_model"
-			],
-			[
-				"menus_",
-				"menus_items"
-			],
-			[
-				"menu",
-				"menus_menus"
-			],
-			[
-				"esl",
-				"else"
-			],
-			[
-				"mod",
-				"module"
-			],
-			[
-				"print_r",
-				"print_r"
-			],
-			[
-				"on",
-				"onMouseDrad"
-			],
-			[
-				"page",
-				"page_data"
-			],
-			[
-				"messa",
-				"messageId"
-			],
-			[
-				"noti",
-				"notifications"
-			],
-			[
-				"notif",
-				"notificationsNbr"
-			],
-			[
-				"list",
-				"list-d	list-style-type: disc;"
-			],
-			[
-				"add",
-				"addClass	addClass"
-			],
-			[
-				"manage",
-				"manageActiveLinks"
-			],
-			[
-				"url",
-				"urlParts"
-			],
-			[
-				"ex",
-				"explodedUrl"
+				"modal",
+				"modalInstance"
 			],
 			[
 				"font",
-				"font-size"
-			],
-			[
-				"pad",
-				"padding-left"
-			],
-			[
-				"remo",
-				"removeClass	.removeClass"
+				"font-family"
 			],
 			[
 				"margin",
-				"margin"
+				"margin-top"
 			],
 			[
 				"border",
 				"border-radius"
 			],
 			[
-				"inline",
-				"inline-block"
+				"background",
+				"background-color"
+			],
+			[
+				"pos-",
+				"pos-f	position: fixed;"
+			],
+			[
+				"pos",
+				"pos-a	position: absolute;"
+			],
+			[
+				"up",
+				"updata"
+			],
+			[
+				"order",
+				"order_max"
+			],
+			[
+				"ol",
+				"old_weight"
+			],
+			[
+				"map",
+				"map_elements_list"
+			],
+			[
+				"node",
+				"nodes"
+			],
+			[
+				"this",
+				"this_element"
+			],
+			[
+				"resu",
+				"result_array"
+			],
+			[
+				"page",
+				"page"
+			],
+			[
+				"paret",
+				"parent_id"
+			],
+			[
+				"parent",
+				"parent_id"
+			],
+			[
+				"pages",
+				"pages_list"
+			],
+			[
+				"min",
+				"min-height"
+			],
+			[
+				"margi",
+				"margin-left"
+			],
+			[
+				"me",
+				"menus"
+			],
+			[
+				"file",
+				"fileNameCopy"
+			],
+			[
+				"uplo",
+				"uploaderId"
+			],
+			[
+				"head",
+				"header_viewmodel"
+			],
+			[
+				"header",
+				"header_model"
+			],
+			[
+				"body",
+				"body_class"
+			],
+			[
+				"$meta",
+				"$meta_title"
+			],
+			[
+				"field",
+				"field_value"
+			],
+			[
+				"preg",
+				"preg_match_all"
+			],
+			[
+				"resut",
+				"result_array"
+			],
+			[
+				"temp",
+				"templates"
+			],
+			[
+				"key",
+				"keywords"
+			],
+			[
+				"uri",
+				"uri_string"
+			],
+			[
+				"sele",
+				"select2Tags"
+			],
+			[
+				"new",
+				"newValue"
+			],
+			[
+				"tag",
+				"tags_model"
+			],
+			[
+				"global",
+				"global_tags"
+			],
+			[
+				"glo",
+				"global_tags_links"
+			],
+			[
+				"parnt",
+				"parent_intentity"
+			],
+			[
+				"par",
+				"parent_id"
+			],
+			[
+				"tage",
+				"tag_type"
+			],
+			[
+				"tas",
+				"tag_ids"
+			],
+			[
+				"pare",
+				"parent_intentity"
+			],
+			[
+				"get_meta",
+				"get_meta_id"
+			],
+			[
+				"data",
+				"database"
+			],
+			[
+				"meta",
+				"meta_keywords"
+			],
+			[
+				"ed",
+				"edit"
+			],
+			[
+				"uni",
+				"uniqueId"
+			],
+			[
+				"templ",
+				"template_values"
+			],
+			[
+				"json",
+				"json_encode"
+			],
+			[
+				"tempa",
+				"template_values"
+			],
+			[
+				"create",
+				"created_on"
+			],
+			[
+				"wh",
+				"where"
+			],
+			[
+				"templa",
+				"template"
+			],
+			[
+				"pages_tem",
+				"pages_templates_values"
+			],
+			[
+				"full",
+				"full_name"
+			],
+			[
+				"max",
+				"max_length"
+			],
+			[
+				"is_re",
+				"is_required"
+			],
+			[
+				"parn",
+				"parent_id"
+			],
+			[
+				"get",
+				"getItem"
+			],
+			[
+				"save",
+				"saveIsBuzy"
+			],
+			[
+				"tem",
+				"templateField"
+			],
+			[
+				"getTem",
+				"getTemplateFields"
+			],
+			[
+				"pages_templs",
+				"pages_templates_fields"
+			],
+			[
+				"cons",
+				"constraint"
+			],
+			[
+				"_po",
+				"_POST"
+			],
+			[
+				"sho",
+				"showAlert"
+			],
+			[
+				"show",
+				"showFadeAlert"
+			],
+			[
+				"el",
+				"else"
+			],
+			[
+				"getTe",
+				"getTemplateFields"
+			],
+			[
+				"tep",
+				"templateFiles"
+			],
+			[
+				"template",
+				"templates"
+			],
+			[
+				"op",
+				"options"
+			],
+			[
+				"fore",
+				"foreign"
+			],
+			[
+				"delete",
+				"db_delete	CI - Active Record DB Delete"
+			],
+			[
+				"templtes",
+				"templates_fields_edit"
+			],
+			[
+				"preg_mat",
+				"preg_match_all"
 			],
 			[
 				"pa",
-				"padding-top"
+				"pattern"
 			],
 			[
-				"tex",
-				"text-align"
+				"admin",
+				"admin_pages"
 			],
 			[
-				"menus",
-				"menus_items"
+				"menu",
+				"menuControl"
 			],
 			[
-				"por",
-				"portfolio_categories"
+				"ou",
+				"output	<output>"
 			],
 			[
-				"news",
-				"news_items"
+				"forei",
+				"odbc_foreignkeys"
+			],
+			[
+				"pri",
+				"primary"
+			],
+			[
+				"$htt",
+				"$http	AngularJS"
+			],
+			[
+				"files",
+				"file_list"
+			],
+			[
+				"preg_",
+				"preg_replace"
+			],
+			[
+				"lo",
+				"logDetailsCache"
+			],
+			[
+				"logD",
+				"logDetailsCache"
+			],
+			[
+				"log",
+				"logListCache"
+			],
+			[
+				"lis",
+				"logListCache"
+			],
+			[
+				"set_",
+				"set_output"
+			],
+			[
+				"out",
+				"output_json	CI - output Json"
 			],
 			[
 				"fun",
 				"function"
 			],
 			[
-				"pages",
-				"pages_model"
+				"is",
+				"isRunning"
 			],
 			[
-				"q",
-				"query"
+				"del",
+				"delimiter"
 			],
 			[
-				"sele",
-				"select"
+				"prop",
+				"prop_1"
 			],
 			[
-				"rese",
-				"resetItem"
+				"pro",
+				"prop_2"
 			],
 			[
-				"meu",
-				"menu_id"
+				"condi",
+				"condition_array"
 			],
 			[
-				"get",
-				"getItemList"
+				"cond",
+				"condition_array"
 			],
 			[
-				"run",
-				"runing"
+				"ru",
+				"running"
 			],
 			[
-				"paret",
-				"parentId"
+				"jon",
+				"json_encode"
 			],
 			[
-				"parent",
-				"parentId"
+				"strn",
+				"string"
 			],
 			[
-				"end",
-				"endEdit"
+				"condition",
+				"conditions"
+			],
+			[
+				"param",
+				"params"
+			],
+			[
+				"fnctio",
+				"function_match_tree"
+			],
+			[
+				"appl",
+				"apply_template"
+			],
+			[
+				"funct",
+				"function_match_tree"
+			],
+			[
+				"app",
+				"apply_functions"
+			],
+			[
+				"function",
+				"function_match_tree"
+			],
+			[
+				"functio",
+				"function_match_tree"
 			],
 			[
 				"prit",
-				"print"
+				"print_r"
 			],
 			[
-				"set",
-				"set_output"
+				"dire",
+				"verbose_directive	AngularJS"
 			],
 			[
-				"field",
-				"fieldConfig"
+				"stop",
+				"stopTime"
 			],
 			[
-				"mail",
-				"mailto"
+				"$in",
+				"$interval	AngularJS"
 			],
 			[
-				"conta",
-				"contacts"
+				"con",
+				"contactRepositories"
 			],
 			[
-				"page_",
-				"page_content"
+				"contact",
+				"contact_contacts"
 			],
 			[
-				"Crea",
-				"CreateUser"
+				"des",
+				"desc"
 			],
 			[
-				"str_re",
-				"str_replace"
+				"port",
+				"portfolio"
 			],
 			[
-				"pass",
-				"password"
+				"user",
+				"user_id"
+			],
+			[
+				"news",
+				"news_items"
+			],
+			[
+				"fi",
+				"filter_input"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "application/models/models/global/stylesheets_content.php",
+			"file": "application/libraries/MY_Form_validation.php",
 			"settings":
 			{
-				"buffer_size": 963,
+				"buffer_size": 4734,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "application/models/models/contact/forms_fields.php",
+			"settings":
+			{
+				"buffer_size": 1589,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "application/front/admin/js/angular.admin.js",
+			"file": "application/models/db_model.php",
 			"settings":
 			{
-				"buffer_size": 9695,
+				"buffer_size": 6365,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "application/models/stylesheets_model.php",
+			"file": "application/controllers/admin_forms.php",
 			"settings":
 			{
-				"buffer_size": 4978,
+				"buffer_size": 3890,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "system/helpers/view_helper.php",
+			"file": "application/controllers/pages.php",
 			"settings":
 			{
-				"buffer_size": 4196,
+				"buffer_size": 2952,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "application/controllers/admin_global.php",
+			"file": "npirotte.sublime-project",
 			"settings":
 			{
-				"buffer_size": 4795,
+				"buffer_size": 174,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "application/front/admin/style_compilator.less",
+			"contents": "",
 			"settings":
 			{
-				"buffer_size": 721,
-				"line_ending": "Unix"
+				"buffer_size": 0,
+				"line_ending": "Windows",
+				"name": "Xdebug Context",
+				"read_only": true,
+				"scratch": true
 			}
 		},
 		{
-			"file": "application/front/admin/style/styles.less",
+			"contents": "",
 			"settings":
 			{
-				"buffer_size": 12475,
-				"line_ending": "Unix"
+				"buffer_size": 0,
+				"line_ending": "Windows",
+				"name": "Xdebug Watch",
+				"read_only": true,
+				"scratch": true
 			}
 		},
 		{
-			"file": "application/front/admin/js/angular.banners.js",
+			"contents": "",
 			"settings":
 			{
-				"buffer_size": 6286,
-				"line_ending": "Unix"
+				"buffer_size": 0,
+				"line_ending": "Windows",
+				"name": "Xdebug Stack",
+				"read_only": true,
+				"scratch": true
 			}
 		},
 		{
-			"file": "application/front/compilers/admin_foot_js.php",
+			"contents": "=> D:\\websites\\npirotte-2013.be\\application\\controllers\\admin_forms.php\n	|+| 1\n	|+| 122\n=> D:\\websites\\npirotte-2013.be\\application\\controllers\\pages.php\n	|+| 30\n=> D:\\websites\\npirotte-2013.be\\application\\models\\db_model.php\n	|+| 41\n",
 			"settings":
 			{
-				"buffer_size": 2818,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "application/views/admin/templates/layout.php",
-			"settings":
-			{
-				"buffer_size": 15944,
-				"line_ending": "Unix"
+				"buffer_size": 234,
+				"line_ending": "Windows",
+				"name": "Xdebug Breakpoint",
+				"read_only": true,
+				"scratch": true
 			}
 		}
 	],
 	"build_system": "Packages/User/typescript.sublime-build",
 	"command_palette":
 	{
-		"height": 101.0,
+		"height": 35.0,
 		"selected_items":
 		[
-			[
-				"inst	a",
-				"Package Control: Install Package"
-			],
-			[
-				"insta",
-				"Package Control: Install Package"
-			],
-			[
-				"pack",
-				"Package Control: Remove Package"
-			],
-			[
-				"pac",
-				"Package Control: Remove Package"
-			],
-			[
-				"pa",
-				"Package Control: Remove Package"
-			],
 			[
 				"install",
 				"Package Control: Install Package"
 			],
 			[
 				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
 				"Package Control: Install Package"
 			],
 			[
@@ -651,6 +647,14 @@
 				"Package Control: Install Package"
 			],
 			[
+				"pack",
+				"Package Control: Disable Package"
+			],
+			[
+				"pa",
+				"Package Control: Remove Package"
+			],
+			[
 				"Snippet: q",
 				"Snippet: QUnit HTML"
 			],
@@ -667,7 +671,7 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 571.0
+		"width": 472.0
 	},
 	"console":
 	{
@@ -690,148 +694,178 @@
 	[
 		"/D/websites/npirotte-2013.be",
 		"/D/websites/npirotte-2013.be/application",
-		"/D/websites/npirotte-2013.be/application/front",
-		"/D/websites/npirotte-2013.be/application/front/admin",
-		"/D/websites/npirotte-2013.be/application/front/admin/style",
-		"/D/websites/npirotte-2013.be/application/front/compilers",
+		"/D/websites/npirotte-2013.be/application/controllers",
+		"/D/websites/npirotte-2013.be/application/libraries",
+		"/D/websites/npirotte-2013.be/application/models",
+		"/D/websites/npirotte-2013.be/application/models/models",
+		"/D/websites/npirotte-2013.be/application/models/models/contact",
+		"/D/websites/npirotte-2013.be/application/models/models/pages",
+		"/D/websites/npirotte-2013.be/application/views",
+		"/D/websites/npirotte-2013.be/application/views/admin",
+		"/D/websites/npirotte-2013.be/application/views/admin/pages",
+		"/D/websites/npirotte-2013.be/application/views/admin/templates",
+		"/D/websites/npirotte-2013.be/application/views/admin/views",
+		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop",
+		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/assets",
+		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/assets/images",
+		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/assets/widgets",
+		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/banners",
+		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/banners/banner",
+		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/banners/bannerzone",
+		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/contacts",
+		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/contacts/forms",
+		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/contacts/messages",
+		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/contacts/widgets",
+		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/manager",
+		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/manager/groups",
+		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/manager/users",
+		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/news",
+		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/news/categories",
+		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/news/news",
+		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/pages",
+		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/pages/pages",
+		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/pages/templates",
+		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/portfolio",
+		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/portfolio/categories",
+		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/portfolio/portfolio",
+		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/shared",
 		"/D/websites/npirotte-2013.be/system",
-		"/D/websites/npirotte-2013.be/system/third_party",
-		"/D/websites/npirotte-2013.be/system/third_party/less.php"
+		"/D/websites/npirotte-2013.be/system/helpers"
 	],
 	"file_history":
 	[
-		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.globalRepositories.js",
-		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/global/stylesheets/edit.php",
-		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.global.js",
-		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.content_edition.js",
-		"/D/websites/npirotte-2013.be/application/models/stylesheets_model.php",
-		"/D/websites/npirotte-2013.be/application/models/models/global/stylesheets.php",
-		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.globalDirectives.js",
-		"/D/websites/npirotte-2013.be/application/models/portfolio_model.php",
-		"/D/websites/npirotte-2013.be/application/models/models/news/categories.php",
-		"/D/websites/npirotte-2013.be/application/models/models/global/stylesheets_content.php",
-		"/D/websites/npirotte-2013.be/application/controllers/admin_global.php",
-		"/D/websites/npirotte-2013.be/application/models/forms_model.php",
-		"/D/websites/npirotte-2013.be/application/models/db_model.php",
-		"/D/websites/npirotte-2013.be/index.php",
-		"/D/websites/npirotte-2013.be/system/core/CodeIgniter.php",
-		"/D/websites/npirotte-2013.be/application/controllers/pages.php",
-		"/D/websites/npirotte-2013.be/application/controllers/session.php",
-		"/C/xampp/apache/conf/extra/httpd-vhosts.conf",
-		"/D/websites/npirotte-2013.be/application/front/admin/style/bootstrap/variables.less",
-		"/D/websites/npirotte-2013.be/application/front/admin/style/form.less",
-		"/D/websites/npirotte-2013.be/application/front/admin/js/angular-bootstrap-checkbox.js",
-		"/D/websites/dev stuffs/hosts",
-		"/C/xampp/apache/conf/httpd.conf",
-		"/D/websites/dev stuffs/htaccess",
-		"/D/websites/npirotte-2013.be/application/front/admin/style/bootstrap/panels.less",
-		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/shared/views/list.php",
-		"/D/websites/npirotte-2013.be/application/front/admin/style/styles.less",
-		"/D/websites/npirotte-2013.be/application/front/admin/style/bootstrap/pagination.less",
-		"/D/websites/npirotte-2013.be/application/front/admin/style/bootstrap/alerts.less",
-		"/C/Users/npirotte/Desktop/ripples.less",
-		"/D/websites/npirotte-2013.be/application/front/admin/plugins/ripple/jquery.ripple.less",
-		"/D/websites/npirotte-2013.be/application/front/admin/plugins/ripple/jquery.ripple.js",
+		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.assetsdirective.js",
 		"/D/websites/npirotte-2013.be/system/helpers/view_helper.php",
-		"/D/websites/npirotte-2013.be/application/models/pages_model.php",
-		"/D/websites/npirotte-2013.be/application/libraries/smartcache.php",
-		"/D/websites/npirotte-2013.be/application/config/flexi_auth.php",
-		"/D/websites/npirotte-2013.be/application/libraries/Cache_manager.php",
-		"/D/websites/npirotte-2013.be/application/views/admin/templates/layout.php",
-		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/manager/groups/edit.php",
-		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.managerRepositories.js",
-		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.admin.js",
-		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/portfolio/portfolio/edit.php",
-		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/pages/pages/edit.php",
-		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.pagesRepositories.js",
-		"/D/websites/npirotte-2013.be/application/models/users_model.php",
-		"/D/websites/npirotte-2013.be/application/controllers/admin_manager.php",
-		"/D/websites/npirotte-2013.be/application/controllers/admin_pages.php",
-		"/D/websites/npirotte-2013.be/application/models/models/pages/pages.php",
-		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.pages.js",
-		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.manager.js",
-		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/manager/users/edit.php",
-		"/D/websites/npirotte-2013.be/application/models/maintenance_model.php",
-		"/D/websites/npirotte-2013.be/application/controllers/portfolio.php",
-		"/D/websites/npirotte-2013.be/application/front/default/plugins/gallery/css/blueimp-gallery.less",
-		"/D/websites/npirotte-2013.be/application/front/default/style_compilator.less",
-		"/D/websites/npirotte-2013.be/application/front/compilers/default_foot_js.php",
-		"/D/websites/npirotte-2013.be/application/views/news/widgets/news_list.php",
-		"/D/websites/npirotte-2013.be/application/controllers/news.php",
-		"/D/websites/npirotte-2013.be/application/views/news/news/view.php",
-		"/D/websites/npirotte-2013.be/application/views/templates/layout.php",
-		"/D/websites/npirotte-2013.be/application/views/news/news/list.php",
-		"/D/websites/npirotte-2013.be/application/front/default/plugins/gallery/css/demo.css",
-		"/D/websites/npirotte-2013.be/application/controllers/admin_news.php",
-		"/D/websites/npirotte-2013.be/application/front/default/js/core/peaks.core.js",
-		"/D/websites/npirotte-2013.be/application/front/default/js/core/peaks.init.js",
-		"/D/websites/npirotte-2013.be/application/views/contact/forms/form.php",
-		"/D/websites/npirotte-2013.be/application/front/default/js/core/peaks.ajax.js",
-		"/D/websites/npirotte-2013.be/application/front/default/js/widgets/contactForm.js",
-		"/D/websites/npirotte-2013.be/application/front/default/js/customer/peaks.homePageCtrl.js",
-		"/D/websites/npirotte-2013.be/application/front/default/js/customer/peaks.news.js",
-		"/D/websites/npirotte-2013.be/application/front/default/js/jquery.customer.js",
-		"/D/websites/npirotte-2013.be/application/front/default/js/customer/peaks.customer_init.js",
-		"/D/websites/npirotte-2013.be/application/front/default/js/customer/peaks.portfolio.js",
-		"/D/websites/npirotte-2013.be/application/front/framework/js/jquery.functions.js",
-		"/D/websites/npirotte-2013.be/application/front/default/js/widgtet/contactForm.js",
-		"/D/websites/npirotte-2013.be/application/front/default/js/core/peaks.contactForm.js",
-		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.news.js",
-		"/D/websites/npirotte-2013.be/application/models/flexi_auth_lite_model.php",
-		"/D/websites/npirotte-2013.be/application/libraries/Flexi_auth_lite.php",
-		"/D/websites/npirotte-2013.be/application/front/default/style/styles.less",
-		"/C/Users/npirotte/Downloads/WRC.4.FIA.World.Rally.Championship-RELOADED/reloaded.nfo",
-		"/D/websites/npirotte-2013.be/application/models/assets_model.php",
-		"/D/websites/npirotte-2013.be/application/controllers/admin_assets.php",
-		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/assets/widgets/assets_list_modal.php",
-		"/D/websites/npirotte-2013.be/.gitignore",
-		"/D/websites/npirotte-2013.be/application/models/banners_model.php",
-		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/assets/widgets/asset_modal.php",
-		"/D/websites/npirotte-2013.be/application/models/tags_model.php",
-		"/D/websites/npirotte-2013.be/application/models/models/assets/images.php",
-		"/D/websites/npirotte-2013.be/application/viewModels/global/HeaderViewModel.php",
-		"/D/websites/npirotte-2013.be/application/controllers/admin_portfolio.php",
+		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/contacts/widgets/forms_fields.php",
+		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/contacts/forms/edit.php",
+		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/contacts/widgets/edit_modal.php",
+		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.contactRepositories.js",
+		"/D/websites/npirotte-2013.be/application/models/models/contact/forms_fields.php",
+		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.contact.js",
+		"/D/websites/npirotte-2013.be/application/controllers/admin_forms.php",
 		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.portfolio.js",
-		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/portfolio/categories/edit.php",
+		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/banners/bannerzone/edit.php",
+		"/D/websites/npirotte-2013.be/application/front/admin/style/form.less",
+		"/D/websites/npirotte-2013.be/application/front/admin/style/styles.less",
+		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/assets/images/image_upload.php",
+		"/D/websites/npirotte-2013.be/application/front/admin/style/bootstrap/variables.less",
+		"/D/websites/npirotte-2013.be/application/front/admin/style/bootstrap/scaffolding.less",
+		"/D/websites/npirotte-2013.be/application/views/admin/templates/layout.php",
+		"/D/websites/npirotte-2013.be/application/controllers/admin_manager.php",
+		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/shared/edit_tools.php",
+		"/D/websites/npirotte-2013.be/application/front/admin/style/bootstrap/navs.less",
+		"/D/websites/npirotte-2013.be/application/front/admin/style/tabbable.less",
+		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/pages/pages/list.php",
+		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/contacts/messages/list.php",
+		"/D/websites/npirotte-2013.be/application/front/admin/js/jquery.admin.js",
+		"/D/websites/npirotte-2013.be/application/controllers/admin.php",
+		"/D/websites/npirotte-2013.be/application/views/admin/pages/login.php",
+		"/D/websites/npirotte-2013.be/application/front/admin/style/logon.less",
 		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/news/news/edit.php",
-		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.portfolioRepositories.js",
-		"/D/websites/npirotte-2013.be/application/models/news_model.php",
-		"/D/websites/npirotte-2013.be/application/front/compilers/admin_foot_js.php",
-		"/D/websites/npirotte-2013.be/application/front/framework/font-awesome/less/icons.less",
-		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.iconsService.js",
-		"/D/websites/npirotte-2013.be/application/controllers/admin_helpers.php",
-		"/D/websites/npirotte-2013.be/application/front/default/js/core/pikes.ajax.js",
-		"/D/websites/npirotte-2013.be/application/front/default/js/core/pikes.init.js",
-		"/D/websites/npirotte-2013.be/application/front/default/js/core/pikes.core.js",
-		"/D/websites/npirotte-2013.be/application/front/default/js/customer/pikes.homePageCtrl.js",
-		"/D/websites/npirotte-2013.be/application/front/default/js/customer/pikes.customer_init.js",
-		"/C/Users/npirotte/Downloads/Adobe Photoshop Lightroom 5.3 Final (64 bit) [ChingLiu]/ChingLiu.Install.Notes.nfo",
-		"/D/websites/npirotte-2013.be/application/front/default/js/canvaIntro.js",
-		"/D/websites/npirotte-2013.be/application/front/default/js/paper-full.min.js",
-		"/D/websites/npirotte-2013.be/application/config/routes.php",
 		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/news/categories/edit.php",
-		"/D/websites/npirotte-2013.be/application/models/models/banners/banners.php",
+		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/manager/users/edit.php",
+		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/manager/groups/edit.php",
 		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/banners/banner/edit.php",
-		"/D/websites/npirotte-2013.be/application/helpers/banners/banners_helper.php",
-		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.newsRepositories.js",
-		"/D/websites/npirotte-2013.be/application/models/models/news/items.php",
-		"/D/websites/npirotte-2013.be/application/models/models/portfolio/categories.php",
-		"/D/websites/npirotte-2013.be/application/libraries/Models_service.php",
-		"/D/websites/npirotte-2013.be/application/viewModels/portfolio/PorfolioItemViewModel.php",
-		"/D/websites/npirotte-2013.be/application/viewModels/portfolio/PortfolioCategoriesListViewModel.php",
-		"/D/websites/npirotte-2013.be/application/viewModels/portfolio/ThumbListWidgetViewModel.php",
-		"/D/websites/npirotte-2013.be/application/models/models/portfolio/items.php",
-		"/D/websites/npirotte-2013.be/application/models/menus_model.php",
-		"/D/websites/npirotte-2013.be/application/controllers/maintenance.php",
-		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/shared/widgets/tree.php",
-		"/D/websites/npirotte-2013.be/application/libraries/MY_Form_validation.php",
+		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/portfolio/portfolio/edit.php",
+		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/portfolio/categories/edit.php",
+		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/pages/templates/edit.php",
+		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/pages/pages/edit.php",
+		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/menus/menus/edit.php",
+		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.ctrlModels.js",
+		"/D/websites/npirotte-2013.be/application/front/admin/style/bootstrap/tables.less",
+		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/shared/views/list.php",
+		"/D/websites/npirotte-2013.be/system/helpers/html_helper.php",
+		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/manager/users/list.php",
+		"/D/websites/npirotte-2013.be/application/front/admin/style/typography.less",
+		"/D/websites/npirotte-2013.be/application/front/admin/style/ui-tree.less",
+		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.pages.js",
+		"/D/websites/npirotte-2013.be/application/models/pages_model.php",
+		"/D/websites/sextoysreunions.be/contact.php",
 		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.pagesDirectives.js",
-		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.banners.js",
-		"/D/websites/npirotte-2013.be/application/controllers/admin.php"
+		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.assets_manager.js",
+		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/shared/widgets/tree.php",
+		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.pagesRepositories.js",
+		"/D/websites/npirotte-2013.be/application/models/db_model.php",
+		"/D/websites/npirotte-2013.be/application/controllers/admin_pages.php",
+		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.admin.js",
+		"/D/websites/npirotte-2013.be/application/front/compilers/admin_foot_js.php",
+		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.menus.js",
+		"/C/Users/npirotte/Desktop/angular-ui-tree-master/demo/js/tree.js",
+		"/C/Users/npirotte/Downloads/angular.min.js",
+		"/C/Users/npirotte/Desktop/angular-ui-tree-master/demo/index.html",
+		"/D/websites/npirotte-2013.be/application/front/framework/js/tree/angular-ui-tree.js",
+		"/D/websites/npirotte-2013.be/application/front/framework/js/angular-1.2.3/angular.min.js",
+		"/C/Users/npirotte/Desktop/angular-ui-tree-master/demo/bower_components/angular/angular.min.js",
+		"/D/websites/npirotte-2013.be/application/front/framework/js/angular-1.2.3/angular.min.js.old",
+		"/C/Users/npirotte/Desktop/angular-ui-tree-master/demo/tree.html",
+		"/D/websites/npirotte-2013.be/application/front/admin/style_compilator.less",
+		"/C/Users/npirotte/Desktop/angular-ui-tree-master/demo/dist/angular-ui-tree.js",
+		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/menus",
+		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.menu.js",
+		"/C/Users/npirotte/Desktop/angular-ui-tree-master/demo/bower_components/angular/angular.js",
+		"/C/Users/npirotte/Desktop/angular-ui-tree-master/source/angular-ui-tree.css",
+		"/D/websites/npirotte-2013.be/application/controllers/session.php",
+		"/D/websites/npirotte-2013.be/application/controllers/admin_assets.php",
+		"/D/websites/npirotte-2013.be/application/controllers/file_upload.php",
+		"/D/websites/npirotte-2013.be/application/controllers/assets.php",
+		"/D/websites/npirotte-2013.be/application/views/shared/grid_generator.php",
+		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.manager.js",
+		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.content_edition.js",
+		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/pages/widgets/grid_editor.php",
+		"/D/websites/npirotte-2013.be/application/logs/log-2014-06-15.php",
+		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/assets/widgets/assets_list.php",
+		"/D/websites/npirotte-2013.be/application/logs/log-2014-06-13.php",
+		"/D/websites/npirotte-2013.be/application/libraries/session.php",
+		"/D/websites/npirotte-2013.be/application/helpers/portfolio/showcase_helper.php",
+		"/D/websites/npirotte-2013.be/index.php",
+		"/D/websites/npirotte-2013.be/application/libraries/MY_Parser.php",
+		"/D/websites/npirotte-2013.be/application/helpers/news/news_helper.php",
+		"/D/websites/npirotte-2013.be/application/models/news_model.php",
+		"/D/websites/npirotte-2013.be/application/views/pages/home.php",
+		"/D/websites/npirotte-2013.be/application/front/default/style/styles.less",
+		"/D/websites/npirotte-2013.be/application/views/templates/layout.php",
+		"/D/websites/npirotte-2013.be/application/models/tags_model.php",
+		"/D/websites/npirotte-2013.be/application/viewModels/news/LastNewsWidgetViewModel.php",
+		"/D/websites/npirotte-2013.be/application/views/templates/layout_en.php",
+		"/D/websites/npirotte-2013.be/application/viewModels/global/HeaderViewModel.php",
+		"/D/websites/npirotte-2013.be/application/views/templates/meta_head.php",
+		"/D/websites/npirotte-2013.be/application/views/pages/test.php",
+		"/D/websites/npirotte-2013.be/application/controllers/pages.php",
+		"/D/websites/npirotte-2013.be/application/front/compilers/admin_logon_foot_js.php",
+		"/D/websites/npirotte-2013.be/application/front/admin/js/select2.js",
+		"/D/websites/npirotte-2013.be/application/controllers/admin_news.php",
+		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.news.js",
+		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.globalDirectives.js",
+		"/D/websites/npirotte-2013.be/application/front/admin/style/assets_manager.less",
+		"/D/websites/npirotte-2013.be/application/front/admin/style/select2.less",
+		"/C/Users/npirotte/Desktop/index.html",
+		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.globalRepositories.js",
+		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.dashboard.js",
+		"/D/websites/npirotte-2013.be/application/logs/log-2014-06-09.php",
+		"/D/websites/npirotte-2013.be/application/controllers/admin_global.php",
+		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.globaRepositories.js",
+		"/C/Users/npirotte/Downloads/Sniper.Elite.V2-SKIDROW[rbg]/skidrow.nfo",
+		"/D/websites/npirotte-2013.be/application/models/global_model.php",
+		"/D/websites/npirotte-2013.be/application/front/admin/style/bootstrap/forms.less",
+		"/D/websites/npirotte-2013.be/application/front/cache/admin_combined.css",
+		"/D/websites/npirotte-2013.be/application/logs/log-2014-06-07.php",
+		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/wysiwyg/wysiwyg/edit.php",
+		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.managerDirectives.js",
+		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.contactDirectives.js",
+		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/pages/widgets/frid_editor;",
+		"/D/websites/npirotte-2013.be/system/libraries/Parser.php",
+		"/D/websites/npirotte-2013.be/application/helpers/admin/form_helper.php",
+		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/dashboard/dashboard/view.php",
+		"/D/websites/npirotte-2013.be/application/controllers/auth.php",
+		"/D/websites/npirotte-2013.be/application/front/admin/js/jquery.admin_logon.js",
+		"/C/Users/npirotte/Desktop/amtlib.dll",
+		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/contacts/widgets/last_messages.php",
+		"/D/websites/npirotte-2013.be/application/controllers/admin_contact.php",
+		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.managerRepositories.js"
 	],
 	"find":
 	{
-		"height": 43.0
+		"height": 39.0
 	},
 	"find_in_files":
 	{
@@ -847,149 +881,143 @@
 		"case_sensitive": false,
 		"find_history":
 		[
-			"cersions",
-			"btn-ripple",
-			"v",
-			"riple",
-			"ripple",
-			"#mainHeader",
-			"modelCtrl",
-			"get",
-			"is_logged_in",
-			"Pikes",
-			"InitPage",
-			"canvaIntro",
-			"news_list",
-			"experience",
-			"item_available",
-			"();\n",
-			"\\||(%7c)",
-			"|",
-			"print",
-			"menusService",
-			"nyp_",
-			"icon-",
-			"contact",
-			"btn-group",
-			"date",
-			"glyphicon glyphicon-",
-			"cal",
-			"call",
-			"ajaxify",
-			"circle-o",
-			"circle",
-			"contact_contacts",
-			"nyp_contact_contacts",
-			"pages_templates_values",
-			"nyp_pages_templates_values",
-			"loading",
-			"aside",
-			".noUi-handle",
-			"noUi-background",
-			"banner",
-			"is",
-			"print_r",
-			"is_logged_in",
-			"auth",
-			"is_logged_in",
-			"userdata",
-			"userdata()",
-			"userdata",
-			"sess_cookie_name",
-			"sess_read",
-			"cookie",
-			"get_cookie",
-			"userdata",
-			"session_data",
-			"is_logged_in",
-			"v",
-			"cookie",
-			"$this->CI->auth->sess",
-			"$this->CI->auth",
-			"$this->auth",
-			"portfolio",
-			".noUi-origin",
-			"validate_database_login_session",
-			"is_lo",
-			"is_l",
-			"is_L",
-			"is_",
-			"is_log",
-			"is_logged_in",
-			"login",
-			"insert_database_login_session",
-			"set_cookie",
-			"get_cookie",
-			"set_cookie",
-			"cookie",
-			"header",
-			"is_logged_in",
-			"coockie",
-			"set_login_sessions",
-			"login",
-			"flexi_auth_model",
-			"#mainHeader",
-			"potfo",
-			"porf",
-			"news",
-			"material.animations",
-			"material-track",
-			"is_admin",
-			"login",
-			"carte",
-			"src",
-			"user",
-			"profile",
-			"banners",
-			"banner",
-			"validation",
-			"cssclass",
-			"backUrl",
-			"itemGroupReordering",
-			"getTheItem",
-			"banner",
-			"delete",
-			"categoryDelete",
-			"delete",
-			"itemGroupReordering",
-			"delete",
-			"image-upload",
-			".media",
-			"setIntroHeight",
-			"contact ",
-			"news-list",
-			"news-view",
-			"presentation",
-			"grid",
-			"caption",
-			"formfield-alert",
-			"label",
-			"alert",
+			"updateItem",
+			"editedItem",
+			"form-field",
+			"widget-im",
+			"widget-up",
+			"widget-u",
+			"hr",
+			"brand",
+			"uplo",
+			"upla",
+			"mainHeader",
+			"widget-imageupload",
+			"widget-imageupload.full",
+			"tab",
+			"item-list",
+			"#container",
+			"fa",
+			"well",
+			"panel",
+			"opacity",
+			".angular-ui-tree-handle",
+			"mainHeader",
+			"hr",
 			"radius",
-			"input",
-			"icon_regexp",
-			"portfolio",
-			"portfoliod",
-			".flex-control-nav",
-			"Cache_manager",
+			"<p>",
+			"order_max",
+			"t_id",
+			"pages",
+			"place",
+			"uiTreeNodes",
+			"init",
+			"treeNodesCtrl",
+			"ui.tree",
+			"uiTreeNodes",
+			"['',",
+			"completeCallBack",
+			"media_category",
+			");\n",
+			"loader",
+			"template_values_list",
+			"convertToAngularModel",
+			"ngModel",
+			"multi",
+			"open",
+			"url",
+			"join",
+			"select2-container-multi",
+			"clone",
+			"preve",
+			"pre",
+			".content",
+			"icon-",
+			"template_values_list",
+			"item",
+			"itemfieldValuefieldValue",
+			"item",
+			"templates_fields_edit",
+			"pages",
+			"unique",
+			"pages",
+			"logs",
+			"pages",
+			"parse_functions",
+			"pages",
 			"news",
-			"PorfolioDetails",
-			"media"
+			"pages",
+			"prin",
+			"news_update",
+			"contactsRespository",
+			"user_id",
+			"controls",
+			"control-label",
+			"control-group",
+			"><",
+			"cate",
+			"validation",
+			"categories",
+			"news",
+			"error_string",
+			"error_array",
+			"error_string",
+			"validation_errors",
+			"vaidation_errors",
+			"unique",
+			"[",
+			"rules",
+			"identity_",
+			"identity_available",
+			"unique",
+			"now",
+			"nox",
+			"news",
+			"controls",
+			"control-label",
+			"control-group",
+			"controls",
+			"control-label",
+			"control-group",
+			"controls",
+			"control-label",
+			"control-group",
+			"form-control",
+			"control-label",
+			"control-group",
+			"controls",
+			"control-label",
+			"control-group",
+			"circle",
+			"control-group",
+			"sx",
+			"controls",
+			"<label class=\"control-label\"",
+			"/label>",
+			"<label",
+			"controls",
+			"<label(az-AZ)</label>",
+			"control-group",
+			"icon-",
+			"default",
+			"icon-",
+			"table",
+			"success",
+			"\"span",
+			"span-",
+			"border",
+			"background-clip",
+			"modal",
+			"icon-"
 		],
-		"highlight": true,
+		"highlight": false,
 		"in_selection": false,
 		"preserve_case": false,
-		"regex": true,
+		"regex": false,
 		"replace_history":
 		[
-			"Peaks",
-			"_this",
-			"~",
-			"Menus_model",
-			"fa fa-",
-			"portfolio_items",
-			"admin",
-			"portfolio_item",
+			"item",
+			"<p class=\"style1\">",
 			"admin",
 			"",
 			"fa fa-",
@@ -1055,19 +1083,47 @@
 			[
 				{
 					"buffer": 0,
-					"file": "application/models/models/global/stylesheets_content.php",
+					"file": "application/libraries/MY_Form_validation.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 963,
+						"buffer_size": 4734,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								298,
-								298
+								1476,
+								1476
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 216.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "application/models/models/contact/forms_fields.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1589,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								485,
+								485
 							]
 						],
 						"settings":
@@ -1079,31 +1135,150 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
-					"buffer": 1,
-					"file": "application/front/admin/js/angular.admin.js",
+					"buffer": 2,
+					"file": "application/models/db_model.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 9695,
+						"buffer_size": 6365,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1025,
-								1040
+								813,
+								813
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 528.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "application/controllers/admin_forms.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3890,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2665,
+								2665
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": -0.0,
+						"translation.y": 1628.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "application/controllers/pages.php",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 2952,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								518,
+								518
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "npirotte.sublime-project",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 174,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								152,
+								152
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 6,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Xdebug Client/Xdebug.tmLanguage",
+							"word_wrap": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -1113,233 +1288,90 @@
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "application/models/stylesheets_model.php",
+					"buffer": 7,
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4978,
+						"buffer_size": 0,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4908,
-								4908
+								0,
+								0
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 2962.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "system/helpers/view_helper.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4196,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3460,
-								3460
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": -0.0,
-						"translation.y": 1777.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "application/controllers/admin_global.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4795,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2603,
-								2603
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1559.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "application/front/admin/style_compilator.less",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 721,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								691,
-								691
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/LESS/LESS.tmLanguage"
+							"syntax": "Packages/Xdebug Client/Xdebug.tmLanguage",
+							"word_wrap": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 6,
 					"type": "text"
-				},
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
 				{
-					"buffer": 6,
-					"file": "application/front/admin/style/styles.less",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 12475,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2574,
-								2583
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/LESS/LESS.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 2128.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "application/front/admin/js/angular.banners.js",
+					"buffer": 8,
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 6286,
+						"buffer_size": 0,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3036,
-								500
+								0,
+								0
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/Xdebug Client/Xdebug.tmLanguage",
+							"word_wrap": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 93.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 7,
 					"type": "text"
 				},
 				{
-					"buffer": 8,
-					"file": "application/front/compilers/admin_foot_js.php",
+					"buffer": 9,
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2818,
+						"buffer_size": 234,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1461,
-								1461
+								234,
+								234
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/Xdebug Client/Xdebug.tmLanguage",
+							"word_wrap": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 9,
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": "application/views/admin/templates/layout.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 15944,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2986,
-								2986
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 515.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 8,
@@ -1350,7 +1382,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 25.0
+		"height": 34.0
 	},
 	"input":
 	{
@@ -1363,18 +1395,32 @@
 			[
 				0,
 				0,
-				1,
+				2,
 				1
+			],
+			[
+				0,
+				1,
+				1,
+				2
+			],
+			[
+				1,
+				1,
+				2,
+				2
 			]
 		],
 		"cols":
 		[
 			0.0,
+			0.5,
 			1.0
 		],
 		"rows":
 		[
 			0.0,
+			0.7,
 			1.0
 		]
 	},
@@ -1387,10 +1433,14 @@
 	{
 		"height": 0.0
 	},
+	"output.xdebug":
+	{
+		"height": 0.0
+	},
 	"project": "npirotte.sublime-project",
 	"replace":
 	{
-		"height": 80.0
+		"height": 72.0
 	},
 	"save_all_on_build": false,
 	"select_file":
@@ -1471,28 +1521,16 @@
 	},
 	"select_project":
 	{
-		"height": 625.0,
+		"height": 552.0,
 		"selected_items":
 		[
 			[
-				"",
-				"D:\\websites\\kicker\\kicker.sublime-project"
-			],
-			[
-				"ki",
-				"D:\\websites\\kicker\\kicker.sublime-project"
-			],
-			[
-				"k",
-				"D:\\websites\\kicker\\kicker.sublime-project"
-			],
-			[
-				"adm",
-				"D:\\webapps\\adminMobile\\adminMobile.sublime-project"
-			],
-			[
-				"ny",
+				"se",
 				"D:\\websites\\sextoysreunions.be\\nickye.sublime-project"
+			],
+			[
+				"n",
+				"D:\\websites\\cucina-autentica.be\\npirotte.sublime-project"
 			],
 			[
 				"sec",
@@ -1511,6 +1549,10 @@
 				"/D/websites/npirotte-2013.be/npirotte.sublime-project"
 			],
 			[
+				"",
+				"/D/websites/cucina-autentica.be/cucina-autentica.sublime-project"
+			],
+			[
 				"c",
 				"/D/websites/cucina-autentica.be/cucina-autentica.sublime-project"
 			],
@@ -1523,10 +1565,6 @@
 				"/D/websites/deshabitsetmoi.be/deshabitsetmoi.sublime-project"
 			],
 			[
-				"n",
-				"/Volumes/documents/localhost/npirotte-2013.be/npirotte.sublime-project"
-			],
-			[
 				"s",
 				"/Volumes/documents/localhost/sainte-marguerite.be/sainte-marguerite.sublime-project"
 			],
@@ -1535,7 +1573,7 @@
 				"/Volumes/documents/localhost/sainte-marguerite.be/sainte-marguerite.sublime-project"
 			]
 		],
-		"width": 475.0
+		"width": 420.0
 	},
 	"select_symbol":
 	{
@@ -1548,12 +1586,56 @@
 	"selected_group": 0,
 	"settings":
 	{
+		"xdebug":
+		{
+			"hide_conflict": false,
+			"restore_index":
+			{
+				"30":
+				{
+					"group": 0,
+					"index": 0
+				},
+				"31":
+				{
+					"group": 0,
+					"index": 2
+				},
+				"33":
+				{
+					"group": 0,
+					"index": 1
+				}
+			},
+			"restore_layout":
+			{
+				"cells":
+				[
+					[
+						0,
+						0,
+						1,
+						1
+					]
+				],
+				"cols":
+				[
+					0.0,
+					1.0
+				],
+				"rows":
+				[
+					0.0,
+					1.0
+				]
+			}
+		}
 	},
 	"show_minimap": true,
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 440.0,
+	"side_bar_width": 447.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

@@ -1,9 +1,9 @@
 <h3>Champs du formulaire</h3>
 			         <hr/>
 						
-					<button class="btn btn-primary" onclick="$('#item-creation-popup').modal()">
+					<button class="btn btn-primary" ng-click="openModal({})">
 						Ajouter 
-						<i  class="icon-plus"></i>
+						<i  class="fa fa-plus"></i>
 					</button>
 					<br />
 					<br />
@@ -177,7 +177,7 @@
 					</div>
 					
 			         
-				    <div ng-show="formFields.length == 0" class="alert alert-warning">Cette catégorie ne contient aucun élément. <a href="" onclick="$('#item-creation-popup').modal()" >Ajouter</a></div>   
+				    <div ng-show="formFields.length == 0" class="alert alert-warning">Cette catégorie ne contient aucun élément. <a href="" ng-click="openModal({})" >Ajouter</a></div>   
 
 					<div class="form-library" ui:sortable="sortableOptions" ng:model="formFieldsSamples">
 						<div class="item" ng-repeat="formField in formFieldsSamples">
@@ -194,17 +194,17 @@
 				    			<div class="form-field" ng-class="formField.field_type">{{formField.placeholder}}</div>
 				    		</div>
 				    		<div class="col-sm-1">
-				    			<button ng-click="switchEditMode(formField)">
+				    			<button ng-click="openModal(formField)">
 				          			<i class="fa fa-pencil circle-icon"></i>
 				          			</button>
-				          		<div class="pull-right reorder">
+				          		<!-- <div class="pull-right reorder">
 				          			<button ng-hide="$index == 0" ng-click="reorder(formField, 'minus')">
-					          			<i class="fa fa-angle-up"></i>
-					          		</button>
-					          		<button ng-hide="$index == formField.length-1" ng-click="reorder(formField, 'plus')">
-					          			<i class="fa fa-angle-down"></i>
-					          		</button>
-				          		</div>
+				          							          			<i class="fa fa-angle-up"></i>
+				          							          		</button>
+				          							          		<button ng-hide="$index == formField.length-1" ng-click="reorder(formField, 'plus')">
+				          							          			<i class="fa fa-angle-down"></i>
+				          							          		</button>
+				          		</div> -->
 				    		</div>
 				    	</div>
 				    </div>		

@@ -114,23 +114,41 @@ class Admin_forms extends CI_Controller {
 
 	public function field_edit()
 	{
+		$this->load->library('form_validation');
+		$this->load->model('db_model');
 
-		$item = json_decode(file_get_contents('php://input'));
-		$item = get_object_vars($item);
+		$_POST = $item = json_decode(file_get_contents('php://input'), true);
 
-		$output = array();
+		$this->db_model->set_validation_rules('contact_forms_fields', $item['id'], false, $_POST['parent_id']);
+		$errors = array();
 
-		if (!array_key_exists('id', $item)) {
-			$output['item'] = $item;
-			$output['item']['id'] = $this->forms_model->field_create($item);
+		if (!$this->form_validation->run()) 
+		{
+			$this->form_validation->set_error_delimiters('', '');
+			$errors = $this->form_validation->error_array();
+			$message = "Le formulaire contient des erreurs";
 		}
 		else
-		{
-			$this->forms_model->field_update($item);
-		}
+			{
 
-		$this->cache_manager->DeletePagesCache();
-		$this->cache_manager->DeleteDbCache();
+			if (!array_key_exists('id', $item)) {
+				$output['item'] = $item;
+				$output['item']['id'] = $this->forms_model->field_create($item);
+			}
+			else
+			{
+				$this->forms_model->field_update($item);
+			}
+
+			$message = 'Modifications enregistrées';
+
+			$this->cache_manager->DeletePagesCache();
+			$this->cache_manager->DeleteDbCache();
+		};
+
+		$output['error'] = count($errors);
+		$output['errors'] = $errors;
+		$output['message'] = $message;
 
 		$this->output->set_output($output);
 	}

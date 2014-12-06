@@ -3,18 +3,18 @@
 </div>
 
 
-<div>
-	<h1>Groupe d'utilisateur : #{{item.id}} {{item.name}}</h1>
-	<hr>
+<section class="asided-right animated fadeIn" ng-if="item">
+<section class="asided-right >
+	<h1 class="page-title">Groupe d'utilisateur : #{{item.id}} {{item.name}}</h1>
 
 	<div class="row">
-		<div class="col-md-9">
+		<div class="col-md-12">
 			<div error-sumary></div>
 			<form name="editForm" class="form form-horizontal">
 			<div class="row">
 				<div class="col-md-6">
 					<h3>Informations</h3>
-					<h3></h3>
+					<hr>
 					<div class="form-group">
 						<label class="control-label col-sm-2" for"inputHeight">Nom</label>
 						<div class="col-sm-6">
@@ -43,9 +43,9 @@
 				</div>
 			
 		</div>
-
-		<div class="col-md-2 col-md-offset-1">
-			<?php $this->load->view('admin/views/desktop/shared/edit_infos'); ?>
-		</div>
 	</div>
+</div>
+
+<div class="big-aside right">
+	<?php $this->load->view('admin/views/desktop/shared/edit_infos'); ?>
 </div>

@@ -21,7 +21,8 @@ $database['contact_forms_fields'] = array(
 			'type' => 'VARCHAR',
 			'constraint' => 80,
 			'required' => TRUE,
-			'validation' => 'slug'
+			'validation' => 'slug',
+			'unique' => 'by_parent'
 			),
 		'display_name' => array(
 			'type' => 'VARCHAR',

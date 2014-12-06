@@ -27,12 +27,12 @@
 <div id="browser-users">
      <?php foreach($client_users as $client_user): ?>
         <div data-username="<?= $client_user['username']; ?>" class="user clearfix">
-           <div class="user_thumb" style="background-image: url(<?= site_url('assets/image/users~'.$client_user['user_id'].'~thumbs/60x60/'.$client_user['src']); ?>)"></div>
+           <div class="user_thumb" style="background-image: url(<?= site_url('assets/image/users~'.$client_user['user_id'].'~thumbs/80x80/'.$client_user['src']); ?>)"></div>
            <span class="user_name"><?= $client_user['last_name']; ?> <?= $client_user['first_name']; ?></span>
            <i class="fa fa-angle-right"></i>
         </div>
      <?php endforeach; ?>
-
+    <br />
      <a class="user <?= count($client_users) === 0 ? 'selected' : '';?>" id="new_user">Nouvel utilisateur <i class="fa fa-plus"></i></a>
 </div>
 
@@ -57,7 +57,7 @@
         </div>
 
 
-        <button type="submit" class="btn btn-primary btn-lg btn-block btn-ripple">Connection<i class="fa fa-ok-sign"></i></button>
+        <button type="submit" class="btn btn-success btn-lg btn-block btn-ripple">Connection<i class="fa fa-ok-sign"></i></button>
     </form>
     
     <footer>

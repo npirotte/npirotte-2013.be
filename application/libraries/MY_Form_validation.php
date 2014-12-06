@@ -29,7 +29,7 @@ class MY_Form_validation extends CI_Form_validation
 		$result = $count === 0;
 
 		if (!$result) {
-			$this->CI->form_validation->set_message('item_available', 'La valeur "'.$str.'" du champ %s existé déjà dans la base de donnée' );
+			$this->CI->form_validation->set_message('item_available', 'La valeur "'.$str.'" du champ <em>%s</em> existé déjà dans la base de donnée' );
 		}
 
 		return $result;
@@ -43,7 +43,33 @@ class MY_Form_validation extends CI_Form_validation
 
 		$this->CI->db->where('lang', $lang);
 
+		$this->CI->form_validation->set_message('item_available_localized', 'La valeur "'.$str.'" du champ <em>%s</em> existé déjà dans la base de donnée' );
+
 		return $this->item_available($str, $params);
+	}
+
+	public function item_available_parented($str, $params)
+	{
+		$paramsArray = explode(',', $params);
+		$parent_id = trim($paramsArray[4]);
+
+		$this->CI->db->where('parent_id', $parent_id);
+
+		$this->CI->form_validation->set_message('item_available_parented', 'La valeur "'.$str.'" du champ <em>%s</em> existé déjà dans la base de donnée'  );
+
+		return $this->item_available($str, $params);
+	}
+
+	public function item_available_parented_localized($str, $params)
+	{
+		$paramsArray = explode(',', $params);
+		$parent_id = trim($paramsArray[5]);
+
+		$this->CI->db->where('parent_id', $parent_id);
+
+		$this->CI->form_validation->set_message('item_available_parented_localized', 'La valeur "'.$str.'" du champ <em>%s</em> existé déjà dans la base de donnée' );
+
+		return $this->item_available_localized($str, $params);
 	}
 
 	// flexi auth functions

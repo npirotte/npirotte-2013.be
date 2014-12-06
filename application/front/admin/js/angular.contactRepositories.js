@@ -1,3 +1,47 @@
+admin.factory('FormsRespository', ['$http', function($http){
+  return {
+    Get : function(id)
+    {
+      return $http.get('/admin_forms/form_details/'+id);
+    },
+    Delete : function(id)
+    {
+      return $http.get('/admin_forms/form_delete/'+id);
+    },
+    Save : function(data)
+    {
+      return $http({
+        url: '/admin_forms/form_edit',
+        method: "POST",
+        data: data,
+        headers: {'Content-Type': 'application/json'}
+        });
+    }
+  }
+}]);
+
+admin.factory('FormsFieldsRespository', ['$http', function($http){
+  return {
+    GetAll : function(parentId)
+    {
+      return $http.get('/admin_forms/fields_list/'+parentId);
+    },
+    Delete : function(id)
+    {
+      return $http.get('/admin_forms/field_delete/'+id);
+    },
+    Save : function(data)
+    {
+      return $http({
+        url: '/admin_forms/field_edit',
+        method: "POST",
+        data: data,
+        headers: {'Content-Type': 'application/json'}
+        });
+    }
+  }
+}]);
+
 admin.factory('contactsRepository', ['$http', '_', function($http){
 
   var messagesListCache = new Array();

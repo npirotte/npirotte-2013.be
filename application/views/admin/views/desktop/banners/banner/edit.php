@@ -3,15 +3,14 @@
 	<?php $this->load->view('admin/views/desktop/shared/edit_tools'); ?>
 </div>
 
-<div>
-	<h1>Bannière: #{{item.id}} {{item.img_title}}</h1>
+<section class="asided-right animated fadeIn" ng-if="item">
+	<h1 class="page-title">Bannière: #{{item.id}} {{item.img_title}}</h1>
 	Zone de bannière : <a href="#/banner-zones/edit/{{item.parent_id}}">#{{item.parent_id}}</a>
-	<hr>
 	<div error-sumary></div>
 	<div class="row">
 		<?php //include('./menu.php'); ?>
 
-		<div class="col-md-9">
+		<div class="col-md-12">
 
 			<h3>Image</h3>
 			<hr>
@@ -79,19 +78,11 @@
 			</form>
 			
 		</div>
-
-		<div class="col-md-2 col-md-offset-1">
-			<aside id="edit-aside" class="well" ng-if="item.created_on">
-				<strong>Crée le :</strong> {{item.created_on}} <br />
-				<strong>Par : </strong><manager-user-infos userid="item.created_by" ></manager-user-infos>
-
-				<div ng-if="item.modified_by">
-					<strong>Modifié le : </strong> {{item.modified_on}} <br />
-					<strong>Par : </strong><manager-user-infos userid="item.modified_by" ></manager-user-infos>
-				</div>
-			</aside>
-		</div>
     
 	</div>
 
+</section>
+
+<div class="big-aside right">
+  <?php $this->load->view('admin/views/desktop/shared/edit_infos'); ?>
 </div>

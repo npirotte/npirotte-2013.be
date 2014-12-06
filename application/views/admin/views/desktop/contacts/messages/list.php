@@ -1,37 +1,38 @@
 
-<section id="content">
-	<h1>{{isSpam == 0 ? 'Messages' : 'Spams' }} <button ng-click="refresh()"><i class="fa fa-refresh circle-icon"></i></button></h1>
-	<hr>
+<aside class="big-aside left">
+	<h1 class="title">
+		{{isSpam == 0 ? 'Messages' : 'Spams' }} 
+		<button ng-click="refresh()"><i class="fa fa-refresh circle-icon"></i></button>
+	</h1>
 
-	<div class="row">
+	<input type="text" placeholder="Rechercher" ng-model="query" ng-change="search()"> 
+
+	<div class="item-list">
+		<div 
+			class="item btn-ripple"
+			id="item-{{item.id}}"
+			ng-repeat="item in items | orderBy:'id':true" 
+			ng-click="getResume(item.id)"
+			ng-class="item.read_on ? '' : 'success'"
+			>
+			<h4>{{item.sender}}</h4>
+			<span class="date">{{item.created_on}}</span>
+		</div>
+
+		<button ng-if="items.length < total_items" class="btn btn-default btn-block" ng-click="getMore()">Plus</button>
+	</div>
+</aside>
+
+<section id="content" class="asided-left">
+
+	<h1 class="page-title" ng-if="resume">{{resume.sender}}</h1>
+
+	<div class="row" >
 		<?php //include('./menu.php'); ?>
 
 		<div class="col-sm-12" ng-show="items.length > 0 || query != null">
-	      <div>
-	      	<div class="row">
-	      		<div class="col-md-3">
-	      			<input type="text" placeholder="Rechercher" ng-model="query" ng-change="search()"> 
-	      		</div>
-	      		<div class="col-md-9">
-	      			{{items.length}} / {{total_items}}
-	      		</div>
-	      	</div>
-	      	<hr>
-	      	<div class="row">
-	      		<div class="col-sm-3 item-list">
-	      			<div 
-	      				class="item btn-ripple"
-	      				id="item-{{item.id}}"
-	      				ng-repeat="item in items | orderBy:'id':true" 
-	      				ng-click="getResume(item.id)"
-	      				ng-class="item.read_on ? '' : 'success'"
-	      				>
-	      				<h4>{{item.sender}}</h4>
-	      				<span class="date">{{item.created_on}}</span>
-	      			</div>
-	      			<button ng-if="items.length < total_items" class="btn btn-default btn-block" ng-click="getMore()">Plus</button>
-	      		</div>
-	      		<div class="col-sm-9">
+
+
 	      			<div ng-show="resume">
 	      				<div class="tools pull-right">
 	      					<a href="mailto:{{resume.sender}}"><i class="icon-reply circle-icon"></i></a>
@@ -49,11 +50,9 @@
 						</div>
 	      			</div>
 	      			<div ng-hide="resume">
+	      				<br /> <br />
 	      				<div class="alert alert-warning">Aucun élément sélectionné</div>
 	      			</div>
-	      		</div>
-	      	</div>
-	      </div>
 		</div>
 
 		<div class="col-sm-12" ng-if="items.length == 0  && query == ''">

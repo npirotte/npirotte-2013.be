@@ -211,11 +211,11 @@
 
 		function dirSize($directory) {
 		    $size = 0;
-		    foreach(new RecursiveIteratorIterator(new RecursiveDirectoryIterator($directory)) as $file){
+		    /*foreach(new RecursiveIteratorIterator(new RecursiveDirectoryIterator($directory)) as $file){
 		        //$size+= get_file_info($file, 'size');
 		        $file_size = (get_file_info($file, 'size'));
 		        $size += $file_size['size'];
-		    }
+		    }*/
 		    return $size;
 		} 
 
@@ -223,8 +223,6 @@
 		$this->data['cacheSize'] = dirSize(APPPATH.'cache');
 		$this->data['appSize'] = dirSize('./') - $this->data['assetsSize'] - $this->data['cacheSize'];
 		$this->data['serverSize'] = 1000000000;
-
-		error_log('coucou');
 
 		$this->output->set_output($this->data);
 	}

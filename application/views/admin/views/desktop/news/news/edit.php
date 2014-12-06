@@ -10,16 +10,17 @@
 </div>
 
 
-<div>
-	<h1>News: #{{item.id}} {{item.title}}</h1>
-	<hr>
+<section class="asided-right animated fadeIn" ng-if="item" >
+	<h1 class="page-title">News: #{{item.id}} {{item.title}}</h1>
+
+	<div error-sumary></div>
 
 	<div class="row">
-		<div class="col-md-9">
-			<div error-sumary></div>
+		<div class="col-md-12">
+			
 			<form name="editForm" class="form form-horizontal">
 
-				<tabset>
+				<tabset class="edit-tabs">
 					<tab>
 						<tab-heading>
 							<i class="fa fa-pencil fa-fw"></i>&nbsp;&nbsp;<strong>News</strong>
@@ -122,36 +123,26 @@
 			</form>
 
 		</div>
+	</div>
+</div>
 
-		<div class="col-md-2 col-md-offset-1">
-			<aside id="edit-aside" class="well" ng-if="item.created_on">
-				<p><strong>Statut :</strong> {{statut}}</p>
-				<strong>Crée le :</strong> {{item.created_on}} <br />
-				<strong>Par : </strong><manager-user-infos userid="item.created_by" ></manager-user-infos>
+<div class="big-aside right">
+	<?php $this->load->view('admin/views/desktop/shared/edit_infos'); ?>
 
-				<div ng-if="item.modified_by">
-					<strong>Modifié le : </strong> {{item.modified_on}} <br />
-					<strong>Par : </strong><manager-user-infos userid="item.modified_by" ></manager-user-infos>
-				</div>
-			</aside>
-
-			<div class="panel panel-default">
-				<div class="panel-heading">
-					Meta
-				</div>
-				<div class="panel-body">
-					<label>Keywords</label>
-					<?php // print_input($self, 'textarea', 'pages', 'meta_keywords', 'item', 'editForm') ?>
-					<input
-						id="page_keywords"
-					    type="hidden"
-					    ui-select2="select2Tags"
-					    ng-model="item.meta_keywords"
-					    ng-if="select2Tags.tags && item"
-					    >
-				</div>
-			</div>
-
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			Meta
+		</div>
+		<div class="panel-body">
+			<label>Keywords</label>
+			<?php // print_input($self, 'textarea', 'pages', 'meta_keywords', 'item', 'editForm') ?>
+			<input
+				id="page_keywords"
+			    type="hidden"
+			    ui-select2="select2Tags"
+			    ng-model="item.meta_keywords"
+			    ng-if="select2Tags.tags && item"
+			    >
 		</div>
 	</div>
 </div>

@@ -22,7 +22,7 @@ class Db_model extends CI_Model {
 		return $this->db->table_exists($table) ? true : false;
 	}
 
-	public function set_validation_rules($table_id, $item_id, $item_lang = false)
+	public function set_validation_rules($table_id, $item_id, $item_lang = false, $parent_id = 0)
 	{
 
 		function extend_rule($rules, $rule)
@@ -39,15 +39,24 @@ class Db_model extends CI_Model {
 		foreach ($table['fields'] as $col => $params) {
 
 			$rule = '';
+			$key = $col;
 
 			// is unique
-			if ( isset($params['unique']) && $params['unique'] === TRUE ) {
-				if ($item_lang) {
-					$rule = extend_rule($rule, 'item_available_localized['.$item_id.','.$key[0].','.$table_id.','.$col.','.$item_lang.']');
+			if ( isset($params['unique'])) {
+
+				// avec parent
+				if ($params['unique'] === 'by_parent') {
+					$rule = extend_rule($rule, 'item_available_parented['.$item_id.','.$key[0].','.$table_id.','.$col.','.$parent_id.']');
 				}
-				else
-				{
-					$rule = extend_rule($rule, 'item_available['.$item_id.','.$key[0].','.$table_id.','.$col.']');
+				// sans parent
+				else if ($params['unique'] === TRUE ) {
+					if ($item_lang) {
+					$rule = extend_rule($rule, 'item_available_localized['.$item_id.','.$key[0].','.$table_id.','.$col.','.$item_lang.']');
+					}
+					else
+					{
+						$rule = extend_rule($rule, 'item_available['.$item_id.','.$key[0].','.$table_id.','.$col.']');
+					}
 				}
 			}
 

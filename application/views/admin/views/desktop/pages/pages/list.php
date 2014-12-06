@@ -2,22 +2,16 @@
 	<a class="btn btn-primary" href="#/{{section}}/edit/new">Ajouter <i class="fa fa-plus-circle"></i></a>
 </div>
 
-<section >
-	<h1>{{pageTitle}}</h1>
-	<hr>
+<div class="big-aside left">
+	<h1 class="title">Site map</h1>
+	<div pages-site-map small-size="true" ></div>
+</div>
 
-	<div class="row">
-		<div class="col-sm-4">
-			<div class="panel panel-default">
-				<div class="panel-heading">
-					Site Map
-				</div>
-				<div class="panel-body">
-					<div pages-site-map small-size="true" ></div>
-				</div>
-			</div>
-		</div>
-		<div class="col-sm-8">
+<section class="asided-left">
+	<h1 class="page-title">{{pageTitle}}</h1>
+
+	<div class="">
+		<div class="">
 	      <div>
 
 	      	<div class="tools clearfix">

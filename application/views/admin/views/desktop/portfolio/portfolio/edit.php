@@ -3,13 +3,12 @@
 </div>
 
 
-<div>
-	<h1>Portfolio: #{{item.id}} {{item.db_title_default}}</h1>
-	<hr>
+<section class="asided-right animated fadeIn" ng-if="item" >
+	<h1 class="page-title">Portfolio: #{{item.id}} {{item.db_title_default}}</h1>
 
 	<div class="row">
 
-		<div class="col-md-9">
+		<div class="col-md-12">
 
 			<form name="editForm" class="form form-horizontal">
 
@@ -119,38 +118,37 @@
 
 			</form>		
 		</div>
-
-		<div class="col-md-2 col-md-offset-1">
-			<?php $this->load->view('admin/views/desktop/shared/edit_infos'); ?>
-
-			<div class="panel panel-default">
-				<div class="panel-heading">
-					Meta
-				</div>
-				<div class="panel-body">
-					<tabset>
-						<?php foreach($this->lang->languages as $lang): ?>
-							<tab heading="<?=$lang?>">
-								<label>Titre <?=$lang?></label>
-								<?php print_input($self, 'text', 'portfolio_items', 'meta_title_'.$lang, 'item', 'editForm') ?>
-								<label>Keywords <?=$lang?></label>
-								<?php // print_input($self, 'textarea', 'pages', 'meta_keywords', 'item', 'editForm') ?>
-								<input
-									id="page_keywords"
-								    type="hidden"
-								    ui-select2="select2Tags"
-								    ng-model="item.meta_keywords_<?=$lang?>"
-								    ng-if="select2Tags.tags && item"
-								    >
-								<label>Description <?=$lang?></label>
-								<?php print_input($self, 'textarea', 'portfolio_items', 'meta_description_'.$lang, 'item', 'editForm') ?>
-							</tab>
-						<?php endforeach; ?>	
-					</tabset>
-				</div>
-			</div>
-
-		</div>
 	
 	</div>		
+</section>
+
+<div class="big-aside right">
+  <?php $this->load->view('admin/views/desktop/shared/edit_infos'); ?>
+
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			Meta
+		</div>
+		<div class="panel-body">
+			<tabset>
+				<?php foreach($this->lang->languages as $lang): ?>
+					<tab heading="<?=$lang?>">
+						<label>Titre <?=$lang?></label>
+						<?php print_input($self, 'text', 'portfolio_items', 'meta_title_'.$lang, 'item', 'editForm') ?>
+						<label>Keywords <?=$lang?></label>
+						<?php // print_input($self, 'textarea', 'pages', 'meta_keywords', 'item', 'editForm') ?>
+						<input
+							id="page_keywords"
+						    type="hidden"
+						    ui-select2="select2Tags"
+						    ng-model="item.meta_keywords_<?=$lang?>"
+						    ng-if="select2Tags.tags && item"
+						    >
+						<label>Description <?=$lang?></label>
+						<?php print_input($self, 'textarea', 'portfolio_items', 'meta_description_'.$lang, 'item', 'editForm') ?>
+					</tab>
+				<?php endforeach; ?>	
+			</tabset>
+		</div>
+	</div>
 </div>

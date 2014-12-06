@@ -3,8 +3,7 @@
 </div>
 
 <section >
-	<h1>{{pageTitle}}</h1>
-	<hr>
+	<h1 class="page-title">{{pageTitle}}</h1>
 
 	<div class="row">
 		<div class="col-sm-12">
@@ -36,8 +35,8 @@
 
 	          <table class="table table-striped table-hover" ng-show="items.length > 0">
 	          	<thead>
-	          		<th ng-click="reorder('id')">Id</th>
-	          		<th ng-repeat="col in table" ng-click="reorder(col.param)">{{col.title}}</th>
+	          		<th ng-click="reorder('id')" ng-class="{'ordered' : 'id' === orderprop, 'reverse' : !reverse}">Id</th>
+	          		<th ng-repeat="col in table" ng-click="reorder(col.param)" ng-class="{'ordered' : col.param === orderprop, 'reverse' : reverse}">{{col.title}}</th>
 	          		<th width="96px"></th>
 	          	</thead>
 	          	<tbody>

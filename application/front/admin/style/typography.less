@@ -13,11 +13,11 @@ body {
 i.circle-icon:before {
 	display: inline-block;
 	border-radius : 50%;
-	height: 30px;
-	line-height: 30px;
-	width: 30px;
+	height: 26px;
+	line-height: 25px;
+	width: 26px;
 
-	font-size: 16px;
+	font-size: 14px;
 	text-align: center;
 
 	border: solid 1px #1A1A1A;
@@ -36,7 +36,7 @@ a, button {
 		.transition(top .2s);
 		top: 0;
 		position: relative;
-		color: #1A1A1A;
+		color: @gray-dark;
 	}
 	&:hover {
 		.circle-icon {
@@ -44,7 +44,7 @@ a, button {
 			text-decoration: none;
 			&:before {
 				color: white;
-			background: #1A1A1A;
+			color: @gray-dark;
 			}
 		}
 	}

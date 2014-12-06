@@ -23,6 +23,7 @@ $files = array(
 	APPPATH . "front/framework/js/ng-google-chart.js",
 	APPPATH . "front/admin/js/jquery.admin.js",
 	APPPATH . "front/framework/js/jquery.Jcrop.js",
+	APPPATH . "front/admin/plugins/loadingbar/loading-bar.js",
 	APPPATH . "front/admin/js/angular.admin.js",
 	APPPATH . "front/admin/js/angular.ctrlModels.js",
 	APPPATH . "front/admin/js/angular.urlService.js",

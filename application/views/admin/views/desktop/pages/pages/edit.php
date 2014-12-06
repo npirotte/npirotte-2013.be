@@ -2,13 +2,13 @@
 	<?php $this->load->view('admin/views/desktop/shared/edit_tools'); ?>
 </div>
 
-<section>
-	<h1>Page : #{{item.id}} {{item.name}}</h1>
-	<hr />
+<section class="asided-right animated fadeIn" ng-if="item">
+	<h1 class="page-title">Page : #{{item.id}} {{item.name}}</h1>
+
 	<div error-sumary></div>
 
 	<div class="row">
-		<div class="col-md-9">
+		<div class="col-md-12">
 			<form name="editForm" class="form form-horizontal" novalidate>
 
 				<div class="row">
@@ -127,56 +127,56 @@
 				</div>
 			</form>
 		</div>
+	</div>
+</section>
 
-		<div class="col-md-2 col-md-offset-1">
-			<?php $this->load->view('admin/views/desktop/shared/edit_infos'); ?>
-			<div class="panel panel-default">
-				<div class="panel-body">
-					<strong>Version :</strong> {{item.version}}
-				</div>
-			</div>
-			<div class="panel panel-default">
-				<div class="panel-heading">
-					Meta
-				</div>
-				<div class="panel-body">
-					<label>Titre</label>
-					<?php print_input($self, 'text', 'pages', 'meta_title', 'item', 'editForm') ?>
-					<label>Keywords</label>
-					<?php // print_input($self, 'textarea', 'pages', 'meta_keywords', 'item', 'editForm') ?>
-					<input
-						id="page_keywords"
-					    type="hidden"
-					    ui-select2="select2Tags"
-					    ng-model="item.meta_keywords"
-					    ng-if="select2Tags.tags && item"
-					    >
-					<label>Description</label>
-					<?php print_input($self, 'textarea', 'pages', 'meta_description', 'item', 'editForm') ?>
-				</div>
-			</div>
+<div class="big-aside right" ng-if="item">
+	<?php $this->load->view('admin/views/desktop/shared/edit_infos'); ?>
+	<div class="panel panel-default">
+		<div class="panel-body">
+			<strong>Version :</strong> {{item.version}}
+		</div>
+	</div>
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			Meta
+		</div>
+		<div class="panel-body">
+			<label>Titre</label>
+			<?php print_input($self, 'text', 'pages', 'meta_title', 'item', 'editForm') ?>
+			<label>Keywords</label>
+			<?php // print_input($self, 'textarea', 'pages', 'meta_keywords', 'item', 'editForm') ?>
+			<input
+				id="page_keywords"
+			    type="hidden"
+			    ui-select2="select2Tags"
+			    ng-model="item.meta_keywords"
+			    ng-if="select2Tags.tags && item"
+			    >
+			<label>Description</label>
+			<?php print_input($self, 'textarea', 'pages', 'meta_description', 'item', 'editForm') ?>
+		</div>
+	</div>
 
-			<div class="panel panel-default">
-				<div class="panel-heading">
-					Site Map
-				</div>
-				<div class="panel-body">
-					<div pages-site-map small-size="true" current="mode"></div>
-				</div>
-			</div>
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			Site Map
+		</div>
+		<div class="panel-body">
+			<div pages-site-map small-size="true" current="mode"></div>
+		</div>
+	</div>
 
-			<div class="panel panel-default">
-				<div class="panel-heading">
-					Droits d'accès
-				</div>
-				<div class="panel-body">
-					<div class="checkbox" ng-repeat="group in userGroups">
-						<label >
-							<checkbox ng-model="group.checked" value="{{group.id}}"></checkbox> {{group.ugrp_name}}
-					    </label>
-					</div>
-				</div>
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			Droits d'accès
+		</div>
+		<div class="panel-body">
+			<div class="checkbox" ng-repeat="group in userGroups">
+				<label >
+					<checkbox ng-model="group.checked" value="{{group.id}}"></checkbox> {{group.ugrp_name}}
+			    </label>
 			</div>
 		</div>
 	</div>
-</section>
+</div>

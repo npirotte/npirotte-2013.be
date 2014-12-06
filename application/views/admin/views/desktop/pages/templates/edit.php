@@ -2,13 +2,13 @@
 	<?php $this->load->view('admin/views/desktop/shared/edit_tools'); ?>
 </div>
 
-<div>
-	<h1>Template {{'#' + item.id + ' ' + item.name}}</h1>
-	<hr />
+<section class="asided-right animated fadeIn" ng-if="item" >
+	<h1 class="page-title">Template {{'#' + item.id + ' ' + item.name}}</h1>
+
 	<div error-sumary></div>
 
 	<div class="row">
-		<div class="col-md-9">
+		<div class="col-md-12">
 			<form name="editForm" class="form form-horizontal" novalidate>
 				<div class="row">
 					<div class="col-md-6">
@@ -42,10 +42,9 @@
 				</div>
 			</form>
 		</div>
+	</div>	
+</section>
 
-		<div class="col-md-2 col-md-offset-1">
-			<?php $this->load->view('admin/views/desktop/shared/edit_infos'); ?>
-		</div>
-	</div>
-	
+<div class="big-aside right">
+	<?php $this->load->view('admin/views/desktop/shared/edit_infos'); ?>
 </div>

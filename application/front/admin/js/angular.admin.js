@@ -39,7 +39,7 @@ var dashboardRefresh;
 
 $('body').hasClass('mobile') ? templateDir = 'mobile' : templateDir = 'desktop';
 
-var admin = admin || angular.module('admin', ['ngRoute', 'ngSanitize', 'nouislider', 'ui.checkbox', 'ui.sortable', 'ui.tinymce', 'ui.ace', 'ui.select2', 'googlechart', 'ui.bootstrap', 'underscore', 'ui.tree']).
+var admin = admin || angular.module('admin', ['ngRoute', 'ngSanitize', 'nouislider', 'ui.checkbox', 'ui.sortable', 'ui.tinymce', 'ui.ace', 'ui.select2', 'googlechart', 'ui.bootstrap', 'underscore', 'ui.tree', 'chieffancypants.loadingBar']).
   config(
   ['$routeProvider', '$httpProvider', function($routeProvider, $httpProvider) {
   $httpProvider.interceptors.push('httpRequestInterceptor');
@@ -164,7 +164,7 @@ admin.directive('validation', function() {
 admin.directive('errorSumary', function(){
   // Runs during compile
   return {
-    template: '<div ng-if="errors" class="alert alert-danger alert-dismissable"><button type="button" ng-click="closeAlert()" class="close" aria-hidden="true">&times;</button><ul><li ng-repeat="error in errors">{{error}}</li></ul></div>',
+    template: '<div ng-if="errors" class="alert alert-danger alert-dismissable"><button type="button" ng-click="closeAlert()" class="close" aria-hidden="true">&times;</button><ul><li ng-repeat="error in errors" ng-bind-html="error"></li></ul></div>',
     controller: function($scope, $element, $attrs, $transclude) {
       $scope.closeAlert = function() { $scope.errors = null }
     },
