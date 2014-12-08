@@ -15,7 +15,9 @@
 			<h3>Image</h3>
 			<hr>
 			<small>Min. {{parent.width}} x {{parent.height}}</small>
-			<div ng-if="uploader" image-upload config="uploader" item="item.src" ></div>
+			<div class="clearfix">
+				<div ng-if="uploader" image-upload config="uploader" item="item.src" ></div>
+			</div>
 
 			<br />
 			<h3>Contenu</h3>

@@ -135,14 +135,31 @@ $('#toggle-menu').click(function()
 // flush cache
 function flushCache(cacheType)
 {
-	if (confirm("Voulez vous supprimer tout le cache de l'application ?")) { // Clic sur OK
-       $.ajax({
+      bootbox.confirm("Voulez vous supprimer tout le cache de l'application ?", function(result)
+      {
+      	$.ajax({
 		  url: "/maintenance/flush_cache/" + cacheType
 		})
 		  .done(function( data ) {
 		    console.log(data);
-		  });  
-      }
+		  });
+		});
+}
+
+function cleanDisk(dataType)
+{
+	bootbox.confirm('Voulez vous supprimer ces fichiers du serveur ?', function(result)
+	{
+		if (result) {
+			$.ajax({
+			  url: "/maintenance/clean_disk/" + dataType
+			})
+			  .done(function( data ) {
+			    console.log(data);
+			  });  
+	      
+		}
+	})
 }
 
 // generate GUID

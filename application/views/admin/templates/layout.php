@@ -20,8 +20,8 @@
             <div class="pull-left">
                 <button id="toggle-menu"><i class="fa fa-reorder circle-icon"></i></button>
             </div>
-             <div class="pull-right">
-                <span id="notifications" class="dropdown" ng-controller="notificationsCtrl">
+             <div class="pull-right" >
+                <span id="notifications" class="dropdown" ng-controller="notificationsCtrl" ng-cloak>
                     <a href="" class="dropdown-toggle" data-toggle="dropdown">
                         <span class="badge" ng-class="notificationsNbr > 0 ? 'badge-danger' : 'badge-default'">{{notificationsNbr}}</span>
                     </a>
@@ -125,55 +125,70 @@
                        
                         
         <div id="container">
-            <div ng-view class="inner"></div>
+            <div ng-view ng-cloak class="inner"></div>
         </div>
 
         <div id="quick-action-modal" class="modal fade">
-            <div class="modal-content modal-lg">
-                 <div class="modal-header">
-                <div class="container">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <h3>Ajouter :</h3>
-                </div>
-              </div>
-              <div class="modal-body container">
-                <div class="row-fluid">
-                    <div class="span6">
-                        <a href="#/carte/edit/new" class="btn btn-default">Carte</a>
-                        <a href="#/pages/edit/new" class="btn btn-default">Page</a>
-                        <a href="#/portfolio/edit/new" class="btn btn-default">Portfolio</a>
-                        <a href="#/manager/comptes/edit/new" class="btn btn-default">Utilisateur</a>
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h3 class="modal-heading">Ajouter :</h3>
                     </div>
-                </div>
-              </div>
-              <div class="modal-header">
-                <div class="container">
-                    <h3>Actions :</h3>
-                </div>
-              </div>
-              <div class="modal-body container">
-                <div class="row-fluid">
-                    <div class="span6">
-
-                        <div class="btn-group">
-                          <button type="button" class="btn btn-danger" onClick="flushCache(false)">Supprimer le cache</button>
-                          <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown">
-                            <span class="caret"></span>
-                            <span class="sr-only">Toggle Dropdown</span>
-                          </button>
-                          <ul class="dropdown-menu" role="menu">
-                            <li><a href="javascript:void(0)" onClick="flushCache('pages')">Supprimer le cache Pages</a></li>
-                            <li><a href="javascript:void(0)" onClick="flushCache('db')">Supprimer le cache DB</a></li>
-                            <li><a href="javascript:void(0)" onClick="flushCache('assets')">Supprimer le cache Assets</a></li>
-                            <li class="divider"></li>
-                            <li><a href="javascript:void(0)" onClick="flushCache('theme')">Supprimer le cache Theme</a></li>
-                            <li><a href="javascript:void(0)" onClick="flushCache('admin')">Supprimer le cache Admin</a></li>
-                          </ul>
+                
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <a href="#/carte/edit/new" class="btn btn-default">Carte</a>
+                                <a href="#/pages/edit/new" class="btn btn-default">Page</a>
+                                <a href="#/portfolio/edit/new" class="btn btn-default">Portfolio</a>
+                                <a href="#/manager/comptes/edit/new" class="btn btn-default">Utilisateur</a>
+                            </div>
                         </div>
+                    </div>
+                    <div class="modal-header">
+                        <h3>Actions :</h3>
+                    </div>
 
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                
+                                <div class="btn-toolbar">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-danger" onClick="flushCache(false)">Supprimer le cache</button>
+                                        <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown">
+                                            <span class="caret"></span>
+                                            <span class="sr-only">Toggle Dropdown</span>
+                                        </button>
+                                        <ul class="dropdown-menu" role="menu">
+                                          <li><a href="javascript:void(0)" onClick="flushCache('pages')">Supprimer le cache Pages</a></li>
+                                          <li><a href="javascript:void(0)" onClick="flushCache('db')">Supprimer le cache DB</a></li>
+                                          <li><a href="javascript:void(0)" onClick="flushCache('assets')">Supprimer le cache Assets</a></li>
+                                          <li class="divider"></li>
+                                          <li><a href="javascript:void(0)" onClick="flushCache('theme')">Supprimer le cache Theme</a></li>
+                                          <li><a href="javascript:void(0)" onClick="flushCache('admin')">Supprimer le cache Admin</a></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="btn-group">
+                                        <button class="btn btn-warning" onclick="cleanDisk(false)">Nettoyer le serveur</button>
+                                        <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown">
+                                            <span class="caret"></span>
+                                            <span class="sr-only">Toggle Dropdown</span>
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="javascript:void(0)" onclick="cleanDisk('logs')">Supprimer les logs</a></li>
+                                            <li><a href="javascript:void(0)" onclick="cleanDisk('temps')">Suppriler les fichiers temporaires</a></li>
+                                        </ul>
+
+                                    </div>
+                                </div>
+        
+                            </div>
+                        </div>
                     </div>
                 </div>
-              </div>
             </div>
            
         </div>

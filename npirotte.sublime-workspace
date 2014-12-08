@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"unde",
+				"undefined"
+			],
+			[
+				"con",
+				"console"
+			],
+			[
+				"tye",
+				"typeof"
+			],
+			[
 				"item",
 				"item_available"
 			],
@@ -488,10 +500,6 @@
 				"$interval	AngularJS"
 			],
 			[
-				"con",
-				"contactRepositories"
-			],
-			[
 				"contact",
 				"contact_contacts"
 			],
@@ -506,40 +514,27 @@
 			[
 				"user",
 				"user_id"
-			],
-			[
-				"news",
-				"news_items"
-			],
-			[
-				"fi",
-				"filter_input"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "application/libraries/MY_Form_validation.php",
+			"contents": "//angular\n\nfunction MessagesListCtrl($scope, $http, contactsRepository, $routeParams, _ ) {\n\n  menuControl('messages');\n\n  $scope.isSpam = $routeParams.filter == 'messages' ? 0 : 1;\n  var loadMessage = $routeParams.messageId;\n\n  console.log(loadMessage);\n\n  function getTheMessages(){\n\n    //contenu\n    contactsRepository.messagesList($scope.isSpam, function(data, total_items)\n    {\n      $scope.items = data;\n      $scope.total_items = total_items;\n      init_page();\n\n      if (loadMessage)\n      {\n        $scope.getResume(loadMessage);\n      }\n  \n    });\n  }\n\n  $scope.getMore = function()\n  {\n    contactsRepository.messagesList($scope.isSpam, function(data, total_items)\n    {\n      $scope.items = data;\n      $('.item-list').minSize();\n    }, true);\n  }\n    \n  $scope.setGetPage = function (pageNo) {\n    $scope.currentPage = pageNo;\n    $scope.offset = $scope.currentPage * $scope.itemPerPage - $scope.itemPerPage;\n    getTheItems($scope.itemPerPage, $scope.offset);\n  };\n\n  $scope.getView = function(id)\n  {\n    window.location.hash = '#/contacts/messages/'+id;\n    block();\n  }\n\n  $scope.search = function()\n  {\n    if($scope.query.length >= 2)\n    {\n      console.log($scope.query);\n      contactsRepository.searchItem(0, $scope.query, function(data)\n      {\n        $scope.total_items = data.total_items;\n        $scope.items = data.items;\n      }, false);\n    }\n    else\n    {\n      getTheMessages();\n    }\n  }\n\n  $scope.getResume = function(id)\n  {\n    //contenu\n    $('.item-list').find('.active').removeClass('active');\n    $('#item-'+id).addClass('active');\n\n    contactsRepository.messageDetails(id, function(data)\n    {\n        $scope.resume = _.findWhere($scope.items, {id : id});\n        $scope.resume.fields = data.content_items;\n\n        var i = 0;\n\n        angular.forEach($scope.items, function(item)\n        {\n          if (item.id == id) {\n            $scope.items[i].read_on = true;\n          }\n          i++;\n        });\n    });\n  }\n\n  $scope.validation = function (id) {\n    $scope.deleteId = id;\n    $('#validation-popup').showModal();\n  }\n\n  $scope.deleteItem = function (id) {\n    $http.get('/admin_contact/delete_message/'+id).success(\n      function(data)\n      {\n        if (data['error'] == '0') {\n            //deleteItemInArray(id);\n\n            $scope.items = _.filter($scope.items, function(item){ return item.id != id });\n\n            if ($scope.resume.id = id) { $scope.resume = '' };\n        }\n      }\n    );\n  }\n\n  $scope.refresh = function () {\n    getTheMessages();\n  }\n\n  getTheMessages();\n}\n\nViewMessage = function($scope, $http, $location, $routeParams){\n\n  var id = $routeParams.messageId;\n\n  getTheMessages = function(){\n    //contenu\n    $http.get('/admin_contact/message/'+id).success(function(data) {\n      $scope.item = data[0];\n      setTimeout(\"init_page()\",10);\n    });\n  }\n\n  $scope.validation = function (id, index) {\n    $scope.deleteId = id;\n    $scope.$index = index;\n    $('#validation-popup').fadeIn();\n  }\n\n  $scope.deleteMessage = function (id, index) {\n    $http.get('/admin_contact/delete/'+id).success(getTheMessages());\n  }\n\n  getTheMessages();\n}\n\nfunction ContactConfigCtrl($scope, $http) {\n  menuControl('messages');\n\n  $scope.editMode = false;\n\n  init_page();\n\n  function getContactInfos ()\n  {\n    $http.get('/admin_contact/get_contact_info').success(function(data)\n      {\n        var i = 0;\n        angular.forEach(data, function(element){\n          data[i].weight = parseInt(data[i].weight);\n          data[i].id = parseInt(data[i].id);\n          i++;\n        });\n        $scope.contactItems = data;\n      })\n  }\n\n  $scope.addContactInfo = function()\n  {\n    $scope.newContactInfo.weight = $scope.contactItems.length;\n    $http({\n            url: '/admin_contact/create_contact_info',\n            method: \"POST\",\n            data: $scope.newContactInfo,\n            headers: {'Content-Type': 'application/json'}\n        }).success(function (data, status, headers, config) {\n            $scope.contactItems.push({id:data.id, name: data.name, value:data.value, target:data.target, icon:data.icon, weight:data.weight});\n            }).error(function (data, status, headers, config) {\n                $scope.alert = 'Une erreure est survenue.';\n                console.log(data);\n            }); \n\n    $scope.newContactInfo = '';\n  }\n\n  $scope.switchEditMode = function(object)\n  {\n    $scope.editMode = true;\n    $scope.editedItem = object;\n  }\n\n  $scope.updateContactInfo = function(object)\n  {\n    $http(\n    {\n      url: '/admin_contact/edit_contact_info',\n      method: 'POST',\n      data: $scope.editedItem,\n      headers: {'Content-Type': 'application/json'}\n    }).success(function(data) {\n      var i = 0;\n      angular.forEach($scope.contactItems, function(item){\n        if (item.id === $scope.editedItem.id) {$scope.contactItems[i] = $scope.editedItem};\n        i++;\n      });\n      $scope.editMode = false;\n    })\n  }\n\n  $scope.deleteContactInfo = function()\n  {\n    $http({\n      url: '/admin_contact/delete_contact_info',\n      method: 'POST',\n      data: $scope.editedItem,\n      headers: {'Content-Type': 'application/json'}\n    }).success(function(data) {\n      if (data.error === 0) {\n          getContactInfos();\n          $scope.editMode = false;\n          $scope.alert = data.message;\n\n          var temp = [],\n          i = 0;\n\n          angular.forEach($scope.editedItem, function(item) {\n            if ( item.id != $scope.editedItem.id ) temp.push(item);\n\n          });\n          $scope.editedItem = temp;\n\n      };\n    })\n  }\n\n  $scope.reorder = function(object, sens)\n  {\n    var currentWeight = object.weight,\n        newWeight,\n        i=0,\n        modified = 0;\n\n\n    function updateItem(object)\n    {\n          $http(\n          {\n            url: '/admin_contact/edit_contact_info',\n            method: 'POST',\n            data: object,\n            headers: {'Content-Type': 'application/json'}\n          });\n    }\n\n    function setMinus()\n    {\n      angular.forEach($scope.contactItems, function(item){\n        if (item.weight === currentWeight+1) { $scope.contactItems[i].weight = currentWeight; modified = 1};\n        if (item.id === object.id) { $scope.contactItems[i].weight = currentWeight+1; modified = 1};\n        i++;\n        if (modified === 1) {updateItem(item)};\n      });\n    }\n\n    function setPlus()\n    {\n      angular.forEach($scope.contactItems, function(item){\n        if (item.weight === currentWeight-1) { $scope.contactItems[i].weight = currentWeight; modified = 1};\n        if (item.id === object.id) { $scope.contactItems[i].weight = currentWeight-1; modified = 1};\n        i++;\n        if (modified === 1) {updateItem(item)};\n      });\n    }\n\n    sens == 'plus' ? setMinus() : setPlus();\n\n  }\n\n  $scope.save = function () {\n\n    console.log($scope.items);\n\n    $http({\n            url: '/admin_contact/update_config',\n            method: \"POST\",\n            data: $scope.items,\n            headers: {'Content-Type': 'application/json'}\n        })\n      .success(function (data, status, headers, config) {\n          console.log(data);\n\n            $scope.alert = 'Modification enregistrées !';\n                  showFadeAlert();\n                \n            })\n      .error(function (data, status, headers, config) {\n                $scope.alert = 'Une erreure est survenue.';\n                showFadeAlert();\n            });\n    \n  }\n\n  getContactInfos();\n\n}\n\n\n// ************** edition des formulaires ******************************//\n\n\nfunction ContactFormsListCtrl($scope, $http, $injector)\n{\n  var config = {\n    section : \"contacts/forms\",\n    menu : 'messages',\n    getUrl : '/admin_forms/forms_list/',\n    deleteUrl : '/admin_forms/form_delete/',\n  }\n\n  $scope.table = [\n      {title : 'Nom', param : 'name'}\n    ];\n\n  $scope.pageTitle = 'Formulaires de contact';\n\n  $injector.invoke(ItemList, this, {$scope: $scope, $http: $http, config: config});\n\n}\n\nfunction ContactFormsEditCtrl($scope, $http, $routeParams, FormsRespository)\n{\n  $scope.section = \"contacts/forms/list\";\n  $scope.backurl = 'contacts/forms/list';\n  menuControl('messages');\n\n  var id = $routeParams.id;\n  $scope.mode =  id;\n\n  var getThePage = function(){\n\n    FormsRespository.Get(id)\n      .success(function(data)\n      {\n        $scope.item = data.items[0];\n        init_page();\n      });\n   };\n\n  if (id == 'new') \n  {\n    $scope.item = {};\n    init_page();\n  } \n  else \n  {\n    getThePage();\n  }\n\n  $scope.delete = function()\n  {\n    if (confirm('Supprimer cette catégories et tout ses éléments ?')) {\n      FormsRespository.Delete(id)\n        .success(function(data)\n        {\n          window.location.hash = $scope.backurl;\n        });\n    };\n  }\n\n    $scope.save = function(returnToList)\n    {\n      $scope.alert = \"Sauvegarde...\";\n      showAlert();\n\n      FormsRespository.Save($scope.item)\n        .success(function (data, status, headers, config) {\n\n          console.log(data);\n\n            if (returnToList && data.error === 0) {\n              window.location.hash = '/contacts/forms/list';\n            }\n            else if (id === 'new' && data.errors.length === 0)\n            {\n              window.location.hash = '/contacts/forms/edit/' + data.id;\n            }\n            else\n            {\n              $scope.alert = data.message;\n              $scope.errors = data.errors;\n              showFadeAlert();\n              getThePage();\n            }\n                  \n          })\n        .error(function (data, status, headers, config) {\n                  $scope.alert = 'Une erreure est survenue.';\n                  showFadeAlert();\n              });\n    }\n    \n}\n\n\n// plats\n\nadmin.directive('formsFields', function(){\n  // Runs during compile\n  return {\n    //require: 'ngModel',\n    //template: 'test upload',\n    // name: '',\n    // priority: 1,\n    // terminal: true,\n    // scope: {\n    //     w : '=w',\n    //     h : '=h',\n    // }, // {} = isolate, true = child, false/undefined = no change\n    controller: function($scope, $element, $attrs, $transclude, $http, $routeParams, $modal, FormsFieldsRespository) {\n        \n        // gestion des infos contact\n\n        var id = $routeParams.id;\n\n        function getFormFields ()\n        {\n         \n          FormsFieldsRespository.GetAll(id)\n            .success(function(data)\n            {\n              var i = 0;\n              data = data.items;\n              angular.forEach(data, function(element){\n                data[i].weight = parseInt(data[i].weight);\n                data[i].id = parseInt(data[i].id);\n                i++;\n              });\n              $scope.formFields = data;\n            });\n        }\n\n        getFormFields();\n\n        // drag-n-drop\n\n        /*var formFieldsSamples = [\n          {name : 'text_field', display_name : \"Champ texte\", field_type : 'text'}\n        ];\n\n        $scope.formFieldsSamples = formFieldsSamples.slice();\n*/\n        $scope.sortableOptions = {\n          connectWith: \".form-preview\",\n          stop: function(e, ui) { \n            var i = 0;\n            //$scope.formFieldsSamples = formFieldsSamples.slice();\n            angular.forEach($scope.formFields, function( item )\n            {\n              console.log(item);\n              console.log(i);\n                if (i != item.weight )\n                {\n                  item.weight = i;\n                  updateItem(item);\n                  FormsFieldsRespository.Save(item);\n                }\n                i++;\n            })\n          },\n          axis: 'y',\n          placeholder: \"beingDragged\",\n          tolerance: 'pointer',\n          selector: '.item'\n        };\n\n      \n\n        $scope.openModal = function(object)\n        {\n          if (!object.parent_id) { object.parent_id = id };\n           if (!object.weight) { object.weight = $scope.formFields.length };\n\n          var modalInstance = $modal.open({\n            templateUrl: '/admin/view_loader/'+templateDir+'/contacts/widgets/edit_modal',\n            controller: EditFormModalCtrl,\n            size: 'lg',\n            resolve: {\n              item: function () {\n                return angular.copy(object);\n              }\n            }\n          });\n\n          modalInstance.result.then(function(resultObj)\n          {\n            getFormFields();\n          });\n        }\n\n    },\n    // require: 'ngModel', // Array = multiple requires, ? = optional, ^ = check parent elements\n    // restrict: 'A', // E = Element, A = Attribute, C = Class, M = Comment\n    // template: '',\n    templateUrl: '/admin/view_loader/'+templateDir+'/contacts/widgets/forms_fields',\n    // replace: true,\n    // transclude: true,\n    // compile: function(tElement, tAttrs, function transclude(function(scope, cloneLinkingFn){ return function linking(scope, elm, attrs){}})),\n    // link: function($scope, iElm, iAttrs, controller) {\n      \n    // }\n  };\n});\n\nfunction EditFormModalCtrl($scope, $modalInstance, FormsFieldsRespository, item)\n{\n  $scope.item = item;\n\n  $scope.save = function () {\n    FormsFieldsRespository.Save(item)\n      .success(function(data){\n        if (data.error > 0) {\n          $scope.errors = data.errors\n        }\n        else\n        {\n           $modalInstance.close({ action : 'edit', item : $scope.item });\n        }\n      }); \n  };\n\n  $scope.deleteField = function()\n  {\n    bootbox.confirm('Etes vous sur de vouloir supprimer ce champ ?', function(result)\n    {\n      if (result) {\n        FormsFieldsRespository.Delete(item.id)\n          .success(function()\n          {\n             $modalInstance.close({ action : 'delete', item : $scope.item});\n          });\n      };\n    });\n  }\n\n  $scope.cancel = function () {\n    $modalInstance.dismiss('cancel');\n  };\n\n  $scope.fieldvalues = {\n    add : function()\n    {\n\n      try \n      {\n        $scope.item.field_values.push({ field_value : 'valeur', field_display_value : 'texte affiché'});\n      }\n      catch(e)\n      {\n        $scope.item.field_values = [{ field_value : 'valeur', field_display_value : 'texte affiché'}];\n      }\n         \n    },\n    remove: function(index)\n    {\n      $scope.item.field_values.splice(index, 1);\n    }\n  }\n\n}",
+			"file": "application/front/admin/js/angular.contact.js",
+			"file_size": 14096,
+			"file_write_time": 130623775612336915,
 			"settings":
 			{
-				"buffer_size": 4734,
+				"buffer_size": 14082,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "application/models/models/contact/forms_fields.php",
+			"file": "application/controllers/admin_contact.php",
 			"settings":
 			{
-				"buffer_size": 1589,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "application/models/db_model.php",
-			"settings":
-			{
-				"buffer_size": 6365,
+				"buffer_size": 2706,
 				"line_ending": "Unix"
 			}
 		},
@@ -547,23 +542,15 @@
 			"file": "application/controllers/admin_forms.php",
 			"settings":
 			{
-				"buffer_size": 3890,
+				"buffer_size": 3918,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "application/controllers/pages.php",
+			"file": ".gitignore",
 			"settings":
 			{
-				"buffer_size": 2952,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "npirotte.sublime-project",
-			"settings":
-			{
-				"buffer_size": 174,
+				"buffer_size": 575,
 				"line_ending": "Windows"
 			}
 		},
@@ -601,10 +588,10 @@
 			}
 		},
 		{
-			"contents": "=> D:\\websites\\npirotte-2013.be\\application\\controllers\\admin_forms.php\n	|+| 1\n	|+| 122\n=> D:\\websites\\npirotte-2013.be\\application\\controllers\\pages.php\n	|+| 30\n=> D:\\websites\\npirotte-2013.be\\application\\models\\db_model.php\n	|+| 41\n",
+			"contents": "",
 			"settings":
 			{
-				"buffer_size": 234,
+				"buffer_size": 0,
 				"line_ending": "Windows",
 				"name": "Xdebug Breakpoint",
 				"read_only": true,
@@ -695,6 +682,13 @@
 		"/D/websites/npirotte-2013.be",
 		"/D/websites/npirotte-2013.be/application",
 		"/D/websites/npirotte-2013.be/application/controllers",
+		"/D/websites/npirotte-2013.be/application/front",
+		"/D/websites/npirotte-2013.be/application/front/admin",
+		"/D/websites/npirotte-2013.be/application/front/admin/js",
+		"/D/websites/npirotte-2013.be/application/front/admin/plugins",
+		"/D/websites/npirotte-2013.be/application/front/admin/plugins/loadingbar",
+		"/D/websites/npirotte-2013.be/application/front/admin/style",
+		"/D/websites/npirotte-2013.be/application/front/compilers",
 		"/D/websites/npirotte-2013.be/application/libraries",
 		"/D/websites/npirotte-2013.be/application/models",
 		"/D/websites/npirotte-2013.be/application/models/models",
@@ -734,18 +728,27 @@
 	],
 	"file_history":
 	[
-		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.assetsdirective.js",
 		"/D/websites/npirotte-2013.be/system/helpers/view_helper.php",
-		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/contacts/widgets/forms_fields.php",
-		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/contacts/forms/edit.php",
-		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/contacts/widgets/edit_modal.php",
-		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.contactRepositories.js",
-		"/D/websites/npirotte-2013.be/application/models/models/contact/forms_fields.php",
 		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.contact.js",
+		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.assetsdirective.js",
+		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/contacts/widgets/edit_modal.php",
+		"/D/websites/npirotte-2013.be/application/front/admin/style/form.less",
+		"/D/websites/npirotte-2013.be/application/front/admin/style_compilator.less",
+		"/D/websites/npirotte-2013.be/application/front/compilers/admin_foot_js.php",
+		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.admin.js",
+		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/contacts/widgets/forms_fields.php",
+		"/D/websites/npirotte-2013.be/application/front/admin/plugins/loadingbar/loading-bar.less",
+		"/D/websites/npirotte-2013.be/application/front/admin/style/select2.less",
+		"/D/websites/npirotte-2013.be/system/libraries/Form_validation.php",
 		"/D/websites/npirotte-2013.be/application/controllers/admin_forms.php",
+		"/D/websites/npirotte-2013.be/application/models/db_model.php",
+		"/D/websites/npirotte-2013.be/application/models/models/contact/forms_fields.php",
+		"/D/websites/npirotte-2013.be/application/libraries/MY_Form_validation.php",
+		"/D/websites/npirotte-2013.be/npirotte.sublime-project",
+		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/contacts/forms/edit.php",
+		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.contactRepositories.js",
 		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.portfolio.js",
 		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/banners/bannerzone/edit.php",
-		"/D/websites/npirotte-2013.be/application/front/admin/style/form.less",
 		"/D/websites/npirotte-2013.be/application/front/admin/style/styles.less",
 		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/assets/images/image_upload.php",
 		"/D/websites/npirotte-2013.be/application/front/admin/style/bootstrap/variables.less",
@@ -785,10 +788,7 @@
 		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.assets_manager.js",
 		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/shared/widgets/tree.php",
 		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.pagesRepositories.js",
-		"/D/websites/npirotte-2013.be/application/models/db_model.php",
 		"/D/websites/npirotte-2013.be/application/controllers/admin_pages.php",
-		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.admin.js",
-		"/D/websites/npirotte-2013.be/application/front/compilers/admin_foot_js.php",
 		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.menus.js",
 		"/C/Users/npirotte/Desktop/angular-ui-tree-master/demo/js/tree.js",
 		"/C/Users/npirotte/Downloads/angular.min.js",
@@ -798,7 +798,6 @@
 		"/C/Users/npirotte/Desktop/angular-ui-tree-master/demo/bower_components/angular/angular.min.js",
 		"/D/websites/npirotte-2013.be/application/front/framework/js/angular-1.2.3/angular.min.js.old",
 		"/C/Users/npirotte/Desktop/angular-ui-tree-master/demo/tree.html",
-		"/D/websites/npirotte-2013.be/application/front/admin/style_compilator.less",
 		"/C/Users/npirotte/Desktop/angular-ui-tree-master/demo/dist/angular-ui-tree.js",
 		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/menus",
 		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.menu.js",
@@ -837,7 +836,6 @@
 		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.news.js",
 		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.globalDirectives.js",
 		"/D/websites/npirotte-2013.be/application/front/admin/style/assets_manager.less",
-		"/D/websites/npirotte-2013.be/application/front/admin/style/select2.less",
 		"/C/Users/npirotte/Desktop/index.html",
 		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.globalRepositories.js",
 		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.dashboard.js",
@@ -857,11 +855,7 @@
 		"/D/websites/npirotte-2013.be/application/helpers/admin/form_helper.php",
 		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/dashboard/dashboard/view.php",
 		"/D/websites/npirotte-2013.be/application/controllers/auth.php",
-		"/D/websites/npirotte-2013.be/application/front/admin/js/jquery.admin_logon.js",
-		"/C/Users/npirotte/Desktop/amtlib.dll",
-		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/contacts/widgets/last_messages.php",
-		"/D/websites/npirotte-2013.be/application/controllers/admin_contact.php",
-		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.managerRepositories.js"
+		"/D/websites/npirotte-2013.be/application/front/admin/js/jquery.admin_logon.js"
 	],
 	"find":
 	{
@@ -881,6 +875,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"radio_list ",
+			".select2-container .select2-choice",
 			"updateItem",
 			"editedItem",
 			"form-field",
@@ -1006,9 +1002,7 @@
 			"\"span",
 			"span-",
 			"border",
-			"background-clip",
-			"modal",
-			"icon-"
+			"background-clip"
 		],
 		"highlight": false,
 		"in_selection": false,
@@ -1078,110 +1072,54 @@
 	"groups":
 	[
 		{
-			"selected": 5,
+			"selected": 3,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "application/libraries/MY_Form_validation.php",
+					"file": "application/front/admin/js/angular.contact.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4734,
+						"buffer_size": 14082,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1476,
-								1476
+								8948,
+								8948
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/PHP/PHP.tmLanguage"
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 216.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 9,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "application/models/models/contact/forms_fields.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1589,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								485,
-								485
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "application/models/db_model.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 6365,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								813,
-								813
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 528.0,
+						"translation.y": 5073.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 3,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "application/controllers/admin_forms.php",
+					"buffer": 1,
+					"file": "application/controllers/admin_contact.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3890,
+						"buffer_size": 2706,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2665,
-								2665
+								0,
+								0
 							]
 						],
 						"settings":
@@ -1190,27 +1128,27 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": -0.0,
-						"translation.y": 1628.0,
+						"translation.y": 1751.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "application/controllers/pages.php",
-					"semi_transient": true,
+					"buffer": 2,
+					"file": "application/controllers/admin_forms.php",
+					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2952,
+						"buffer_size": 3918,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								518,
-								518
+								1314,
+								1314
 							]
 						],
 						"settings":
@@ -1218,33 +1156,33 @@
 							"syntax": "Packages/PHP/PHP.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.x": -0.0,
+						"translation.y": 796.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 5,
-					"file": "npirotte.sublime-project",
+					"buffer": 3,
+					"file": ".gitignore",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 174,
+						"buffer_size": 575,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								152,
-								152
+								575,
+								575
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JSON.tmLanguage"
+							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -1257,6 +1195,68 @@
 		},
 		{
 			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 4,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Xdebug Client/Xdebug.tmLanguage",
+							"word_wrap": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Xdebug Client/Xdebug.tmLanguage",
+							"word_wrap": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -1312,69 +1312,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
-					"type": "text"
-				}
-			]
-		},
-		{
-			"selected": 0,
-			"sheets":
-			[
-				{
-					"buffer": 8,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 0,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Xdebug Client/Xdebug.tmLanguage",
-							"word_wrap": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 234,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								234,
-								234
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Xdebug Client/Xdebug.tmLanguage",
-							"word_wrap": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 8,
+					"stack_index": 4,
 					"type": "text"
 				}
 			]
@@ -1420,7 +1358,7 @@
 		"rows":
 		[
 			0.0,
-			0.7,
+			0.880124223602,
 			1.0
 		]
 	},
@@ -1435,7 +1373,7 @@
 	},
 	"output.xdebug":
 	{
-		"height": 0.0
+		"height": 100.0
 	},
 	"project": "npirotte.sublime-project",
 	"replace":
@@ -1525,6 +1463,10 @@
 		"selected_items":
 		[
 			[
+				"",
+				"D:\\websites\\sextoysreunions.be\\nickye.sublime-project"
+			],
+			[
 				"se",
 				"D:\\websites\\sextoysreunions.be\\nickye.sublime-project"
 			],
@@ -1547,10 +1489,6 @@
 			[
 				"p",
 				"/D/websites/npirotte-2013.be/npirotte.sublime-project"
-			],
-			[
-				"",
-				"/D/websites/cucina-autentica.be/cucina-autentica.sublime-project"
 			],
 			[
 				"c",
@@ -1591,20 +1529,60 @@
 			"hide_conflict": false,
 			"restore_index":
 			{
-				"30":
+				"17":
 				{
 					"group": 0,
 					"index": 0
 				},
-				"31":
+				"18":
 				{
 					"group": 0,
-					"index": 2
+					"index": 3
 				},
-				"33":
+				"19":
+				{
+					"group": 0,
+					"index": 4
+				},
+				"20":
+				{
+					"group": 0,
+					"index": 5
+				},
+				"23":
+				{
+					"group": 1,
+					"index": 0
+				},
+				"24":
+				{
+					"group": 1,
+					"index": 1
+				},
+				"25":
+				{
+					"group": 2,
+					"index": 0
+				},
+				"26":
+				{
+					"group": 2,
+					"index": 1
+				},
+				"28":
+				{
+					"group": 0,
+					"index": 6
+				},
+				"30":
 				{
 					"group": 0,
 					"index": 1
+				},
+				"32":
+				{
+					"group": 0,
+					"index": 2
 				}
 			},
 			"restore_layout":
@@ -1614,18 +1592,32 @@
 					[
 						0,
 						0,
-						1,
+						2,
 						1
+					],
+					[
+						0,
+						1,
+						1,
+						2
+					],
+					[
+						1,
+						1,
+						2,
+						2
 					]
 				],
 				"cols":
 				[
 					0.0,
+					0.5,
 					1.0
 				],
 				"rows":
 				[
 					0.0,
+					0.911180124224,
 					1.0
 				]
 			}

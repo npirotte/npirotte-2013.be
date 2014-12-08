@@ -1,5 +1,9 @@
 /* code : n.pirotte */
 
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+
 .clear {clear: both}
 
 #loading
@@ -7,8 +11,8 @@
 	position: fixed;
 	width: 100%;
 	height: 100%;
-	background: fade(black, 80%);
-	z-index: 100;
+	background: fade(@gray-darker, 80%);
+	z-index: 10000;
 }
 //structure générale
 
@@ -850,7 +854,7 @@ a {
 			display: block;
 			width: 100%;
 			height: 200px;
-			margin-top: 10px;
+			//margin-top: 10px;
 			line-height: 200px;
 			text-align: center;
 			font-size: 4em;

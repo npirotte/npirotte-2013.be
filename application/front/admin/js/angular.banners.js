@@ -105,8 +105,15 @@ function BannerZoneEditCtrl($scope, $http, $routeParams) {
   }
 
   $scope.delete = function () {
-    $http.get('/admin_banners/delete/'+id).success(function(data) {
-          window.location.hash = '/banner-zones/list';
+    bootbox.confirm('Etes vous sur de vouloir supprimer cette bannière ?', function(result)
+    {
+      if (result) {
+        {
+          $http.get('/admin_banners/delete/'+id).success(function(data) {
+            window.location.hash = '/banner-zones/list';
+          });
+       }
+      };
     });
   }
 
@@ -231,9 +238,14 @@ function BannerEditCtrl($scope, $http, $routeParams) {
   }
 
   $scope.delete = function () {
-    $http.get('/admin_banners/delete_banner/'+id).success(function(data) {
-          
-          window.location.hash = '#/banner-zones/edit/'+$scope.item.parent_id;
+    bootbox.confirm('Etes vous sur de vouloir supprimer cette bannière ?', function(result)
+    {
+      if (result) 
+      {
+          $http.get('/admin_banners/delete_banner/'+id).success(function(data) {
+                window.location.hash = '#/banner-zones/edit/'+$scope.item.parent_id;
+          });
+      };
     });
   }
 

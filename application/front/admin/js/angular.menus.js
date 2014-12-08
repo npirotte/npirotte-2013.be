@@ -7,24 +7,16 @@ function MenusListCtrl($scope, $http, $injector)
     getUrl : '/admin_menus/menus_list/',
     deleteUrl : 'admin_menus/menu_delete/',
     getCallBack : function(data)
-    {
-      // traitement du statut utilisateur 
-      var i = 0;
-      angular.forEach($scope.items, function(item){
-        $scope.items[i].statut = item.active == 1 ? 'success' : 'warning';    
-        if (item.suspend == 1) $scope.items[i].statut = 'error';
-        i++;
-      });
-    }
+    {}
   }
 
   $scope.table = [
       {title : 'Nom', param : 'name', strong : true}
     ];
 
-  $scope.pageTitle = 'Utilisateurs';
+  $scope.pageTitle = 'Menu';
 
-  $scope.thumbPath = 'users';
+  $scope.thumbPath = '';
 
   $injector.invoke(ItemList, this, {$scope: $scope, $http: $http, config: config});
 

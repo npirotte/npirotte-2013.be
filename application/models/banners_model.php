@@ -221,7 +221,6 @@ class Banners_model extends CI_Model
 
 		$this->db->trans_complete();
 
-		print_r(APPPATH.'assets/images/banners/'.$banner['parent_id'].'/'.$banner['src']);
 		unlink(APPPATH.'assets/images/banners/'.$banner['parent_id'].'/'.$banner['src']);
 	}
 

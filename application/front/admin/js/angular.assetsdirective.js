@@ -13,8 +13,6 @@ admin.directive('assetsList', function()
     // }, // {} = isolate, true = child, false/undefined = no change
     controller: function($scope, $element, $attrs, $transclude, $http) {
 
-
-
         $scope.getView = function(id)
         {
           window.location.hash = '/'+$scope.assetsList.editPath+id;
@@ -239,67 +237,58 @@ admin.directive('imageUpload', function($timeout){
         config : '=config',
         model : '=item'
     }, // {} = isolate, true = child, false/undefined = no change
-    controller: function($scope, $element, $attrs, $transclude, $http) {
+    controller: function($scope, $element, $attrs, $transclude, $http, $modal) {
          // img upload
 
-         $scope.uploaderId = widgetUniqueId++;
+     $scope.uploaderId = widgetUniqueId++;
 
-          $scope.triggerUpload = function()
-          {
-            //$timeout(function()
-            //{
-              $('#fileUploader-' + $scope.uploaderId).click();
-            //});
-          }
-
-          $scope.uploaderClass = function (content)
-          {
-            var cssClass;
-            (!content ||content == '') ? cssClass = 'empty' : cssClass = 'full';
-            return cssClass; 
-          }
-
-          $scope.reset = function()
-          {
-            $scope.model = '';
-          }
-
-          // drap n drop
-
-        setTimeout(function()
+      $scope.triggerUpload = function()
+      {
+        try{
+          $('#fileUploader-' + $scope.uploaderId).click();
+        }
+        catch(error)
         {
+          $timeout(function()
+          {
+            $('#fileUploader-' + $scope.uploaderId).click();
+          });
+        }
+      }
+
+      $scope.uploaderClass = function (content)
+      {
+        var cssClass;
+        (!content ||content == '') ? cssClass = 'empty' : cssClass = 'full';
+        return cssClass; 
+      }
+
+      $scope.reset = function()
+      {
+        $scope.model = '';
+      }
+
+      // drap n drop
+
+      function dropedFile(e)
+      {
+        var drop = document.getElementById('fileDropper-' + $scope.uploaderId);
+        e = e || event;
+        e.preventDefault();
+        $(drop).removeClass('drop-hover');
+        uploadFiles(event.dataTransfer.files);
+      }
+
+      setTimeout(function()
+      {
+        var drop = document.getElementById('fileDropper-' + $scope.uploaderId);
+        drop.addEventListener("drop",dropedFile ,false);
+      }, 20);
+
+      $scope.$on('$destroy', function() {
           var drop = document.getElementById('fileDropper-' + $scope.uploaderId);
-
-          drop.addEventListener("dragover",function(e){
-            e = e || event;
-            e.preventDefault();
-          },false);
-
-          drop.addEventListener("drop",function(e){
-            e = e || event;
-            e.preventDefault();
-            $(drop).removeClass('drop-hover');
-            uploadFiles(event.dataTransfer.files);
-
-          },false);
-
-          window.addEventListener("dragover",function(e){
-            e = e || event;
-            e.preventDefault();
-            $(drop).addClass('drop-hover');
-          },false);
-          window.addEventListener("dragleave",function(e){
-            e = e || event;
-            e.preventDefault();
-            $(drop).removeClass('drop-hover');
-          },false);
-          window.addEventListener("drop",function(e){
-            e = e || event;
-            e.preventDefault();
-            $(drop).removeClass('drop-hover');
-          },false);
-
-        }, 20);
+          drop.removeEventListener('drop', dropedFile);
+      });
 
 
       function uploadFiles(files) {
@@ -355,16 +344,7 @@ admin.directive('imageUpload', function($timeout){
 
                     if (response.crop == 1) {
                       tempSrc = response.newName;
-                        $('#crop-container').html('<img id="thumb" src="/' + globalVars.app_url + 'assets/temp/'+response.newName+'" alt="" />')
-                        $('#crop-popup').modal();
-                        $('#crop-container').find('img').Jcrop(
-                          {
-                            onSelect: setCoords,
-                            onChange: setCoords,
-                            aspectRatio : $scope.config.w / $scope.config.h,
-                            minSize : [$scope.config.w, $scope.config.h],
-                            setSelect : [0, 0, $scope.config.w, $scope.config.h]
-                          });
+
                         $scope.crop_data = {
                           w : $scope.config.w,
                           h : $scope.config.h,
@@ -376,6 +356,30 @@ admin.directive('imageUpload', function($timeout){
                           newSrc : $scope.config.folder + '/'+response.newName,
                           folder : $scope.config.folder
                         };
+
+                        $scope.config.tempSrc = tempSrc;
+
+                        var modalInstance = $modal.open({
+                          templateUrl: '/admin/view_loader/'+templateDir+'/assets/images/image_crop_modal',
+                          controller: ImageCropperCtrl,
+                          windowClass : 'modal-full',
+                          size: 'lg',
+                          resolve: {
+                            cropData: function () {
+                              return $scope.crop_data;
+                            },
+                            config: function()
+                            {
+                              return $scope.config;
+                            }
+                          }
+                        });
+
+                        modalInstance.result.then(function(resultObj)
+                        {
+                          $scope.model = resultObj.model;
+                        });
+
                       }
                       else
                       {
@@ -388,7 +392,7 @@ admin.directive('imageUpload', function($timeout){
                 }
                 else
                 {
-                  alert(response.message);
+                  bootbox.alert(response.message);
                 };
 
 
@@ -470,3 +474,74 @@ admin.directive('imageUpload', function($timeout){
     // }
   };
 });
+
+
+function ImageCropperCtrl($scope, $http, $modalInstance, config, cropData)
+{
+  //$('#crop-container').html('<img id="thumb" src="/' + globalVars.app_url +cropData.src+'" alt="" />');
+  console.log(config);
+  console.log(cropData);
+  $scope.cropData = cropData;
+  $scope.config = config;
+
+  $scope.setCoords = function(c)
+  {
+    $scope.cropData = {
+        w : c.w,
+        h : c.h,
+        x : c.x,
+        y : c.y,
+        maxW : $scope.config.w,
+        maxH : $scope.config.h,
+        src : '/assets/temp/'+ $scope.config.tempSrc,
+        newSrc : $scope.config.folder + '/' + $scope.config.tempSrc,
+        folder : $scope.config.folder
+      };
+  }
+
+  $scope.crop = function ()
+  {
+    console.log($scope.cropData);
+    $http({
+          url: '/index.php/file_upload/crop_image',
+          method: "POST",
+          data: $scope.cropData,
+          headers: {'Content-Type': 'application/json'}
+      }).success(function (data, status, headers, config) {
+          console.log(data);
+                //$scope.item.src = tempSrc;
+                  //$scope.model = response.newName;
+                  console.log(response);
+                  $modalInstance.close({ model : response.newName});
+          }).error(function (data, status, headers, config) {
+              $scope.alert = 'Une erreure est survenue.';
+              showFadeAlert();
+      });
+  }
+
+  $scope.cancel = function () {
+    $modalInstance.dismiss('cancel');
+  };
+}
+
+admin.directive('imageCropper', function()
+{
+  return {
+    link : function(scope, iElm, iAttr, controller)
+    {
+      var $elem = $(iElm);
+      $elem
+        .html('<img id="thumb" src="/' + globalVars.app_url + scope.cropData.src+'" alt="" />')
+        .find('img')
+        .Jcrop(
+        {
+          onSelect: scope.setCoords,
+          onChange: scope.setCoords,
+          aspectRatio : scope.config.w / scope.config.h,
+          minSize : [scope.config.w, scope.config.h],
+          setSelect : [0, 0, scope.config.w, scope.config.h]
+        });
+
+    }
+  }
+})

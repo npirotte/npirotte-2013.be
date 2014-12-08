@@ -58,6 +58,28 @@
 		$this->output->set_output('Cache supprimé');
  	}
 
+ 	public function clean_disk($data_type = false)
+ 	{
+ 		$this->load->library('Disk_cleaner', array());
+
+ 		switch ($data_type) {
+ 			case 'logs':
+ 				$this->disk_cleaner->DeleteLogs();
+ 				break;
+ 			case 'temps':
+ 				$this->disk_cleaner->DeleteTempFiles();
+ 				break;
+ 			default:
+ 				$this->disk_cleaner->DeleteLogs();
+ 				$this->disk_cleaner->DeleteTempFiles();
+ 				# code...
+ 				break;
+ 		}
+
+ 		$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate");
+		$this->output->set_output('Cache supprimé');
+ 	}
+
  	public function forge_database ($table_target = false)
  	{
  		$this->load->model('db_model');
