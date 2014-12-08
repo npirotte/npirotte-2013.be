@@ -219,9 +219,12 @@
 		    return $size;
 		} 
 
+		$appSize = dirSize(APPPATH);
+		$sysSier = dirSize(SYSDIR);
+
 		$this->data['assetsSize'] = dirSize(APPPATH.'assets');
 		$this->data['cacheSize'] = dirSize(APPPATH.'cache');
-		$this->data['appSize'] = 70000000;//dirSize('./') - $this->data['assetsSize'] - $this->data['cacheSize'];
+		$this->data['appSize'] = $appSize + $sysSize - $this->data['assetsSize'] - $this->data['cacheSize'];//dirSize('./') - $this->data['assetsSize'] - $this->data['cacheSize'];
 		$this->data['serverSize'] = 1000000000;
 
 		$this->output->set_output($this->data);
