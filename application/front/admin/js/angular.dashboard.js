@@ -1,6 +1,8 @@
 function DashboardMasterListCtrl($scope, $http) {
 	menuControl('dashboard');
 
+	console.log('ok');
+
 	function getVisits()
 	{
 		$http.get('/admin_manager/day_visits').success(function(data) {

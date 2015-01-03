@@ -5,9 +5,22 @@
 		background: white;
 		margin: -20px -20px 0 -20px;
 
+		li 
+		{
+			margin-top: 6px;
+
+			&.active
+			{
+				a 
+				{
+					border-top: solid 1px #ddd !important;
+				}
+			}
+		}
+
 		& > li > a 
 		{
-			border-radius: 0;
+			//border-radius: 0;
 			border-top: 0;
 		}
 
@@ -15,5 +28,78 @@
 		{
 			margin-left: 20px;
 		}
+	}
+}
+
+.vertical-tab 
+{
+	.nav
+	{
+		float: left;
+		width: 44px;
+		/* padding-right: 5px; 
+		border-right: solid 1px #ddd; */
+
+		.active > a 
+		{
+			background: @gray-lighter;
+		}
+
+		a 
+		{
+			padding-left: 0;
+			padding-right: 0;
+			text-align: center;
+		}
+	}
+
+	.tab-content
+	{
+		margin-left: 60px;
+	}
+}
+
+.lang-tab 
+{
+	.nav 
+	{
+		padding: 4px;
+		background: @gray-lighter;
+		border-radius: @border-radius-base;
+
+		a 
+		{
+			border-radius: @border-radius-base;
+			padding-top: 6px;
+			padding-bottom: 6px;
+		}
+
+		.active a,
+		a:hover
+		{
+			background: lighten(@brand-primary, 16%);
+			color: white;
+		}
+	}
+
+	&.lang-tab-horizontal
+	{
+		.nav li 
+		{
+			float: left;
+		}
+	}
+}
+
+.block-tab 
+{
+	background: @gray-lighter;
+	border-radius: @border-radius-base;
+	margin-top: 18px;
+
+	.tab-content 
+	{
+		padding-top: 20px;
+		padding-bottom: 20px;
 	}
 }

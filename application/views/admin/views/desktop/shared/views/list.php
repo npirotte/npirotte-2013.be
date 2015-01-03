@@ -1,5 +1,5 @@
 <div id="viewTools">
-	<a class="btn btn-primary btn-ripple" href="#/{{section}}/edit/new">Ajouter <i class="fa fa-plus-circle"></i></a>
+	<a class="btn btn-primary btn-ripple" href="#/{{section}}/new">Ajouter <i class="fa fa-plus-circle"></i></a>
 </div>
 
 <section >

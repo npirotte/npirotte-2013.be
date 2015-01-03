@@ -9,7 +9,8 @@
 
         <!-- css compiler -->
 
-        <?= print_css('admin', $custom_ui); ?>
+       <!--  <?= print_css('admin', $custom_ui); ?> -->
+        <link rel="stylesheet" href="<?= APPPATH ?>front/admin/dist/css/style.css">
 
     </head>
 
@@ -31,7 +32,7 @@
                 </span>
                 <button id="assetTogle"><i data-toggle="tooltip" data-placement="bottom" title="Gestion de assets" class="fa fa-folder circle-icon"></i></button>
                 <button href="#quick-action-modal" role="button" data-toggle="modal" ><i data-toggle="tooltip" data-placement="bottom" title="Actions rapides" class="circle-icon fa fa-bolt"></i></button>
-                <a href="#/manager/comptes/edit/<?=$user_id?>"><i class="fa fa-user circle-icon" data-toggle="tooltip" data-placement="bottom" title="Mon compte"></i></a>
+                <a href="#/manager/users/<?=$user_id?>"><i class="fa fa-user circle-icon" data-toggle="tooltip" data-placement="bottom" title="Mon compte"></i></a>
                 <a class="active" href="/session/logout"><i class="fa fa-power-off circle-icon"></i></a>            
             </div>
         </header>
@@ -44,22 +45,22 @@
                         <i class="fa fa-users circle-icon"></i>Manager
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a href="#/manager/comptes">Comptes</a></li>  
-                        <li><a href="#/manager/groupes">Groupes</a></li>  
+                        <li><a href="#/manager/users">Comptes</a></li>  
+                        <li><a href="#/manager/groups">Groupes</a></li>  
                         <!-- <li><a href="#/manager/logs">Logs serveur</a></li> -->
                         <!-- <li><a href="#/manager/maintenance">Maintenance</a></li>  -->      
                     </ul>
                 </li>
-                <li class="dropdown">
-                    <a href="" id="configuration" class="dropdown-toggle btn-ripple" data-toggle="dropdown">
-                        <i class="fa fa-cog circle-icon"></i>Configuration
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#/configuration/stylesheets">Styles Css</a></li>  
-                        <!-- <li><a href="#/manager/logs">Logs serveur</a></li> -->
-                        <!-- <li><a href="#/manager/maintenance">Maintenance</a></li>  -->      
-                    </ul>
-                </li>
+               <!--  <li class="dropdown">
+                   <a href="" id="configuration" class="dropdown-toggle btn-ripple" data-toggle="dropdown">
+                       <i class="fa fa-cog circle-icon"></i>Configuration
+                   </a>
+                   <ul class="dropdown-menu">
+                       <li><a href="#/configuration/stylesheets">Styles Css</a></li>  
+                       <li><a href="#/manager/logs">Logs serveur</a></li>
+                       <li><a href="#/manager/maintenance">Maintenance</a></li>      
+                   </ul>
+               </li> -->
                 <li class="dropdown">
                     <a href="" id="pages" class="dropdown-toggle btn-ripple" data-toggle="dropdown">
                         <i class="fa fa-sitemap circle-icon"></i>Pages
@@ -67,7 +68,7 @@
                     <ul class="dropdown-menu">
                         <li><a href="#/pages/pages">Pages</a></li>
                         <li><a href="#pages/templates">Templates</a></li>
-                        <li><a href="#pages/menus">Menus</a></li>
+                        <li><a href="#/pages/menus">Menus</a></li>
                         <li><a href="#/pages/pages/edit/new">Ajouter</a></li> 
                     </ul>
                 </li>
@@ -76,8 +77,8 @@
                         <i class="fa fa-picture-o  circle-icon"></i>Bannieres
                     </a>
                         <ul class="dropdown-menu">
-                            <li><a href="#/banner-zones/list">Liste</a></li> 
-                            <li><a href="#/banner-zones/edit/new">Ajouter</a></li> 
+                            <li><a href="#/banners/zones">Liste</a></li> 
+                            <li><a href="#/banners/zones/new">Ajouter</a></li> 
                         </ul>
                 </li>
                 <li class="dropdown">
@@ -96,8 +97,8 @@
                     </a>
                     <ul class="dropdown-menu">
                         <li><a href="#/news/categories">Catégories</a></li> 
-                        <li><a href="#/news/list">News</a></li> 
-                        <li><a href="#/news/edit/new">Ajouter</a></li>  
+                        <li><a href="#/news/items">News</a></li> 
+                        <li><a href="#/news/items/new">Ajouter</a></li>  
                     </ul>
                 </li> 
                 <li class="dropdown">
@@ -107,7 +108,7 @@
                     <ul class="dropdown-menu">
                         <li><a href="#/contacts/messages">Messages</a></li> 
                         <li><a href="#/contacts/spams">Spams</a></li>        
-                        <li><a href="#/contacts/forms/list">Formulaires</a></li>
+                        <li><a href="#/contacts/forms">Formulaires</a></li>
                         <li><a href="#/contacts/config">Informations</a></li>
                     </ul>
                 </li>
@@ -125,7 +126,12 @@
                        
                         
         <div id="container">
-            <div ng-view ng-cloak class="inner"></div>
+            <!-- <div id="tabs" ng-controller="MainTabsCtrl">
+                <ul ui:sortable ng:model="tabs">
+                    <li ng-repeat="tab in tabs"><a href="{{tab.tabUrl}}">{{tab.tabName}}</a></li>
+                </ul>
+            </div> -->
+            <div ui-view ng-cloak class="inner"></div>
         </div>
 
         <div id="quick-action-modal" class="modal fade">
@@ -280,8 +286,8 @@
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js" charset="utf-8"></script>
         <script>window.jQuery || document.write('<script src="/<?= APPPATH?>front/framework/js/jquery-2.1.1.min.js"><\/script>')</script>
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.20/angular.min.js" charset="utf-8"></script>
-        <script>window.angular || document.write('<script src="/<?= APPPATH?>front/framework/js/angular.min.js"><\/script>')</script>
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.20/angular.min.js" charset="utf-8"></script>
+        <script>window.angular || document.write('<script src="/<?= APPPATH?>front/framework/js/angular.min.js"><\/script>')</script> -->
 
         <script type="text/javascript" src="/<?= APPPATH?>front/framework/js/jquery-ui-1.10.4.custom.min.js" charset="utf-8"></script>
 

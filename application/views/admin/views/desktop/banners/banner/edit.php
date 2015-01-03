@@ -23,9 +23,9 @@
 			<h3>Contenu</h3>
 			<hr />
 
-			<form name="editForm" class="form form-horizontal">
+			<form name="editForm" class="form form-horizontal" ng-if="item">
 					
-					<tabset>
+					<tabset vertical="true" class="vertical-tab lang-tab block-tab" type="pills">
 						<?php foreach($this->lang->languages as $lang): ?>
 							<tab heading="<?=$lang?>">
 								<br />
@@ -53,7 +53,7 @@
 								<div class="form-group">
 									<label class="control-label col-xs-2" for"inputContent">Contenu <?=$lang?></label>
 									<div class="col-xs-6">
-										<div ng-if="item || mode == 'new'">
+										<div>
 											<?php print_input($self, 'wysiwyg', 'banners_banners', 'content_'.$lang, 'item', 'editForm') ?>
 										</div>
 									</div>
@@ -62,6 +62,8 @@
 							</tab>
 						<?php endforeach; ?>
 					</tabset>
+
+					<br/>
 
 					<div class="form-group">
 						<label class="control-label col-xs-2" for"inputWeight">Ordre</label>

@@ -1,5 +1,5 @@
 
-admin.directive('gridWizard', function(){
+admin.directive('gridWizard', function($modal){
   // Runs during compile
   var instanceId = 0;
 
@@ -15,13 +15,11 @@ admin.directive('gridWizard', function(){
         $scope.fieldValue = new Array();
       };
 
-      console.log(typeof $scope.fieldValue);
-
       // config
 
       $scope.uniqueId = instanceId++;
 
-      $scope.tinymceOptions = tinymceConfig;
+      //$scope.tinymceOptions = tinymceConfig;
 
       $scope.aceLoaded = function(_editor)
       {
@@ -149,6 +147,34 @@ admin.directive('gridWizard', function(){
       var editPane = new Array();
 
       $scope.editContent = function(parent, index)
+        {
+          var editedItem;
+
+          editedItem = angular.copy($scope.fieldValue[parent].cols[index]);
+
+          var modalInstance = $modal.open({
+            templateUrl: '/admin/view_loader/'+templateDir+'/pages/widgets/grid_editor_modal',
+            windowClass : 'modal-full',
+            controller: GridEditorModalCtrl,
+            size: 'lg',
+            resolve: {
+              item: function () {
+                return editedItem;
+              },
+              uploader : function()
+              {
+                return $scope.uploader;
+              }
+            }
+          });
+
+          modalInstance.result.then(function (editedItem) {
+            //$scope.selected = selectedItem;
+            $scope.fieldValue[parent].cols[index] = editedItem;
+          });
+        }
+
+    /*  $scope.editContent = function(parent, index)
       {
         //$scope.edit = $scope.fieldValue[parent].cols[index];
        // $scope.edit = new Array();
@@ -162,7 +188,7 @@ admin.directive('gridWizard', function(){
             $scope.edit = false;
           });
         });
-      }
+      }*/
 
       $scope.endEdit = function(){ 
 
@@ -336,3 +362,26 @@ admin.directive('gridWizard', function(){
     //link: function($scope, iElm, iAttrs, controller) {}
   };
 });
+
+
+function GridEditorModalCtrl($scope, $modalInstance, item, uploader)
+{
+  $scope.item = item;
+  $scope.uploader = uploader; 
+
+  $scope.ok = function () {
+    console.log($scope.item);
+    $modalInstance.close($scope.item);
+  };
+
+  $scope.cancel = function () {
+    $modalInstance.dismiss('cancel');
+  };
+
+  $scope.tinymceOptions = tinymceConfig;
+
+  $scope.aceLoaded = function(_editor)
+  {
+     aceeditorConfig(_editor);
+  };
+}

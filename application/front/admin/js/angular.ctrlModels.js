@@ -47,7 +47,7 @@ function ItemList($scope, $http, config)
 
   $scope.getView = function(id)
   {
-    window.location.hash = '/'+$scope.section+'/edit/'+id;
+    window.location.hash = '/'+$scope.section+'/'+id;
     block();
   }
 

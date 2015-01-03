@@ -4,7 +4,7 @@
 
 
 <section class="asided-right animated fadeIn" ng-if="item" >
-	<h1 class="page-title">Portfolio: #{{item.id}} {{item.db_title_default}}</h1>
+	<h1 class="page-title">Portfolio: #{{item.id}} {{item.name_fr}}</h1>
 
 	<div class="row">
 
@@ -73,10 +73,9 @@
 						<div class="clear"></div>
 
 						<div class="col-sm-12">
-							<tabset>
+							<tabset  ng-if="item" vertical="true" class="vertical-tab lang-tab block-tab" type="pills">
 								<?php foreach($this->lang->languages as $lang): ?>
 									<tab heading="<?=$lang?>">
-										<br />
 										<div class="form-group">
 											<label class="control-label col-sm-2">Résumé <?=$lang?></label>
 											<div class="col-sm-6">
@@ -87,7 +86,7 @@
 										<div class="form-group">
 											<label class="control-label col-sm-2">Contenu <?=$lang?></label>
 											<div class="col-sm-6">
-												<div ng-if="item || mode == 'new'">
+												<div>
 													<?php print_input($self, 'wysiwyg', 'portfolio_items', 'description_'.$lang, 'item', 'editForm') ?>
 												</div>
 											</div>

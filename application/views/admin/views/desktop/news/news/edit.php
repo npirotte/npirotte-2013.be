@@ -1,6 +1,6 @@
 <div id="viewTools">
 	<button data-role="submit" class="btn btn-primary" ng-click="save()" ng-disabled="editForm.$invalid">Enregistrer<i class="fa fa-check-circle"></i></button>
-	<a data-role="cancel" class="btn btn-default" href="#/news/list">Annuler<i class="fa fa-reply"></i></a>
+	<a data-role="cancel" class="btn btn-default" ui-sref="newsItemsList">Annuler<i class="fa fa-reply"></i></a>
 	<button data-role="delete" ng-hide="item.name == 'home' || mode == 'new'" class="btn btn-danger" ng-click="delete()">Supprimer<i class="fa fa-trash-o"></i></button>
 	<span ng-hide="mode == 'new'">
 		<button ng-show="statut == 'pending' || statut == 'draft'" ng-click="pushOnline()" class="btn btn-success">Mettre en ligne <i class="fa fa-upload"></i></button>

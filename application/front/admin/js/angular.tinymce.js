@@ -12,6 +12,7 @@ angular.module('ui.tinymce', [])
         var expression, options, tinyInstance,
           updateView = function () {
             ngModel.$setViewValue(elm.val());
+            console.log(scope);
             if (!scope.$root.$$phase) {
               scope.$apply();
             }
@@ -67,9 +68,9 @@ angular.module('ui.tinymce', [])
 
         ngModel.$render = function() {
           if (!tinyInstance) {
-            tinyInstance = tinymce.get(attrs.id);
+            tinyInstance = tinymce.get('item_description_fr');
           }
-          tinyInstance.setContent(ngModel.$viewValue || '');
+          //tinyInstance.setContent(ngModel.$viewValue || '');
           if (tinyInstance) {
             tinyInstance.setContent(ngModel.$viewValue || '');
           }

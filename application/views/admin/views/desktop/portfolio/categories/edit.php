@@ -39,11 +39,10 @@
 
 					<div class="col-md-6">
 						<h3>Métas</h3>
-						<hr />
-						<tabset>
+						<tabset vertical="true" class="vertical-tab lang-tab block-tab" type="pills">
 							<?php foreach($this->lang->languages as $lang): ?>
 								<tab heading="<?=$lang?>">
-									<br />
+							
 									<div class="form-group">
 										<label class="control-label col-sm-2">Titre <?=$lang?></label>
 										<div class="col-sm-6">

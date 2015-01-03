@@ -15,10 +15,10 @@
 			<div class="row">
 				<div class="col-md-6">
 					<h3>Informations</h3>
-					<tabset>
+			
+					<tabset vertical="true" class="vertical-tab lang-tab block-tab" type="pills">
 						<?php foreach($this->lang->languages as $lang): ?>
 							<tab heading="<?=$lang?>">
-								<br />
 								<div class="form-group">
 									<label class="control-label col-sm-2" for"inputDbTitle">Nom de la catégories <?=$lang?></label>
 									<div class="col-sm-6">
@@ -88,9 +88,13 @@
 
 					          		<tr ng-dblclick="getView(child.id)" class="{{child.statut}}" ng-repeat="child in childs | filter:query | orderBy:orderProp:reverse">
 
-					          					<td><a href="#/news/edit/{{child.id}}">#{{child.id}}</a></td>
+					          					<td><a ui-sref="newsItemsEdit({id : child.id})">#{{child.id}}</a></td>
 								          		<td>{{child.title}}</td>
-								          		<td><?php $self->load->view('admin/views/desktop/shared/list_tools', FALSE); ?></td>
+								          		<td>
+								          			<div class="btn-group">
+														<a ui-sref="newsItemsEdit({id : child.id})" ><i class="fa fa-pencil  circle-icon"></i></a>
+													</div>
+								          		</td>
 						          	</tr>
 
 					          	</tbody>
