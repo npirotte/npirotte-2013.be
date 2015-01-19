@@ -544,4 +544,4 @@ admin.directive('imageCropper', function()
 
     }
   }
-})
+});

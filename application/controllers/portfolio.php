@@ -135,7 +135,11 @@
 	$this->load->helper(array('html', 'view'));
 	$this->load->model(array('tags_model', 'assets_model'));
 
-	$filename = $this->smartcache->CacheName('porfolio_view', array('lang' => $lang, 'ajax' => $this->data->ajax, 'category' => $category));
+	//calcul de l'id
+	$id = explode('-', $slug);
+	$id = $id[0];
+
+	$filename = $this->smartcache->CacheName('porfolio_view'.$id, array('lang' => $lang, 'ajax' => $this->data->ajax, 'category' => $category));
 
 	$cache = $this->smartcache->get_data($filename);
 
@@ -145,10 +149,6 @@
 	else
 	{
 		// code !
-
-		//calcul de l'id
-		$id = explode('-', $slug);
-		$id = $id[0];
 
 		// récupération des data
 		$item = $this->portfolio_model->PorfolioDetails($id, true);

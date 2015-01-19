@@ -4,14 +4,7 @@ angular.module('Peaks.Banners').controller('BannerEditCtrl', ['$scope', '$http',
   $scope.section = 'banners/banners';
   $scope.backUrl = 'banners/zones/';
 
-  $scope.tinymceOptions = {
-    plugins: [
-        "autolink link image",
-        "searchreplace visualblocks code fullscreen",
-        "table contextmenu paste"
-    ],
-    toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist | link image"
-  }
+  $scope.tinymceOptions = tinymceConfig;
 
   var id = $stateParams.id,
       parent_id = $stateParams['parent_id'];

@@ -24,6 +24,22 @@ class Portfolio_model extends CI_Model {
 
 	}*/
 
+	public function language_transition()
+	{
+		/*==========  items  ==========*/
+		$query = $this->db->get('menus_items');
+		$items = $query->result_array();
+
+		foreach ($items as $item) {
+			# code...
+			$this->db->set('name_fr', $item['name']);
+			$this->db->set('element_fr', $item['element']);
+
+			$this->db->where('id', $item['id']);
+			$this->db->update('menus_items');
+		}
+	}
+
 	public function simple_categories_list()
 	{
 
@@ -70,7 +86,9 @@ class Portfolio_model extends CI_Model {
 
 	public function portfolio_list($limit, $offset, $category_id = FALSE)
 	{
-		$this->load->library('List_query_filters', array('table' => 'portfolio_items', 'filtered_cols' => array('name', 'id')));
+		$lang = $this->lang->lang();
+
+		$this->load->library('List_query_filters', array('table' => 'portfolio_items', 'filtered_cols' => array('name_'.$lang, 'id')));
 
 		$this->db->start_cache();
 		
@@ -80,7 +98,7 @@ class Portfolio_model extends CI_Model {
 
 		$count = $this->db->count_all_results('portfolio_items');
 
-		$this->db->select('id, name, src');
+		$this->db->select('id, name_'.$lang.' as name, src');
 		$query = $this->db->get('portfolio_items', $limit, $offset);
 
 		$result = array(
@@ -135,8 +153,10 @@ class Portfolio_model extends CI_Model {
 
 	public function PortfolioSlug($id)
 	{
+		$lang = $this->lang->lang();
+
 		$this->db
-			->select('portfolio_items.name')
+			->select('portfolio_items.name_'.$lang)
 			->where('id', $id)
 			->from('portfolio_items');
 

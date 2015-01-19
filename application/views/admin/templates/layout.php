@@ -9,7 +9,7 @@
 
         <!-- css compiler -->
 
-       <!--  <?= print_css('admin', $custom_ui); ?> -->
+       <!--  <?php //print_css('admin', $custom_ui); ?> -->
         <link rel="stylesheet" href="<?= APPPATH ?>front/admin/dist/css/style.css">
 
     </head>
@@ -297,6 +297,10 @@
         <script type="text/javascript" src="/<?= APPPATH ?>front/framework/js/ace/ace.js" type="text/javascript" charset="utf-8"></script>
         <script type="text/javascript" src="/<?= APPPATH ?>front/framework/js/ace/ext-language_tools.js" type="text/javascript" charset="utf-8"></script>
         <script type="text/javascript" src="/<?= APPPATH ?>front/framework/js/ace/ext-emmet.js" type="text/javascript" charset="utf-8"></script>
+
+        
+
+
 
         <?= print_js('admin_foot'); ?>
 

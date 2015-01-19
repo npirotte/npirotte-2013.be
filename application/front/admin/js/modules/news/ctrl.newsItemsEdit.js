@@ -12,14 +12,7 @@ angular.module('Peaks.News').controller('NewsItemsEditCtrl', ['$scope', '$http',
 
   $scope.faIcons = ['fa-home', 'fa-pencil', 'fa-map-marker'];
 
-  $scope.tinymceOptions = {
-    plugins: [
-        "autolink link image",
-        "searchreplace visualblocks code fullscreen",
-        "table contextmenu paste"
-    ],
-    toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist | link image"
-  }
+  $scope.tinymceOptions = tinymceConfig;
 
   $scope.uploader = {
         w : 200,

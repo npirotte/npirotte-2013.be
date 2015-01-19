@@ -177,7 +177,7 @@ if (defined('ENVIRONMENT'))
 
 	define('CULTURE', 'fr');
 
-	define('CULTURES', 'fr|en');
+	define('CULTURES', 'fr');
 
 
 	// The path to the "application" folder

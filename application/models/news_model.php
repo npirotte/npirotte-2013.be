@@ -41,7 +41,7 @@ class News_model extends CI_Model {
 	{
 		$lang = $this->lang->lang();
 
-		$this->db->select('id, slug_'.$lang);
+		$this->db->select('id, slug_'.$lang.' as slug');
 		$query = $this->db->get('news_categories');
 
 		$categories  = $query->result_array();
@@ -57,7 +57,9 @@ class News_model extends CI_Model {
 
 	public function admin_categories_list($limit, $offset)
 	{
-		$this->load->library('List_query_filters', array('table' => 'news_categories', 'filtered_cols' => array('name', 'slug', 'id')));
+		$lang = $this->lang->lang();
+
+		$this->load->library('List_query_filters', array('table' => 'news_categories', 'filtered_cols' => array('name_'.$lang, 'slug', 'id')));
 
 		$this->db->start_cache();
 		
@@ -67,7 +69,7 @@ class News_model extends CI_Model {
 
 		$count = $this->db->count_all_results('news_categories');
 
-		$this->db->select('id, name, is_hidden');
+		$this->db->select('id, name_'.$lang.' as name, is_hidden');
 
 		$query = $this->db->get('news_categories', $limit, $offset);
 

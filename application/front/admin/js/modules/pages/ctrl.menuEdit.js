@@ -13,7 +13,7 @@ angular.module('Peaks.Pages').controller('MenuEditCtrl', ['$scope', '$stateParam
       init_page();
 
       if (getTheChilds) {
-
+        
       };
     });
   }

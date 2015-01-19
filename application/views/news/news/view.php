@@ -62,9 +62,15 @@
 </div>
 
 <script>
-	//initPortfolioPage(3);
-	 FB.XFBML.parse();
-	 ReinitializeAddThis();
+	try 
+	{
+		FB.XFBML.parse();
+		ReinitializeAddThis();
+	}
+	catch(e)
+	{
+		console.log(e);
+	}
 </script>
 
 

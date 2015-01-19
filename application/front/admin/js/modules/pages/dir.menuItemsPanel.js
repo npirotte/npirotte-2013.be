@@ -40,6 +40,10 @@ angular.module('Peaks.Pages.Directives').directive('menusItemsPanel', ['MenusIte
         {
           $scope.itemsTree = data;
         });
+        menusItemsRepository.GetItems($scope.menuId).then(function(result)
+        {
+          $scope.itemsList = result.data.items;
+        });
       }
 
       getItemList();

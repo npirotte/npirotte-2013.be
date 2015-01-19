@@ -4,6 +4,102 @@
 		"selected_items":
 		[
 			[
+				"menu",
+				"menuId"
+			],
+			[
+				"ite",
+				"items_list"
+			],
+			[
+				"in",
+				"inTree"
+			],
+			[
+				"print",
+				"print_r"
+			],
+			[
+				"prin",
+				"printer_abort"
+			],
+			[
+				"port",
+				"portfolio_model"
+			],
+			[
+				"com",
+				"comm-subsection	Comment - Subsection comment"
+			],
+			[
+				"meta",
+				"meta_title"
+			],
+			[
+				"descrit",
+				"description"
+			],
+			[
+				"comm",
+				"comm-subsection	Comment - Subsection comment"
+			],
+			[
+				"tab",
+				"tabUrl"
+			],
+			[
+				"cache",
+				"cachedData"
+			],
+			[
+				"cons",
+				"console"
+			],
+			[
+				"get",
+				"getTheItem"
+			],
+			[
+				"cach",
+				"cachedData"
+			],
+			[
+				"cac",
+				"cachedData"
+			],
+			[
+				"module",
+				"verbose_module	AngularJS"
+			],
+			[
+				"m",
+				"margin-top"
+			],
+			[
+				"pad",
+				"padding-bottom"
+			],
+			[
+				"border",
+				"border-radius"
+			],
+			[
+				"padd",
+				"padding-right"
+			],
+			[
+				"margin",
+				"margin-left"
+			],
+			[
+				"wi",
+				"width"
+			],
+			[
+				"back",
+				"background"
+			],
+			[
 				"edit",
 				"editedItem"
 			],
@@ -34,10 +130,6 @@
 			[
 				"con",
 				"contacts"
-			],
-			[
-				"comm",
-				"comm-subsection	Comment - Subsection comment"
 			],
 			[
 				"templ",
@@ -130,14 +222,6 @@
 			[
 				"font",
 				"font-family"
-			],
-			[
-				"margin",
-				"margin-top"
-			],
-			[
-				"border",
-				"border-radius"
 			],
 			[
 				"background",
@@ -296,10 +380,6 @@
 				"get_meta_id"
 			],
 			[
-				"meta",
-				"meta_keywords"
-			],
-			[
 				"ed",
 				"edit"
 			],
@@ -348,10 +428,6 @@
 				"parent_id"
 			],
 			[
-				"get",
-				"getItem"
-			],
-			[
 				"save",
 				"saveIsBuzy"
 			],
@@ -366,10 +442,6 @@
 			[
 				"pages_templs",
 				"pages_templates_fields"
-			],
-			[
-				"cons",
-				"constraint"
 			],
 			[
 				"_po",
@@ -424,10 +496,6 @@
 				"pattern"
 			],
 			[
-				"menu",
-				"menuControl"
-			],
-			[
 				"ou",
 				"output	<output>"
 			],
@@ -446,157 +514,117 @@
 			[
 				"files",
 				"file_list"
-			],
-			[
-				"preg_",
-				"preg_replace"
-			],
-			[
-				"lo",
-				"logDetailsCache"
-			],
-			[
-				"logD",
-				"logDetailsCache"
-			],
-			[
-				"log",
-				"logListCache"
-			],
-			[
-				"lis",
-				"logListCache"
-			],
-			[
-				"set_",
-				"set_output"
-			],
-			[
-				"out",
-				"output_json	CI - output Json"
-			],
-			[
-				"fun",
-				"function"
-			],
-			[
-				"is",
-				"isRunning"
-			],
-			[
-				"del",
-				"delimiter"
-			],
-			[
-				"prop",
-				"prop_1"
-			],
-			[
-				"pro",
-				"prop_2"
-			],
-			[
-				"condi",
-				"condition_array"
-			],
-			[
-				"cond",
-				"condition_array"
-			],
-			[
-				"ru",
-				"running"
-			],
-			[
-				"jon",
-				"json_encode"
-			],
-			[
-				"strn",
-				"string"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "application/front/admin/js/angular.content_edition.js",
+			"file": "application/controllers/admin_menus.php",
 			"settings":
 			{
-				"buffer_size": 11104,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "application/views/admin/views/desktop/pages/widgets/grid_editor.php",
-			"settings":
-			{
-				"buffer_size": 5413,
+				"buffer_size": 4042,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "application/front/admin/js/angular.assetsdirective.js",
+			"file": "application/front/admin/js/modules/pages/repo.menuItem.js",
 			"settings":
 			{
-				"buffer_size": 16608,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "application/views/admin/views/desktop/pages/widgets/grid_editor_modal.php",
-			"settings":
-			{
-				"buffer_size": 1842,
+				"buffer_size": 1741,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "application/front/admin/js/angular.tinymce.js",
+			"file": "application/front/admin/js/modules/pages/dir.menuItemsPanel.js",
 			"settings":
 			{
-				"buffer_size": 2511,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "application/front/framework/js/tinymce/tinymce.min.js",
-			"settings":
-			{
-				"buffer_size": 278470,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "application/views/admin/views/desktop/news/news/edit.php",
-			"settings":
-			{
-				"buffer_size": 5037,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "application/views/admin/views/desktop/news/categories/edit.php",
-			"settings":
-			{
-				"buffer_size": 3912,
+				"buffer_size": 4529,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "application/front/admin/js/vendor/angular/_angular.min.js",
+			"file": "application/views/admin/views/desktop/menus/items/edit.php",
 			"settings":
 			{
-				"buffer_size": 106194,
+				"buffer_size": 5047,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "application/views/admin/views/desktop/portfolio/portfolio/edit.php",
+			"settings":
+			{
+				"buffer_size": 4572,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "application/views/admin/views/desktop/banners/banner/edit.php",
+			"file": "application/models/models/menus/items.php",
 			"settings":
 			{
-				"buffer_size": 2816,
-				"line_ending": "Unix"
+				"buffer_size": 1330,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "application/models/models/portfolio/items.php",
+			"settings":
+			{
+				"buffer_size": 1409,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "application/models/menus_model.php",
+			"settings":
+			{
+				"buffer_size": 7999,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Windows",
+				"name": "Xdebug Context",
+				"read_only": true,
+				"scratch": true
+			}
+		},
+		{
+			"contents": "",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Windows",
+				"name": "Xdebug Watch",
+				"read_only": true,
+				"scratch": true
+			}
+		},
+		{
+			"contents": "",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Windows",
+				"name": "Xdebug Stack",
+				"read_only": true,
+				"scratch": true
+			}
+		},
+		{
+			"contents": "=> D:\\websites\\npirotte-2013.be\\application\\libraries\\url_service.php\n	|+| 70\n",
+			"settings":
+			{
+				"buffer_size": 78,
+				"line_ending": "Windows",
+				"name": "Xdebug Breakpoint",
+				"read_only": true,
+				"scratch": true
 			}
 		}
 	],
@@ -686,53 +714,99 @@
 	[
 		"/D/websites/npirotte-2013.be",
 		"/D/websites/npirotte-2013.be/application",
+		"/D/websites/npirotte-2013.be/application/controllers",
 		"/D/websites/npirotte-2013.be/application/front",
 		"/D/websites/npirotte-2013.be/application/front/admin",
+		"/D/websites/npirotte-2013.be/application/front/admin/dist",
 		"/D/websites/npirotte-2013.be/application/front/admin/dist/js/vendor",
 		"/D/websites/npirotte-2013.be/application/front/admin/js",
-		"/D/websites/npirotte-2013.be/application/front/admin/js/vendor",
+		"/D/websites/npirotte-2013.be/application/front/admin/js/modules",
+		"/D/websites/npirotte-2013.be/application/front/admin/js/modules/pages",
 		"/D/websites/npirotte-2013.be/application/front/admin/js/vendor/angular",
-		"/D/websites/npirotte-2013.be/application/front/framework",
+		"/D/websites/npirotte-2013.be/application/front/default",
 		"/D/websites/npirotte-2013.be/application/front/framework/js",
-		"/D/websites/npirotte-2013.be/application/front/framework/js/tinymce",
+		"/D/websites/npirotte-2013.be/application/models",
+		"/D/websites/npirotte-2013.be/application/models/models",
+		"/D/websites/npirotte-2013.be/application/models/models/menus",
+		"/D/websites/npirotte-2013.be/application/models/models/portfolio",
 		"/D/websites/npirotte-2013.be/application/views",
 		"/D/websites/npirotte-2013.be/application/views/admin",
 		"/D/websites/npirotte-2013.be/application/views/admin/templates",
 		"/D/websites/npirotte-2013.be/application/views/admin/views",
 		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop",
-		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/banners",
-		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/banners/banner",
 		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/banners/bannerzone",
-		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/manager/users",
-		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/manager/widgets",
-		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/news",
+		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/menus/items",
 		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/news/categories",
 		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/news/news",
-		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/pages",
+		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/pages/pages",
 		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/pages/widgets",
+		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/portfolio",
+		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/portfolio/categories",
 		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/portfolio/portfolio",
-		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/shared/views",
-		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/wysiwyg/wysiwyg",
-		"/D/websites/npirotte-2013.be/application/views/templates"
+		"/D/websites/npirotte-2013.be/application/views/news/news",
+		"/D/websites/npirotte-2013.be/system/helpers"
 	],
 	"file_history":
 	[
+		"/D/websites/npirotte-2013.be/application/front/admin/js/modules/pages/ctrl.menuEdit.js",
+		"/D/websites/npirotte-2013.be/application/views/admin/templates/layout.php",
+		"/D/websites/npirotte-2013.be/application/front/admin/js/modules/portfolio/ctrl.portfolioEdit.js",
+		"/D/websites/npirotte-2013.be/application/front/admin/js/modules/news/ctrl.newsItemsEdit.js",
+		"/D/websites/npirotte-2013.be/application/front/admin/js/modules/banners/ctrl.bannerEdit.js",
+		"/D/websites/npirotte-2013.be/index.php",
+		"/D/websites/npirotte-2013.be/application/models/news_model.php",
+		"/D/websites/npirotte-2013.be/application/views/news/news/view.php",
+		"/D/websites/npirotte-2013.be/application/libraries/url_service.php",
+		"/D/websites/npirotte-2013.be/application/models/portfolio_model.php",
+		"/D/websites/npirotte-2013.be/application/controllers/portfolio.php",
+		"/D/websites/npirotte-2013.be/application/controllers/news.php",
+		"/D/websites/npirotte-2013.be/application/views/templates/layout.php",
+		"/D/websites/npirotte-2013.be/application/views/templates/meta_head.php",
+		"/D/websites/npirotte-2013.be/application/views/contact/forms/form.php",
+		"/D/websites/npirotte-2013.be/application/front/default/js/widgets/contactForm.js",
+		"/D/websites/npirotte-2013.be/system/helpers/view_helper.php",
+		"/D/websites/npirotte-2013.be/application/cache/pages/03eb96d4c9f1cfe2696bcac6dce1d09d",
+		"/C/Users/npirotte/Desktop/.htaccess",
+		"/D/websites/npirotte-2013.be/application/controllers/admin_portfolio.php",
+		"/D/websites/npirotte-2013.be/application/controllers/admin_news.php",
+		"/D/websites/npirotte-2013.be/application/front/admin/js/modules/news/ctrl.categoriesList.js",
+		"/D/websites/npirotte-2013.be/application/front/admin/js/modules/portfolio/ctrl.porfolioList.js",
+		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/shared/edit_tools.php",
+		"/D/websites/npirotte-2013.be/application/models/pages_model.php",
+		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.assetsdirective.js",
+		"/D/websites/npirotte-2013.be/application/front/admin/style/logon.less",
+		"/D/websites/npirotte-2013.be/application/views/admin/pages/login.php",
+		"/D/websites/npirotte-2013.be/application/front/admin/js/modules/core/ctrl.mainTabs.js",
+		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.iconsService.js",
+		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.urlService.js",
+		"/D/websites/npirotte-2013.be/application/front/admin/js/modules/core/serv.scopecacheprovider.js",
+		"/D/websites/npirotte-2013.be/application/front/admin/js/modules/portfolio/ctrl.categoriesEdit.js",
+		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/portfolio/portfolio/edit.php",
+		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.globalDirectives.js",
+		"/D/websites/npirotte-2013.be/application/front/compilers/admin_foot_js.php",
+		"/D/websites/npirotte-2013.be/application/front/admin/js/modules/core/core.config.router.js",
+		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/news/categories/edit.php",
+		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/portfolio/categories/edit.php",
+		"/D/websites/npirotte-2013.be/application/front/admin/style/tabbable.less",
+		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/banners/banner/edit.php",
+		"/D/websites/npirotte-2013.be/application/front/admin/js/vendor/angular/_angular.min.js",
+		"/D/websites/npirotte-2013.be/application/front/admin/js/modules/news/ctrl.categoriesEdit.js",
+		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.content_edition.js",
+		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/pages/widgets/grid_editor.php",
+		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/pages/widgets/grid_editor_modal.php",
+		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.tinymce.js",
 		"/D/websites/npirotte-2013.be/application/front/framework/js/tinymce/tinymce.min.js",
+		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/news/news/edit.php",
 		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/wysiwyg/wysiwyg/edit.php",
 		"/D/websites/npirotte-2013.be/application/front/admin/js/modules/global/_global.module.js",
 		"/D/websites/npirotte-2013.be/application/front/admin/js/modules/global/repo.tags.js",
-		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.iconsService.js",
 		"/D/websites/npirotte-2013.be/application/front/admin/js/modules/global/serv.urls.js",
 		"/D/websites/npirotte-2013.be/application/front/admin/js/modules/global/dir.iconsPicker.js",
 		"/D/websites/npirotte-2013.be/application/front/admin/js/modules/global/repo.icons.js",
-		"/D/websites/npirotte-2013.be/application/front/compilers/admin_foot_js.php",
 		"/D/websites/npirotte-2013.be/application/front/admin/js/modules/manager/repo.groupsRepository.js",
 		"/D/websites/npirotte-2013.be/application/front/admin/js/modules/pages/ctrl.pageEdit.js",
 		"/D/websites/npirotte-2013.be/application/front/admin/js/modules/manager/_manager.module.js",
-		"/D/websites/npirotte-2013.be/application/front/admin/js/modules/portfolio/ctrl.categoriesEdit.js",
-		"/D/websites/npirotte-2013.be/application/front/admin/js/modules/portfolio/ctrl.portfolioEdit.js",
 		"/D/websites/npirotte-2013.be/application/front/admin/js/modules/core/_core.module.js",
-		"/D/websites/npirotte-2013.be/application/front/admin/js/modules/news/ctrl.newsItemsEdit.js",
 		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.globalRepositories.js",
 		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.admin.js",
 		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.banners.js",
@@ -740,39 +814,26 @@
 		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.manager.js",
 		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.menus.js",
 		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.pages.js",
-		"/D/websites/npirotte-2013.be/application/front/admin/js/modules/core/core.config.router.js",
-		"/D/websites/npirotte-2013.be/application/views/admin/templates/layout.php",
 		"/D/websites/npirotte-2013.be/application/front/admin/js/modules/news/ctrl.newsList.js",
-		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/news/news/edit.php",
-		"/D/websites/npirotte-2013.be/application/front/admin/js/modules/news/ctrl.categoriesList.js",
-		"/D/websites/npirotte-2013.be/application/front/admin/js/modules/news/ctrl.categoriesEdit.js",
 		"/D/websites/npirotte-2013.be/application/front/admin/js/modules/news/_news.module.js",
 		"/D/websites/npirotte-2013.be/application/front/admin/js/modules/news/repo.categories.js",
 		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.news.js",
 		"/D/websites/npirotte-2013.be/application/front/admin/js/modules/news/repo.items.js",
 		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.newsRepositories.js",
 		"/D/websites/npirotte-2013.be/application/front/admin/js/modules/news",
-		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/portfolio/portfolio/edit.php",
-		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.tinymce.js",
 		"/D/websites/npirotte-2013.be/application/front/admin/js/modules/portfolio/repo.categories.js",
 		"/D/websites/npirotte-2013.be/application/front/admin/js/modules/portfolio/repo.portforlioItems.js",
-		"/D/websites/npirotte-2013.be/application/front/admin/js/vendor/angular/_angular.min.js",
 		"/D/websites/npirotte-2013.be/application/front/admin/js/modules/pages/ctrl.templatesList.js",
 		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.portfolio.js",
 		"/D/websites/npirotte-2013.be/application/front/admin/js/modules/portfolio/ctrl.categoriesList.js",
-		"/D/websites/npirotte-2013.be/application/front/admin/js/modules/portfolio/ctrl.porfolioList.js",
 		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.portfolioRepositories.js",
 		"/D/websites/npirotte-2013.be/application/front/admin/js/modules/portfolio/_porfolio.module.js",
-		"/D/websites/npirotte-2013.be/application/front/admin/js/modules/pages/ctrl.menuEdit.js",
-		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.urlService.js",
 		"/D/websites/npirotte-2013.be/application/front/admin/js/modules/pages/repo.menus.js",
 		"/D/websites/npirotte-2013.be/application/front/admin/js/modules/pages/repo.menuItem.js",
 		"/D/websites/npirotte-2013.be/application/front/admin/js/modules/pages/dir.menuItemsPanel.js",
 		"/D/websites/npirotte-2013.be/application/front/admin/js/modules/pages/ctrl.menusList.js",
 		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.menusRepositories.js",
 		"/D/websites/npirotte-2013.be/application/front/admin/js/modules/banners/ctrl.bannerZoneEdit.js",
-		"/D/websites/npirotte-2013.be/application/front/admin/js/modules/banners/ctrl.bannerEdit.js",
-		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/banners/banner/edit.php",
 		"/D/websites/npirotte-2013.be/application/front/admin/js/modules/banners/ctrl.bannerZoneList.js",
 		"/D/websites/npirotte-2013.be/application/front/admin/js/modules/banners/_banners.module.js",
 		"/D/websites/npirotte-2013.be/application/front/admin/js/modules/pages/dir.pagesSiteMap.js",
@@ -810,41 +871,11 @@
 		"/D/websites/npirotte-2013.be/application/front/admin/js/modules/contacts/repo.ContactsRepository.js",
 		"/D/websites/npirotte-2013.be/application/front/admin/js/modules/contacts/dir.LastMessages.js",
 		"/D/websites/npirotte-2013.be/application/front/admin/js/modules/contacts/ctrl.ContactFormsList.js",
-		"/D/websites/npirotte-2013.be/system/helpers/view_helper.php",
 		"/D/websites/npirotte-2013.be/application/front/admin/js/modules/contacts/angular.contactRepositories.js.exclude",
 		"/D/websites/npirotte-2013.be/application/front/admin/js/modules/contacts/angular.contactDirectives.js.exclude",
 		"/D/websites/npirotte-2013.be/application/front/admin/js/modules/contacts/angular.contact.js.exclude",
 		"/D/websites/npirotte-2013.be/application/front/admin/js/modules/contacts/repo.FormsRepository.js",
-		"/D/websites/npirotte-2013.be/application/front/admin/js/modules/contacts/dir.UnreadMessagesNbr.js",
-		"/D/websites/npirotte-2013.be/application/front/admin/dist/js/modules/contacts.js",
-		"/D/websites/npirotte-2013.be/application/front/admin/dist/css/style.css",
-		"/D/websites/npirotte-2013.be/application/front/admin/dist/js/modules/pages.js",
-		"/D/websites/npirotte-2013.be/application/front/admin/dist/css/style_compilator.css",
-		"/D/websites/npirotte-2013.be/public/css/style_compilator.css",
-		"/D/websites/npirotte-2013.be/node_modules/gulp-less/node_modules/less/lib/less-node/index.js",
-		"/D/websites/npirotte-2013.be/application/controllers/admin_assets.php",
-		"/D/websites/npirotte-2013.be/system/core/Loader.php",
-		"/D/websites/npirotte-2013.be/application/models/assets_model.php",
-		"/D/websites/npirotte-2013.be/application/libraries/Disk_cleaner.php",
-		"/D/websites/npirotte-2013.be/application/front/admin/style/styles.less",
-		"/D/websites/npirotte-2013.be/application/front/admin/js/jquery.admin.js",
-		"/D/websites/npirotte-2013.be/application/controllers/maintenance.php",
-		"/D/websites/npirotte-2013.be/application/controllers/admin_manager.php",
-		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.contact.js",
-		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/assets/images/image_crop_modal.php",
-		"/D/websites/npirotte-2013.be/application/front/admin/js/angular.assetsdirective.js",
-		"/D/websites/npirotte-2013.be/application/controllers/admin_banners.php",
-		"/D/websites/npirotte-2013.be/application/models/banners_model.php",
-		"/D/websites/npirotte-2013.be/application/front/admin/style/bootstrap/modals.less",
-		"/D/websites/npirotte-2013.be/application/controllers/admin_contact.php",
-		"/D/websites/npirotte-2013.be/application/controllers/admin_forms.php",
-		"/D/websites/npirotte-2013.be/.gitignore",
-		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/contacts/widgets/edit_modal.php",
-		"/D/websites/npirotte-2013.be/application/front/admin/style/form.less",
-		"/D/websites/npirotte-2013.be/application/front/admin/style_compilator.less",
-		"/D/websites/npirotte-2013.be/application/views/admin/views/desktop/contacts/widgets/forms_fields.php",
-		"/D/websites/npirotte-2013.be/application/front/admin/plugins/loadingbar/loading-bar.less",
-		"/D/websites/npirotte-2013.be/application/front/admin/style/select2.less"
+		"/D/websites/npirotte-2013.be/application/front/admin/js/modules/contacts/dir.UnreadMessagesNbr.js"
 	],
 	"find":
 	{
@@ -864,6 +895,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"_NewsCategoryUrl",
+			"bd",
+			"admin_categories_list",
 			"edit",
 			"item",
 			"Manager",
@@ -988,10 +1022,7 @@
 			"error_string",
 			"validation_errors",
 			"vaidation_errors",
-			"unique",
-			"[",
-			"rules",
-			"identity_"
+			"unique"
 		],
 		"highlight": false,
 		"in_selection": false,
@@ -999,6 +1030,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"db",
 			"item",
 			"Global",
 			"News",
@@ -1077,34 +1109,33 @@
 	"groups":
 	[
 		{
-			"selected": 7,
+			"selected": 3,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "application/front/admin/js/angular.content_edition.js",
+					"file": "application/controllers/admin_menus.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 11104,
+						"buffer_size": 4042,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								11102,
-								11065
+								2144,
+								2144
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 2841.0,
+						"translation.y": 776.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 7,
@@ -1112,47 +1143,19 @@
 				},
 				{
 					"buffer": 1,
-					"file": "application/views/admin/views/desktop/pages/widgets/grid_editor.php",
+					"file": "application/front/admin/js/modules/pages/repo.menuItem.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5413,
+						"buffer_size": 1741,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2013,
-								2017
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 19.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 9,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "application/front/admin/js/angular.assetsdirective.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 16608,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								5849,
-								6237
+								430,
+								430
 							]
 						],
 						"settings":
@@ -1161,59 +1164,28 @@
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
-						"translation.x": 0.0,
-						"translation.y": 3566.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 8,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "application/views/admin/views/desktop/pages/widgets/grid_editor_modal.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1842,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								830,
-								830
-							]
-						],
-						"settings":
-						{
-							"open_with_edit": true,
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 7.0,
+						"translation.x": -0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 6,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "application/front/admin/js/angular.tinymce.js",
+					"buffer": 2,
+					"file": "application/front/admin/js/modules/pages/dir.menuItemsPanel.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2511,
+						"buffer_size": 4529,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2402,
-								2402
+								1241,
+								1250
 							]
 						],
 						"settings":
@@ -1222,35 +1194,94 @@
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.x": -0.0,
+						"translation.y": 178.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 3,
 					"type": "text"
 				},
 				{
-					"buffer": 5,
-					"file": "application/front/framework/js/tinymce/tinymce.min.js",
+					"buffer": 3,
+					"file": "application/views/admin/views/desktop/menus/items/edit.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 278470,
+						"buffer_size": 5047,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								278470,
-								278470
+								4563,
+								4563
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
-						"translation.x": 171757.0,
+						"translation.x": 0.0,
+						"translation.y": 1052.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "application/views/admin/views/desktop/portfolio/portfolio/edit.php",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 4572,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								770,
+								431
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "application/models/models/menus/items.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1330,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								17,
+								28
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
@@ -1259,11 +1290,74 @@
 				},
 				{
 					"buffer": 6,
-					"file": "application/views/admin/views/desktop/news/news/edit.php",
+					"file": "application/models/models/portfolio/items.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5037,
+						"buffer_size": 1409,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								328,
+								310
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "application/models/menus_model.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7999,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3857,
+								3866
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": -0.0,
+						"translation.y": 1796.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 8,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
 						"regions":
 						{
 						},
@@ -1276,100 +1370,104 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 137.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "application/views/admin/views/desktop/news/categories/edit.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3912,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								456,
-								456
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/Xdebug Client/Xdebug.tmLanguage",
+							"word_wrap": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "application/front/admin/js/vendor/angular/_angular.min.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 106194,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								106194,
-								106194
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 2410.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
+					"stack_index": 8,
 					"type": "text"
 				},
 				{
 					"buffer": 9,
-					"file": "application/views/admin/views/desktop/banners/banner/edit.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2816,
+						"buffer_size": 0,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1923,
-								1923
+								0,
+								0
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/Xdebug Client/Xdebug.tmLanguage",
+							"word_wrap": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 306.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 9,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 10,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Xdebug Client/Xdebug.tmLanguage",
+							"word_wrap": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 78,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								78,
+								78
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Xdebug Client/Xdebug.tmLanguage",
+							"word_wrap": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
 					"type": "text"
 				}
 			]
@@ -1377,7 +1475,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 24.0
+		"height": 23.0
 	},
 	"input":
 	{
@@ -1390,18 +1488,32 @@
 			[
 				0,
 				0,
-				1,
+				2,
 				1
+			],
+			[
+				0,
+				1,
+				1,
+				2
+			],
+			[
+				1,
+				1,
+				2,
+				2
 			]
 		],
 		"cols":
 		[
 			0.0,
+			0.5,
 			1.0
 		],
 		"rows":
 		[
 			0.0,
+			0.7,
 			1.0
 		]
 	},
@@ -1572,60 +1684,15 @@
 			"hide_conflict": false,
 			"restore_index":
 			{
-				"17":
+				"129":
 				{
 					"group": 0,
 					"index": 0
 				},
-				"18":
-				{
-					"group": 0,
-					"index": 3
-				},
-				"19":
-				{
-					"group": 0,
-					"index": 4
-				},
-				"20":
-				{
-					"group": 0,
-					"index": 5
-				},
-				"23":
-				{
-					"group": 1,
-					"index": 0
-				},
-				"24":
-				{
-					"group": 1,
-					"index": 1
-				},
-				"25":
-				{
-					"group": 2,
-					"index": 0
-				},
-				"26":
-				{
-					"group": 2,
-					"index": 1
-				},
-				"28":
-				{
-					"group": 0,
-					"index": 6
-				},
-				"30":
+				"130":
 				{
 					"group": 0,
 					"index": 1
-				},
-				"32":
-				{
-					"group": 0,
-					"index": 2
 				}
 			},
 			"restore_layout":
@@ -1635,32 +1702,18 @@
 					[
 						0,
 						0,
-						2,
+						1,
 						1
-					],
-					[
-						0,
-						1,
-						1,
-						2
-					],
-					[
-						1,
-						1,
-						2,
-						2
 					]
 				],
 				"cols":
 				[
 					0.0,
-					0.5,
 					1.0
 				],
 				"rows":
 				[
 					0.0,
-					0.911180124224,
 					1.0
 				]
 			}

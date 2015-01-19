@@ -27,7 +27,7 @@ class Menus_model extends CI_Model {
 		$result['menu'] = $result['menu'][0];
 
 		// links
-		$result['links'] = $this->itemsTree($result['menu']['id'], $baseLink, true);
+		$result['links'] = $this->itemsTree($result['menu']['id'], $baseLink, true, true);
 
 		return $result;
 	}
@@ -81,6 +81,7 @@ class Menus_model extends CI_Model {
 
 	public function menusList($limit, $offset)
 	{
+
 		$this->load->library('List_query_filters', array('table' => 'menus_menus', 'filtered_cols' => array('menus_menus.name', 'menus_menus.id')));
 
 		$this->db->start_cache();
@@ -178,10 +179,11 @@ class Menus_model extends CI_Model {
 
 	public function itemsList($parentId)
 	{
+		$lang = $this->lang->lang();
 
 		$count = $this->db->count_all_results('menus_items');
 
-		$this->db->select('id, name');
+		$this->db->select('id, name_'.$lang.' as name');
 		$query = $this->db->get('menus_items');
 
 		$result = array(
@@ -194,14 +196,20 @@ class Menus_model extends CI_Model {
 		return $result;
 	}
 
-	public function itemsTree($menuId, $baseLink = false, $allData = false)
+	public function itemsTree($menuId, $baseLink = false, $allData = false, $is_public = false)
 	{
+		$lang = $this->lang->lang();
+
 		$map_id_list = array();
 		$map_elements_list = array();
 
 		$this->db->start_cache();
 			if (!$allData) {
-				$this->db->select('id, name, parent_id');
+				$this->db->select('id, name_'.$lang.' as name, parent_id');
+			}
+			else
+			{
+				$this->db->select('id, name_'.$lang.' as name, parent_id, cssclass, target, module, function, element_'.$lang.' as element');
 			}
 			$this->db->order_by('weight');
 		$this->db->stop_cache();
@@ -215,6 +223,10 @@ class Menus_model extends CI_Model {
 		else
 		{
 			$this->db->where('parent_id', 0);	
+		}
+		
+		if ($is_public) {
+			$this->db->where('is_hidden_'.$lang, 0);
 		}
 		
 		$this->db->where('menu_id', $menuId);
@@ -244,6 +256,7 @@ class Menus_model extends CI_Model {
 
 			$this->db->where_in('parent_id', $map_id_list);
 			$this->db->where('menu_id', $menuId);
+			//$this->db->where('is_hidden_'.$lang, 0);
 
 			$query = $this->db->get('menus_items');
 

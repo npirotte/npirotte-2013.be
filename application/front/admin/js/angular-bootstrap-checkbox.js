@@ -2,12 +2,14 @@
 
 angular.module("ui.checkbox", []).directive("checkbox", function() {
 	return {
-		scope: {},
+		scope: {
+			label : '@label'
+		},
 		require: "ngModel",
 		restrict: "E",
 		replace: "true",
 		template: "<button type=\"button\" ng-style=\"stylebtn\" class=\"bootcheck\" ng-class=\"{'btn-xs': size==='default', 'btn-sm': size==='large', 'btn-lg': size==='largest', 'checked' : checked === true}\">" +
-			"<span ng-style=\"styleicon\" class=\"fa\" ng-class=\"{'fa-check': checked===true}\"></span>" +
+			"<span ng-if=\"!label\" ng-style=\"styleicon\" class=\"fa\" ng-class=\"{'fa-check': checked===true}\"></span>" + '<span ng-style=\"styleicon\" ng-if=\"label\" class=\"checkbox-label\">{{label}}</span>' +
 			"</button>",
 		link: function(scope, elem, attrs, modelCtrl) {
 			scope.size = "default";

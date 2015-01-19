@@ -109,9 +109,15 @@ public function menu_delete($id)
 
 // items
 
-public function items_list($menuId)
+public function items_list($menuId, $inTree = false)
 {
-	$data = $this->Menus_model->itemsTree($menuId);
+	if ($inTree) {
+		$data = $this->Menus_model->itemsTree($menuId);
+	}
+	else
+	{
+		$data = $this->Menus_model->itemsList($menuId);
+	}
 
 	$this->output->set_output($data);
 }

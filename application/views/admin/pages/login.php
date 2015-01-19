@@ -12,7 +12,8 @@
 
         <!-- css compiler -->
 
-        <?= print_css('admin'); ?>
+        <?php //print_css('admin'); ?>
+        <link rel="stylesheet" href="<?= APPPATH ?>front/admin/dist/css/style.css">
         
     </head>
 
@@ -33,7 +34,7 @@
         </div>
      <?php endforeach; ?>
     <br />
-     <a class="user <?= count($client_users) === 0 ? 'selected' : '';?>" id="new_user">Nouvel utilisateur <i class="fa fa-plus"></i></a>
+     <a class="user new-user <?= count($client_users) === 0 ? 'selected' : '';?>" id="new_user">Nouvel utilisateur <i class="fa fa-plus"></i></a>
 </div>
 
 <div id="container" class="container">

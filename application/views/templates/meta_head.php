@@ -25,7 +25,7 @@
             var baseVars = {
                 lang : "<?=$header_viewmodel->lang?>",
                 applicationPath : "<?=site_url()?>"
-            }
+            };
         </script>
         
     </head>

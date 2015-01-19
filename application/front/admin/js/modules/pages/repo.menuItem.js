@@ -3,11 +3,15 @@ angular.module('Peaks.Pages.Repositories' ).factory('MenusItemsRepository', ['$h
   return { 
     GetItemsTree : function(menuId, callback)
     {
-      $http.get('/admin_menus/items_list/'+menuId)
+      $http.get('/admin_menus/items_list/'+menuId + '/true')
           .success(function(data)
           {
             callback (data);
           });
+    },
+    GetItems : function(menuId)
+    {
+      return $http.get('/admin_menus/items_list/' + menuId);
     },
   	GetItem : function(id, callback)
   	{

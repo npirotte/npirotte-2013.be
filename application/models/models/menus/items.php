@@ -28,12 +28,13 @@ $database['menus_items'] = array(
 			'type' => 'VARCHAR',
 			'constraint' => 40,
 			'required' => true,
-			'set' => TRUE
+			'set' => TRUE,
+			'localize' => TRUE
 			),
 		'cssclass' => array(
 			'type' => 'VARCHAR',
 			'constraint' => 80,
-			'dafault' => 'NULL',
+			'default' => 'NULL',
 			'set' => TRUE
 			),
 		'target' => array(
@@ -64,7 +65,15 @@ $database['menus_items'] = array(
 			'type' => 'VARCHAR',
 			'constraint' => 80,
 			'default' => 'NULL',
-			'set' => TRUE
+			'set' => TRUE,
+			'localize' => TRUE
+			),
+		'is_hidden' => array(
+			'type' => 'tinyint',
+			'constraint' => 1,
+			'default' => 0,
+			'set' => true,
+			'localize' => true
 			)
 		)
 	);

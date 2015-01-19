@@ -39,6 +39,10 @@
 	echo json_encode($output);
 }
 
+public function update_lang()
+{
+	$this->portfolio_model->language_transition();
+}
 // controlers
 
  	public function portfolio_list( $limit = null, $offset = 0 )
