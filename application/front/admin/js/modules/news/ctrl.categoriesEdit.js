@@ -55,7 +55,7 @@ angular.module('Peaks.News').controller('NewsCategoriesEditCtrl', ['$scope', '$h
             headers: {'Content-Type': 'application/json'}
         }).success(function (data, status, headers, config) {
               console.log(data);
-                if (id == 'new' && data.errors.length === 0) { window.location.hash = '/news/categories/edit/'+data.id; }
+                if (id == 'new' && data.errors.length === 0) { window.location.hash = '/news/categories/'+data.id; }
                 else
                 {
                    $scope.alert = data.message;
@@ -81,7 +81,14 @@ angular.module('Peaks.News').controller('NewsCategoriesEditCtrl', ['$scope', '$h
     });
   }
 
-  getThePage();
-  getTheItems($scope.itemPerPage, 0);
+  if (id === 'new') {
+    $scope.item = {};
+    init_page();
+  }
+  else
+  {
+    getThePage();
+    getTheItems($scope.itemPerPage, 0);
+  }
 
 }])

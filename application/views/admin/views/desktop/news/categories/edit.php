@@ -41,6 +41,7 @@
 				<div class="col-md-6">
 					<h3>Configuration</h3>
 					<hr>
+					<h4>Vignettes</h4>
 					<div class="form-group">
 						<label class="control-label col-sm-2" for"inputHeight">Hauteur</label>
 						<div class="col-sm-6">
