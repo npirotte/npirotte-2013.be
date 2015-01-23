@@ -100,6 +100,7 @@
 	$config['database']['user_group']['columns']['name'] = 'ugrp_name';
 	$config['database']['user_group']['columns']['description'] = 'ugrp_desc';
 	$config['database']['user_group']['columns']['admin'] = 'ugrp_admin';
+	$config['database']['user_group']['columns']['is_public'] = 'ugrp_is_public';
 	
 	###++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++###
 	

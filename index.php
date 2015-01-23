@@ -17,7 +17,7 @@
  * NOTE: If you change these, also change the error_reporting() code below
  *
  */
-	define('ENVIRONMENT', 'production');
+	define('ENVIRONMENT', 'development');
 /*
  *---------------------------------------------------------------
  * ERROR REPORTING
@@ -203,6 +203,8 @@ if (defined('ENVIRONMENT'))
  * And away we go...
  *
  */
+
+require_once BASEPATH.'libraries/pigeon.php';
 
 require_once BASEPATH.'core/CodeIgniter.php';
 

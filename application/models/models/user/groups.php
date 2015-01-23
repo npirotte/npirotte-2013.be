@@ -21,6 +21,11 @@ $database['user_groups'] = array(
 		'ugrp_admin' => array(
 			'type' => 'TINYINT',
 			'constraint' => 1
+			),
+		'ugrp_is_public' => array(
+			'type' => 'TINYINT',
+			'constraint' => 1,
+			'default' => 0
 			)
-		)
+		),
 	);

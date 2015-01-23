@@ -33,11 +33,13 @@
 
 }
 
-	public function news_list($lang = 'fr', $category = false)
+	public function news_list($category = false)
 {
 	$this->load->helper('html');
 	$this->load->helper('view');
 	$this->load->model('tags_model');
+
+	$lang = $this->lang->lang();
 
 	$filename = $this->smartcache->CacheName('news_list_'.$category, array('lang' => $lang, 'ajax' => $this->data->ajax));
 
@@ -106,11 +108,13 @@
 
 }
 
-	public function View ($lang = 'fr', $slug) 
+	public function View ($slug) 
 {
 	$this->load->helper('html');
 	$this->load->helper('view');
 	$this->load->model(array('tags_model', 'assets_model'));
+
+	$lang = $this->lang->lang();
 
 	$filename = $this->smartcache->CacheName('news_'.$slug, array('lang' => $lang, 'ajax' => $this->data->ajax));
 

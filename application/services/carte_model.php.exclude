@@ -1,0 +1,139 @@
+<?php
+
+class Carte_model extends CI_Model
+{
+	public function __construct()
+	{
+		$this->db->cache_on();
+	}
+
+	public function categories_list($limit, $offset)
+	{
+
+		$this->load->library('List_query_filters', array('table' => 'carte_categories', 'filtered_cols' => array('name', 'id', 'desc')));
+
+		$this->db->start_cache();
+		
+			$this->list_query_filters->setFilters();
+
+		$this->db->stop_cache();
+
+		$count = $this->db->count_all_results('carte_categories');
+
+		$this->db->select('id, name, weight');
+
+		$query = $this->db->get('carte_categories', $limit, $offset);
+
+		$result = array(
+			'items' => $query->result_array(),
+			'total_items' => $count
+			);
+
+		$this->db->flush_cache();
+
+		$i = 0;
+
+		foreach ($result['items'] as $item) {
+			$this->db->where(array('parent_id' => $item['id']));
+
+			$result['items'][$i++]['childs_count'] = $this->db->count_all_results('carte_items');
+		}
+
+		return $result;
+	}
+
+	public function ordered_categories_list()
+	{
+		// modèle des catégories
+		$this->db->select('id, name, desc');
+		$this->db->order_by('weight', 'asc');
+
+		$query = $this->db->get('carte_categories');
+
+		$result = array(
+			'items' => $query->result_array(),
+			);
+
+		$this->db->start_cache();
+		$this->db->select('name, desc, price');
+		$this->db->order_by('weight', 'asc');
+		$this->db->from('carte_items');
+		$this->db->stop_cache();
+
+		$i = 0;
+
+		foreach ($result['items'] as $item) {
+			$this->db->where(array('parent_id' => $item['id']));
+
+			$query = $this->db->get();
+
+			$result['items'][$i++]['childs'] =  $query->result_array();
+		}
+
+		$this->db->flush_cache();
+
+		return $result;
+	}
+
+
+	public function category_details($id)
+	{
+		$this->db->select('*');
+		$this->db->where(array('id' => $id));
+		$query = $this->db->get('carte_categories');
+
+		return $query->result_array();
+	}
+
+	public function categories_create($data)
+	{
+		$this->db->insert('carte_categories', $data);
+
+		$this->db->select_max('id');
+		$query = $this->db->get('carte_categories');
+
+		$result = $query->result_array();
+		$result = $result[0]['id'];
+
+		return $result;
+	}
+
+
+	public function categories_delete($id)
+	{
+		$this->db->trans_start();
+
+		$this->db->delete('carte_categories' , array('id' => $id));
+
+		$this->db->delete('carte_items' , array('parent_id' => $id));
+
+		$this->db->trans_complete();
+	}
+
+	//items
+
+	public function item_create($data)
+	{
+		$this->db->insert('carte_items', $data);
+
+		$this->db->select_max('id');
+		$query = $this->db->get('carte_items');
+
+		$result = $query->result_array();
+		$result = $result[0]['id'];
+
+		return $result;
+	}
+
+	public function items_list($parent_id)
+	{
+		$this->db->select('*');
+		$this->db->where(array('parent_id' => $parent_id));
+		$query = $this->db->get('carte_items');
+
+		$result = $query->result_array();
+
+		return $result;
+	}
+
+}

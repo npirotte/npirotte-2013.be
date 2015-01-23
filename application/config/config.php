@@ -364,5 +364,13 @@ $config['rewrite_short_tags'] = FALSE;
 $config['proxy_ips'] = '';
 
 
+/*==========  Class auto loader  ==========*/
+
+function __autoload($class) {
+    if (file_exists(APPPATH."models/".strtolower($class).EXT)) {
+        include_once(APPPATH."models/".strtolower($class).EXT);
+    }
+}
+
 /* End of file config.php */
 /* Location: ./application/config/config.php */

@@ -215,14 +215,6 @@ class Users_model extends CI_Model {
 
 	// user groups
 
-	public function PublicGroupsList()
-	{
-		$this->db->select('ugrp_id as id, ugrp_name, ugrp_admin');
-		$query = $this->db->get('user_groups');
-
-		return $query->result_array();
-	}
-
 	public function user_groups_list($limit, $offset)
 	{
 		$this->load->library(
@@ -273,7 +265,7 @@ class Users_model extends CI_Model {
 
 	public function update_user_group($data)
 	{
-		$this->flexi_auth->update_group($data['id'], array('ugrp_name' => $data['ugrp_name'], 'ugrp_desc' => $data['ugrp_desc'], 'ugrp_admin' => $data['ugrp_admin'], 'ugrp_is_public' => $data['ugrp_is_public']));
+		$this->flexi_auth->update_group($data['id'], array('ugrp_name' => $data['ugrp_name'], 'ugrp_desc' => $data['ugrp_desc'], 'ugrp_admin' => $data['ugrp_admin']));
 	}
 
 	public function visits($time)

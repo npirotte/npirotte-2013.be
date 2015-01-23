@@ -38,9 +38,53 @@
 |
 */
 
+Pigeon::map(function($r){
+
+	$r->get('default_controller', '/pages/view/fr/home');
+	$r->get('^('.CULTURES.')$', '/pages/view/fr/home');
+
+	/*==========  admin  ==========*/
+	
+	$r->get('admin', 'admin/view/home');
+	$r->get('admin/view_loader/(:any)/(:any)/(:any)/(:any)', 'admin/view_loader/$1/$2/$3/$4');
+
+	/*==========  News  ==========*/
+	
+	$r->get('^'.CULTURES.'/news/*([a-zA-Z0-9\-}]*)$', 'news/news_list/$1');
+	$r->get('^'.CULTURES.'/news/post/([0-9]+\-\S+)$', 'news/view/$1');
+
+	/*==========  portfolio  ==========*/
+	
+	$r->get('^('.CULTURES.')/portfolio/([0-9]*\-\S*)$' , 'portfolio/view/$1/$2'); // sans catégorie
+	$r->get('^('.CULTURES.')/portfolio/c([0-9]+\-\S+)/([0-9]*\-\S*)$', 'portfolio/view/$1/$3/$2'); // avec catégories
+	$r->get('^('.CULTURES.')/portfolio$' , 'portfolio/porfolio_list/$1');
+	$r->get('^('.CULTURES.')/portfolio/c([0-9]+\-\S+)$', 'portfolio/porfolio_list/$1/$2');
+
+	/*==========  Accounts  ==========*/
+	
+	$r->get('^'.CULTURES.'/accounts/register', array('Accounts', 'Register'));
+	$r->post('^'.CULTURES.'/accounts/register-profile', array('Accounts', 'RegisterProfile'));
+	$r->post('^'.CULTURES.'/accounts/create', array('Accounts', 'create'));
+
+	/*==========  contacts  ==========*/
+	
+	$r->post('^('.CULTURES.')/contact/send/(:any)', 'contact/send/$2');
+
+	/*==========  sitemap  ==========*/
+	
+	$r->get('sitemap\.xml', "sitemap/sitemap_view");
+
+	/*==========  pages  ==========*/
+
+	$r->get('^('.CULTURES.')/(:any)', 'pages/view/$1/$2');	
+
+});
+
+$route = Pigeon::draw();
+
 // URI like '/en/about' -> use controller 'about'
 //$route['^(en|de|fr|nl)/(.+)$'] = "$2";
-
+/*
 $route['default_controller'] = '/pages/view/fr/home';
 
 // '/en', '/de', '/fr' and '/nl' URIs -> use default controller
